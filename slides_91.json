@@ -1,0 +1,608 @@
+{
+  "1": {
+    "slide": 1,
+    "text": "Presentation by 汪汪 讓AI成為協作好夥伴 20261124 - GPT X Tschool AI任務設計師",
+    "links": []
+  },
+  "2": {
+    "slide": 2,
+    "text": "20261124 - GPT X Tschool # XR #解謎 #遊戲化 汪 檍 臺北市數位實驗高中 生成式 AI 協作開發與教育創新 數位策展與沉浸式體驗設計 遊戲化學習與實境解謎設計 3D 建模與數位視覺創作 VR／AR 沉浸式科技教學 科技跨領域課程與互動教學設計",
+    "links": []
+  },
+  "3": {
+    "slide": 3,
+    "text": "20261124 - GPT X Tschool 目次 淺談與AI的工作心理歷程 01 適合Vibe Coding的專案情境 02 和GEMINI/GPT搏鬥的專案們 03 04 GPT 和GEMINI/GPT專案小體驗與QA",
+    "links": []
+  },
+  "4": {
+    "slide": 4,
+    "text": "20261124 - GPT X Tschoolchool 程式小白紙一張 適合今天分享內容的TA 想嘗試但沒有方向 有情境 想解決它",
+    "links": []
+  },
+  "5": {
+    "slide": 5,
+    "text": "過去 現在 工具 協作 使用態度上的轉變 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "6": {
+    "slide": 6,
+    "text": "過去 現在 抗拒 判斷 心態上的轉變 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "7": {
+    "slide": 7,
+    "text": "AI成了行政教學生活心情重要的伙伴 官方邀請信 課程學習單 冰箱剩菜料理 策展主題發想 冗到不行的N種 計畫報告 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "8": {
+    "slide": 8,
+    "text": "不是在用工具，是在跟人協作 放掉SOP，什麼面向都可以嘗試 降壓求助與詢問的人際心理壓力 它把屬於我的時間交還給我 堆疊出來的心理韌性 更深層的感受 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "9": {
+    "slide": 9,
+    "text": "放下工具學習的SOP 打開專案實驗的思維 本日不談工具怎麼用/談怎麼思考跟AI工作 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "10": {
+    "slide": 10,
+    "text": "高度客製化 人手資源不足 開啟與AI協作專案的好時機 需求規範清析 現有工具無法滿足 時間專業經費匱乏 專案目標非常明確 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "11": {
+    "slide": 11,
+    "text": "【適合Vibe Coding的專案情境】 1️⃣ 快速原型與概念驗證（Prototype / MVP） 新產品想法測試 教學活動小工具（互動網頁、學習小遊戲） 展覽、工作坊、黑客松作品 「先做出來看看再說」 👉 關鍵價值：速度 &gt; 完美 2️⃣ 個人效率工具（Personal Productivity） 自動整理資料的小程式 教學行政自動化（名單整理、報表生成） 小型資料分析或視覺化 Notion / Google Sheet / API 串接工具 👉 通常使用者＝開發者，風險低 3️⃣ 創意探索與跨域實驗 AI互動作品 遊戲化學習設計 教學情境模擬 UI/UX概念快速測試 👉 重點是 「探索可能性」 ，不是長期維護 4️⃣ 學習與入門程式設計 非工程背景的人入門開發 理解系統邏輯 教學生做小作品 👉 非常適合教育現場（尤其做AI教學） ※GPT提供 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "12": {
+    "slide": 12,
+    "text": "【要與AI開啟專案協作的碎念心理準備】 如同任何專案一樣，預留工作時程。事情永遠不會像你想的那麼順 它其實也沒那麼聰明，能多給越清楚的架構，專案推進會更流暢 要有大顆的心臟，拼命的砍掉重來是協作日常，每項專案都會有N個版本 沒想法的時候先跟它聊聊，可以幫助發散思考，但收斂依然要靠自己 如果它真的累了開始鬧脾氣，也是提醒自己該休息一下的時候 不要放棄就算卡關也可以先擱置。專案會失敗，但絕對絕對就是不要放棄 轉移注意力做的別的事情先，新的思維對話有機會從不同角度開啟，專案又有機會往前推。 它不是數位工具沒有一堆的工具列，只能看著空白畫布，心想到底要從何開始... 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "13": {
+    "slide": 13,
+    "text": "TSCHOOL 學習成果平 台 自由行 協作記帳 平台 T SCHOOL 校史平臺 字 音字形自 學互動網 自我覺察 工作坊 報告書 學習歷程指 南互動自學 平台 202 6 臺灣科教展 互動闖關 2026數實祭 主廚上菜 本日分享的專案主題與類型 01學校行政 02自主學習任務 03課程教學 05生活與學習 04策展專案 TSCHOOL 招生心理 測驗 自我挑戰 管理版 轉型正義 小測驗 易經六十四卦自主學習平臺 AI學習歷 程密室 自由花蕊 實境解謎 傾城之戀 閱讀解謎 跨校交流 闖關 策展視 覺與空 間設計 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://www.canva.com/link?target=https%3A%2F%2Fsites.google.com%2Ftschool.tp.edu.tw%2F0909%2Fhome%3Fauthuser%3D2&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document",
+      "https://www.canva.com/link?target=https%3A%2F%2Fsites.google.com%2Fview%2Ftrip-count%2F%25E5%2587%25BA%25E5%259C%258B%25E8%2587%25AA%25E9%2581%258A%25E8%25A1%258C%25E5%258D%2594%25E4%25BD%259C%25E8%25A8%2598%25E5%25B8%25B3%25E7%25B6%25B2%25E9%25A0%2581&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document",
+      "https://www.canva.com/link?target=https%3A%2F%2Fsites.google.com%2Ftschool.tp.edu.tw%2Ftschool20250915%2Ftschool&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document",
+      "https://www.canva.com/link?target=https%3A%2F%2Fsites.google.com%2Ftschool.tp.edu.tw%2Ftschool-historyt%2Ft-school-history&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document",
+      "https://www.canva.com/link?target=https%3A%2F%2Fsites.google.com%2Fview%2Ftschool100%2F00%25E5%25B9%25B4%25E5%25AD%2597%25E9%259F%25B3%25E5%25AD%2597%25E5%25BD%25A2%25E7%25AB%25B6%25E8%25B3%25BD%25E7%25B7%25B4%25E7%25BF%2592-%25E4%25BA%2592%25E5%258B%2595%25E5%25AD%25B8%25E7%25BF%2592%25E7%25B3%25BB%25E7%25B5%25B1&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document",
+      "https://www.canva.com/link?target=https%3A%2F%2Fsites.google.com%2Fview%2Ftschool-self-awareness%2Ftschool-%25E8%2587%25AA%25E6%2588%2591%25E8%25A6%25BA%25E5%25AF%259F&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document",
+      "https://www.canva.com/link?target=https%3A%2F%2Fsites.google.com%2Fview%2Ftschoollearningportfolio%2F1031&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document",
+      "https://www.canva.com/link?target=https%3A%2F%2Fsites.google.com%2Fview%2Ftschooldigitalera%2F%25E6%2595%25B8%25E4%25BD%258D%25E6%2599%2582%25E4%25BB%25A3&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document",
+      "https://www.canva.com/link?target=https%3A%2F%2Fsites.google.com%2Fview%2Ftschool2026%2F2026%25E6%2595%25B8%25E5%25AF%25A6%25E7%25A5%25AD&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document",
+      "https://www.canva.com/link?target=https%3A%2F%2Fsites.google.com%2Ftschool.tp.edu.tw%2Ftschooltest%3Fusp%3Dsharing&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document",
+      "https://www.canva.com/link?target=https%3A%2F%2Fself-awareness-115-challenge.tschool-taip-6197.chatgpt.site%2F%23s-hodvvxl0&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document",
+      "https://www.canva.com/link?target=https%3A%2F%2Fsites.google.com%2Fview%2Ftransitional-justice-yoyo%2F%25E8%2587%25BA%25E7%2581%25A3%25E8%25BD%2589%25E5%259E%258B%25E6%25AD%25A3%25E7%25BE%25A9%25E5%25B0%258F%25E6%25B8%25AC%25E9%25A9%2597&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document",
+      "https://www.canva.com/link?target=https%3A%2F%2Fsites.google.com%2Fview%2Fyichin20260310%2F64%25E6%258E%259B%25E8%2587%25AA%25E5%25AD%25B8%25E7%25B6%25B2%3Fauthuser%3D0&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document",
+      "https://www.canva.com/link?target=https%3A%2F%2Fivy7579-spec.github.io%2Fai-learning-portfolio-game%2F&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document",
+      "https://www.canva.com/link?target=https%3A%2F%2Fziyou-huarui-demo.tschool-taip-6197.chatgpt.site&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document",
+      "https://www.canva.com/link?target=https%3A%2F%2Fsites.google.com%2Fview%2Floveinfallencity2026%2Floveinfallencity&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document",
+      "https://www.canva.com/link?target=https%3A%2F%2Fschool-exchange-115-demo.tschool-taip-6197.chatgpt.site%2Fgame%2F&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document"
+    ]
+  },
+  "14": {
+    "slide": 14,
+    "text": "TSCHOOL 學習成果平 台 T SCHOOL 校史平臺 01學校行政 TSCHOOL 招生心理測 驗 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://www.canva.com/link?target=https%3A%2F%2Fsites.google.com%2Ftschool.tp.edu.tw%2F0909%2Fhome%3Fauthuser%3D2&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document",
+      "https://www.canva.com/link?target=https%3A%2F%2Fsites.google.com%2Ftschool.tp.edu.tw%2Ftschool20250915%2Ftschool&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document",
+      "https://www.canva.com/link?target=https%3A%2F%2Fsites.google.com%2Ftschool.tp.edu.tw%2Ftschool-historyt%2Ft-school-history&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document",
+      "https://www.canva.com/link?target=https%3A%2F%2Fsites.google.com%2Ftschool.tp.edu.tw%2Ftschooltest%3Fusp%3Dsharing&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document"
+    ]
+  },
+  "15": {
+    "slide": 15,
+    "text": "邁入成校第四屆，沒有專用的學習成果平台 包含升學備審資料/學習歷程檔案/畢業專題 急需建立系統資料庫存檔及展示 因涉學生個資，平台需限學校內部使用 多方管理端均可增加每學年度的各項檔案 需建立類別及學年度篩選功能 01 TSCHOOL學習成果平 台 專案發生需求情境 01校園管理專案 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://www.canva.com/link?target=https%3A%2F%2Fsites.google.com%2Ftschool.tp.edu.tw%2F0909%2Fhome%3Fauthuser%3D2&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document",
+      "https://www.canva.com/link?target=https%3A%2F%2Fsites.google.com%2Ftschool.tp.edu.tw%2Ftschool20250915%2Ftschool&amp;design=DAHZ1N312-w&amp;utl=h1eeaa63079&amp;accessRole=viewer&amp;linkSource=document"
+    ]
+  },
+  "16": {
+    "slide": 16,
+    "text": "01 崩潰的專案協作歷程 01學校行政 TSCHOOL學習成果平 台 對程式的思維專業不足 滿腦子只有UI界面沒有邏輯 當倒過來先想系統再生界面時 GEMINI直接說它不會 最後靠GPT先生成連動SHEET的CODE 再由GEMINI接棒繼續推動進度 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://sites.google.com/tschool.tp.edu.tw/0909/home?authuser=2",
+      "https://sites.google.com/tschool.tp.edu.tw/tschool20250915/tschool"
+    ]
+  },
+  "17": {
+    "slide": 17,
+    "text": "01 TSCHOOL學習成果平 台 透過資料庫與前台連動 發揮不同的AI強項 GOOGLE SITE解決權限問題 多方可以後台建立資料 卡關時停一停找人聊聊 合格原因 20261124 - GPT X Tschoolchool 01學校行政",
+    "links": [
+      "https://sites.google.com/tschool.tp.edu.tw/0909/home?authuser=2",
+      "https://sites.google.com/tschool.tp.edu.tw/tschool20250915/tschool"
+    ]
+  },
+  "18": {
+    "slide": 18,
+    "text": "在第一屆使用GOOGLE表單製作過招生用互動心理測驗 認識TSCHOOL的實驗系統與特色 傳達TSCHOOL適配的學習特質 使用者探所自我特質與TSCHOOL的適配性 透過互動遊戲進行宣傳招生 01 TSCHOOL招生心理測驗 專案發生需求情境 20261124 - GPT X Tschoolchool 01學校行政",
+    "links": [
+      "https://sites.google.com/tschool.tp.edu.tw/tschooltest?usp=sharing"
+    ]
+  },
+  "19": {
+    "slide": 19,
+    "text": "01 TSCHOOL招生心理測驗 表單只會用基分計算區間 和AI討論後優化以五大能力對 應每個選項做學習光譜的落點 AI協助以情境生成圖片美編 在心理互動測驗類型在機分或權重公式上自由度高 合格原因 20261124 - GPT X Tschoolchool 01學校行政",
+    "links": [
+      "https://sites.google.com/tschool.tp.edu.tw/tschooltest?usp=sharing"
+    ]
+  },
+  "20": {
+    "slide": 20,
+    "text": "數實已經邁向創校第五年，校史文字資料一直都有累積但找不到適合的呈現方式 有大量影音記錄資料 需要持續每年更新文字影音記錄 可以外掛在官網的一個平臺 01 TSCHOOL校史平臺 專案發生需求情境 20261124 - GPT X Tschoolchool 01學校行政",
+    "links": [
+      "https://sites.google.com/tschool.tp.edu.tw/tschool-historyt/t-school-history"
+    ]
+  },
+  "21": {
+    "slide": 21,
+    "text": "01 TSCHOOL校史平臺 用了分類鍵來清楚表達每筆資料 建置了影音牆 使用GOOGLE SHEET部屬 讓每年度的文字影音資料非常 方便的去建置並跟前臺同步 合格原因 20261124 - GPT X Tschoolchool 01學校行政",
+    "links": [
+      "https://sites.google.com/tschool.tp.edu.tw/tschool-historyt/t-school-history"
+    ]
+  },
+  "22": {
+    "slide": 22,
+    "text": "字 音字形 自學互動 網 學習歷程 指南互動 自學平台 202 6 臺灣科教展 互動闖關 02自主學習任務 AI學習歷 程密室 傾城之戀 閱讀解謎 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://sites.google.com/view/tschool100/00%E5%B9%B4%E5%AD%97%E9%9F%B3%E5%AD%97%E5%BD%A2%E7%AB%B6%E8%B3%BD%E7%B7%B4%E7%BF%92-%E4%BA%92%E5%8B%95%E5%AD%B8%E7%BF%92%E7%B3%BB%E7%B5%B1",
+      "https://sites.google.com/view/tschoollearningportfolio/1031",
+      "https://sites.google.com/view/tschooldigitalera/%E6%95%B8%E4%BD%8D%E6%99%82%E4%BB%A3",
+      "https://ivy7579-spec.github.io/ai-learning-portfolio-game/",
+      "https://sites.google.com/view/loveinfallencity2026/loveinfallencity"
+    ]
+  },
+  "23": {
+    "slide": 23,
+    "text": "02 2025 臺灣科教展互動闖關 高一校必修「數位時代」固定每年學習活動 只有半天的工作天就必須完工 TA使用情境為手機與平板 需能下載的學習果進行作業繳交 專案發生需求情境 02自主學習任務 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://sites.google.com/view/tschooldigitalera/%E6%95%B8%E4%BD%8D%E6%99%82%E4%BB%A3"
+    ]
+  },
+  "24": {
+    "slide": 24,
+    "text": "時間壓力超大，開展當天需完成互動任務設計 當晚就要發佈任務連結給學生 跟AI溝通不夠清楚，輸入文字一直超出框架 PDF本來輕鬆下載，但因版本落差新版一直失敗 IPAD和IOS網頁視窗，畫面會回彈 崩潰的專案協作歷程 02 2025 臺灣科教展互動闖關 02自主學習任務 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://sites.google.com/view/tschooldigitalera/%E6%95%B8%E4%BD%8D%E6%99%82%E4%BB%A3"
+    ]
+  },
+  "25": {
+    "slide": 25,
+    "text": "02 2025臺灣科教展互動闖關 時間壓力，放棄完美 透過靠不同版本記錄交互工作 解決PDF無法下載的問題 跨載具跨系統的封測與修正 相較過去文件式學習單更為活潑美觀又有趣 合格原因 01校園管理專案 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://sites.google.com/view/tschooldigitalera/%E6%95%B8%E4%BD%8D%E6%99%82%E4%BB%A3"
+    ]
+  },
+  "26": {
+    "slide": 26,
+    "text": "靠AI AGENT，2小時就生出來 相較去年AI的提升又優化了很多部份，如PDF排版、展場地圖 用去年的架構來改更為高效 加入更多的互動遊戲化關卡 合格原因 02 2026臺灣科教展互動闖關 01校園管理專案 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://edtech-2026-explore.tschool-taip-6197.chatgpt.site"
+    ]
+  },
+  "27": {
+    "slide": 27,
+    "text": "02 學習歷程指南 互動自學平台 從來沒用過教育部學習歷程指南 突然被邀請分享會怎麼使用這份教材 只有不到兩週的工作時程 TA使用情境為與電子手冊互動自學 以更高效的方式提供電子閱覽體驗 專案發生需求情境 02自主學習任務 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://sites.google.com/view/tschoollearningportfolio/1031"
+    ]
+  },
+  "28": {
+    "slide": 28,
+    "text": "解決電子檔目次沒有超連結 適合作為翻閱指南前的概念建立 的前導自主學習教材 依照教材單元架構設計互動段落 及檢核活動加深印象 合格原因 02 學習歷程指南互動自學平台 02自主學習任務 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://sites.google.com/view/tschoollearningportfolio/1031"
+    ]
+  },
+  "29": {
+    "slide": 29,
+    "text": "02 字音字形自 學互動網 導生國文寫作別字量太高 紙本練習核對及盯進度效率低 高度依賴平板學習 需要有「書寫」的功能 需要能下載練習歷程記錄以便追蹤 專案發生需求情境 02自主學習任務 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://sites.google.com/view/tschool100/00%E5%B9%B4%E5%AD%97%E9%9F%B3%E5%AD%97%E5%BD%A2%E7%AB%B6%E8%B3%BD%E7%B7%B4%E7%BF%92-%E4%BA%92%E5%8B%95%E5%AD%B8%E7%BF%92%E7%B3%BB%E7%B5%B1"
+    ]
+  },
+  "30": {
+    "slide": 30,
+    "text": "逐次的餵題庫，但吃了後面的丟了前面的 專案執行間格太久，AI把題庫又丟光 該如何呈現手寫歷程花很多時間 網頁上畫布框內書寫範圍設定卡關 換到IPAD上能流暢書寫另個巨大困難 崩潰的專案協作歷程 02 字音字形自學 互動網 02自主學習任務 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://sites.google.com/view/tschool100/00%E5%B9%B4%E5%AD%97%E9%9F%B3%E5%AD%97%E5%BD%A2%E7%AB%B6%E8%B3%BD%E7%B7%B4%E7%BF%92-%E4%BA%92%E5%8B%95%E5%AD%B8%E7%BF%92%E7%B3%BB%E7%B5%B1"
+    ]
+  },
+  "31": {
+    "slide": 31,
+    "text": "放棄大量題庫匯入，調整為多個網頁分頁 畫筆卡頓問題無解，放大書寫畫框以手指書寫 跨載具跨系統的封測與修正 可順利完成歷程記錄下載 合格原因 02 字 音字形自學互動網 02自主學習任務 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://sites.google.com/view/tschool100/00%E5%B9%B4%E5%AD%97%E9%9F%B3%E5%AD%97%E5%BD%A2%E7%AB%B6%E8%B3%BD%E7%B7%B4%E7%BF%92-%E4%BA%92%E5%8B%95%E5%AD%B8%E7%BF%92%E7%B3%BB%E7%B5%B1"
+    ]
+  },
+  "32": {
+    "slide": 32,
+    "text": "02 AI學習歷程密室 專案發生需求情境 - 首次解鎖使用AI製作密室逃脫遊戲 02自主學習任務 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://ivy7579-spec.github.io/ai-learning-portfolio-game/",
+      "https://sites.google.com/view/learning-portfoliotschool2026/ai%E5%AD%B8%E7%BF%92%E6%AD%B7%E7%A8%8B%E5%AF%86%E5%AE%A4",
+      "https://sites.google.com/view/tteesstt2026/test-1"
+    ]
+  },
+  "33": {
+    "slide": 33,
+    "text": "02 AI學習歷程密室 AI 對密室解謎的理解 02自主學習任務 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://ivy7579-spec.github.io/ai-learning-portfolio-game/"
+    ]
+  },
+  "34": {
+    "slide": 34,
+    "text": "從雛型架構邊摸邊長關卡 摸索的過程中確立遊戲核心 逐步讓關卡對焦核心理念 掌握密室逃脫類型遊戲元素 細 修關卡及難易度調整(遊戲時間) 素材生成及音樂添加 合格原因 02 AI學習歷程密室 02自主學習任務 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://ivy7579-spec.github.io/ai-learning-portfolio-game/"
+    ]
+  },
+  "35": {
+    "slide": 35,
+    "text": "02 傾城之戀-閱讀解謎闖關遊戲 專案發生需求情境 02自主學習任務 20261124 - GPT X Tschoolchool 把「閱讀」從接受變成行動 讓「抽象文學感受」變成可操作經驗 讓「閱讀理 解」升級成「敘事推理」 改變了教師角色-把文本轉譯成體驗 讓 AI 不只是「代寫工具」 重新定義「國文課可以是什麼」 學生真正重要的能力是什麼？",
+    "links": [
+      "https://sites.google.com/view/loveinfallencity2026/loveinfallencity"
+    ]
+  },
+  "36": {
+    "slide": 36,
+    "text": "02 02自主學習任務 傾城之戀-閱讀解謎闖關遊戲 GPT的穩定度目前比GEMINI高非常多，最後倒 過來GPT跑CODE，GEMINI跑圖和生音樂 互動設計上有部份限制 可以多跟GPT討論CODE能做到的操作體驗 關卡架構先定調後，關卡可以再逐步細修深化體驗 多邀請不同專長背景的伙伴協助封測 蒐集不同回饋可以協助遊戲開發的迭代優化 創作速度沒有變快，花更多時間在磨內容 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://sites.google.com/view/loveinfallencity2026/loveinfallencity"
+    ]
+  },
+  "37": {
+    "slide": 37,
+    "text": "《傾城之戀》互動式閱讀解謎專題 其實已經不只是「數位教材」 而是把文學課重新定義成一種 「可被體驗的敘事空間」 合格原因 02 02自主學習任務 20261124 - GPT X Tschoolchool 傾城之戀-閱讀解謎闖關遊戲 遊戲封測迭代 50% 架構設計 20% 關卡設計 15% 閱讀挑選文本 10% 素材生成 5%",
+    "links": [
+      "https://sites.google.com/view/loveinfallencity2026/loveinfallencity"
+    ]
+  },
+  "38": {
+    "slide": 38,
+    "text": "自我覺察 工作坊 報告書 03課程教學 自我挑戰 管理版 跨校交流 闖關 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://sites.google.com/view/tschool-self-awareness/tschool-%E8%87%AA%E6%88%91%E8%A6%BA%E5%AF%9F",
+      "https://self-awareness-115-challenge.tschool-taip-6197.chatgpt.site/#s-hodvvxl0",
+      "https://school-exchange-115-demo.tschool-taip-6197.chatgpt.site/game/"
+    ]
+  },
+  "39": {
+    "slide": 39,
+    "text": "03 03課程教學 20261124 - GPT X Tschoolchool 自我覺察工作坊報告書 專案發生需求情境 實體工作坊的復盤學習記錄 希望有AI進來做評估引導 兩次工作坊日期隔太久，要有存檔功能 要有報告生成功能 AI輔助需要雙版本，API由使用端自行提供",
+    "links": [
+      "https://sites.google.com/view/tschool-self-awareness/tschool-%E8%87%AA%E6%88%91%E8%A6%BA%E5%AF%9F"
+    ]
+  },
+  "40": {
+    "slide": 40,
+    "text": "合格原因 20260417 - GEMINI X Tschool 03 自我覺察工作坊報告書 03課程教學",
+    "links": [
+      "https://sites.google.com/view/tschool-self-awareness/tschool-%E8%87%AA%E6%88%91%E8%A6%BA%E5%AF%9F"
+    ]
+  },
+  "41": {
+    "slide": 41,
+    "text": "03 03課程教學 20261124 - GPT X Tschoolchool 自我挑戰管理版 專案發生需求情境 前兩年使用過MIRO和NOTION，效果都不佳 MIRO太亂，NOTION進出麻煩 需要讓大家能夠共覽和互動 需要有每月的執行記錄 可以支援多種檔型附件的貼文",
+    "links": [
+      "https://self-awareness-115-challenge.tschool-taip-6197.chatgpt.site/#s-hodvvxl0"
+    ]
+  },
+  "42": {
+    "slide": 42,
+    "text": "03 03課程教學 20261124 - GPT X Tschoolchool 自我挑戰管理版 滿慌亂的執行歷程 真的在課堂壓力測試很可怕 牽涉到前後台資料寫入， 後台寫入太慢或前台獨取太慢 多人同時寫入時前台大當機 多人同時寫入資料會不見 BENNER圖檔太大讀太久",
+    "links": [
+      "https://self-awareness-115-challenge.tschool-taip-6197.chatgpt.site"
+    ]
+  },
+  "43": {
+    "slide": 43,
+    "text": "合格原因 20260417 - GEMINI X Tschool 03 03課程教學 不是太完美但堪用 請學生可以分流記錄跟匯出存檔 到目前為止功能運作都OK 如果OK明年會持續使用它 自我挑戰管理版",
+    "links": [
+      "https://self-awareness-115-challenge.tschool-taip-6197.chatgpt.site"
+    ]
+  },
+  "44": {
+    "slide": 44,
+    "text": "03 03課程教學 20261124 - GPT X Tschoolchool 跨校交流 闖關 -最想環遊的世界 專案發生需求情境 數實/景美/金陵/大甲高中四校固定輪流辦理實體跨校交流活動 數實上一RUN玩過課程賓果了，年底這次不知道還能玩什麼 需要四門課互相交流認識課程核心 要強化\"交流\"的本質 希望活動結尾要有儀式感",
+    "links": [
+      "https://school-exchange-115-demo.tschool-taip-6197.chatgpt.site/game/"
+    ]
+  },
+  "45": {
+    "slide": 45,
+    "text": "合格原因 提供四門課教師任務共編 提供學生互動任務 只要一隻手機就能闖關 活動歷程可下載PDF做記錄 可獲得電子機票和共享世界地圖 20260417 - GEMINI X Tschool 03 03課程教學 跨校交流 闖關 -最想環遊的世界",
+    "links": [
+      "https://school-exchange-115-demo.tschool-taip-6197.chatgpt.site/game/"
+    ]
+  },
+  "46": {
+    "slide": 46,
+    "text": "2026數實祭 主廚上菜 04策展專案 策展視覺與空間設計 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://ivy7579-spec.github.io/chef-serving-game/?v=f74554c&fbclid=IwY2xjawTrMepwZG9mBWV4dG4DYWVtAjEwAGJyaWQRMW90MjNTS3BXc0dwYUFpaXBzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEe2APsYJM-9M_rM9V47oxfw0CECG0zxXzICdH4_djxRqF7M2kHwa8RfksXcoU_aem_adarF3Wmqz3877wt7-q8pQ",
+      "https://sites.google.com/view/tschool2026/2026%E6%95%B8%E5%AF%A6%E7%A5%AD"
+    ]
+  },
+  "47": {
+    "slide": 47,
+    "text": "每年必辦的數實祭學習成果展 已有主題展區的基礎的論述 要結合主題展區設計可互動的體驗 要能搭配觸屏進行互動 需要玩家能取得自己生成的名信片 04 2026數實祭總舖師上菜-主廚上菜 專案發生需求情境 04策展專案 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://ivy7579-spec.github.io/chef-serving-game/?v=f74554c&fbclid=IwY2xjawTrMepwZG9mBWV4dG4DYWVtAjEwAGJyaWQRMW90MjNTS3BXc0dwYUFpaXBzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEe2APsYJM-9M_rM9V47oxfw0CECG0zxXzICdH4_djxRqF7M2kHwa8RfksXcoU_aem_adarF3Wmqz3877wt7-q8pQ"
+    ]
+  },
+  "48": {
+    "slide": 48,
+    "text": "04 2026數實祭總舖師上菜-主廚上菜 希望玩家能寄名料理信片給自己 技術問題跟AI討論很久 本來想客製每道菜要有自己的破關影片 依據展區設計符合精神的互動任務 04策展專案 崩潰的專案協作歷程 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://ivy7579-spec.github.io/chef-serving-game/?v=f74554c&fbclid=IwY2xjawTrMepwZG9mBWV4dG4DYWVtAjEwAGJyaWQRMW90MjNTS3BXc0dwYUFpaXBzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEe2APsYJM-9M_rM9V47oxfw0CECG0zxXzICdH4_djxRqF7M2kHwa8RfksXcoU_aem_adarF3Wmqz3877wt7-q8pQ"
+    ]
+  },
+  "49": {
+    "slide": 49,
+    "text": "合格原因 2026數實祭總舖師上菜-主廚上菜 完成的網頁和觸屏體驗搭配起來相當流暢 在展場的互動人流很高 04 04策展專案 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://ivy7579-spec.github.io/chef-serving-game/?v=f74554c&fbclid=IwY2xjawTrMepwZG9mBWV4dG4DYWVtAjEwAGJyaWQRMW90MjNTS3BXc0dwYUFpaXBzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEe2APsYJM-9M_rM9V47oxfw0CECG0zxXzICdH4_djxRqF7M2kHwa8RfksXcoU_aem_adarF3Wmqz3877wt7-q8pQ"
+    ]
+  },
+  "50": {
+    "slide": 50,
+    "text": "總鋪師上菜主視覺歷程 20260417 - GEMINI X Tschool 04 策展視覺與空間設計 04策展專案",
+    "links": [
+      "https://sites.google.com/view/tschool2026/2026%E6%95%B8%E5%AF%A6%E7%A5%AD"
+    ]
+  },
+  "51": {
+    "slide": 51,
+    "text": "20260417 - GEMINI X Tschool 04 04策展專案 總鋪師上菜主視覺歷程 策展視覺與空間設計",
+    "links": [
+      "https://sites.google.com/view/tschool2026/2026%E6%95%B8%E5%AF%A6%E7%A5%AD"
+    ]
+  },
+  "52": {
+    "slide": 52,
+    "text": "20260417 - GEMINI X Tschool 04 04策展專案 策展視覺與空間設計 3D列印一堆小廚師",
+    "links": [
+      "https://sites.google.com/view/tschool2026/2026%E6%95%B8%E5%AF%A6%E7%A5%AD"
+    ]
+  },
+  "53": {
+    "slide": 53,
+    "text": "學校日-解憂柑仔店 空間設計提案 20260417 - GEMINI X Tschool 04 04策展專案 策展視覺與空間設計",
+    "links": [
+      "https://sites.google.com/view/tschool2026/2026%E6%95%B8%E5%AF%A6%E7%A5%AD"
+    ]
+  },
+  "54": {
+    "slide": 54,
+    "text": "04",
+    "links": []
+  },
+  "55": {
+    "slide": 55,
+    "text": "20260417 - GEMINI X Tschool 04",
+    "links": []
+  },
+  "56": {
+    "slide": 56,
+    "text": "04 20260417 - GEMINI X Tschool 04策展專案 策展視覺與空間設計 學校日-解憂柑仔店 空間設計實景",
+    "links": [
+      "https://sites.google.com/view/tschool2026/2026%E6%95%B8%E5%AF%A6%E7%A5%AD"
+    ]
+  },
+  "57": {
+    "slide": 57,
+    "text": "20261124 - GPT X Tschoolchool 04 04策展專案 策展視覺與空間設計 最想環遊的世界",
+    "links": [
+      "https://sites.google.com/view/tschool2026/2026%E6%95%B8%E5%AF%A6%E7%A5%AD"
+    ]
+  },
+  "58": {
+    "slide": 58,
+    "text": "20261124 - GPT X Tschoolchool 數位實中 汪汪 04 04策展專案 策展視覺與空間設計 最想環遊的世界",
+    "links": [
+      "https://sites.google.com/view/tschool2026/2026%E6%95%B8%E5%AF%A6%E7%A5%AD"
+    ]
+  },
+  "59": {
+    "slide": 59,
+    "text": "自由行 協作記帳 平台 轉型正義 小測驗 易經六十四 卦自主學習 平臺 自由花蕊 實境解謎 05生活與學習 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://sites.google.com/view/trip-count/%E5%87%BA%E5%9C%8B%E8%87%AA%E9%81%8A%E8%A1%8C%E5%8D%94%E4%BD%9C%E8%A8%98%E5%B8%B3%E7%B6%B2%E9%A0%81",
+      "https://sites.google.com/view/transitional-justice-yoyo/%E8%87%BA%E7%81%A3%E8%BD%89%E5%9E%8B%E6%AD%A3%E7%BE%A9%E5%B0%8F%E6%B8%AC%E9%A9%97",
+      "https://sites.google.com/view/yichin20260310/64%E6%8E%9B%E8%87%AA%E5%AD%B8%E7%B6%B2?authuser=0",
+      "https://ziyou-huarui-demo.tschool-taip-6197.chatgpt.site"
+    ]
+  },
+  "60": {
+    "slide": 60,
+    "text": "20260417 - GEMINI X Tschool 05 自由行 協作記帳平台 現成的APP無法滿足個人化使用需求 需要能多人協作共編的資料建置 需要類別日期付款人多重篩選金額 手動匯率(因現金兌換需求) 大量時間會使用手機載具 專案發生需求情境 05生活與學習",
+    "links": [
+      "https://sites.google.com/view/trip-count/%E5%87%BA%E5%9C%8B%E8%87%AA%E9%81%8A%E8%A1%8C%E5%8D%94%E4%BD%9C%E8%A8%98%E5%B8%B3%E7%B6%B2%E9%A0%81"
+    ]
+  },
+  "61": {
+    "slide": 61,
+    "text": "SHEET資料庫先試建架構 跨載具平台使用情境修正 工具列按鍵一直調整不好 暫時無法解決套換不同使用 端的SHEET資料庫問題 微崩潰的專案協作歷程 05 自由行協作記帳平台 05生活與學習 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://sites.google.com/view/trip-count/%E5%87%BA%E5%9C%8B%E8%87%AA%E9%81%8A%E8%A1%8C%E5%8D%94%E4%BD%9C%E8%A8%98%E5%B8%B3%E7%B6%B2%E9%A0%81"
+    ]
+  },
+  "62": {
+    "slide": 62,
+    "text": "合格原因 經封測後可以在真實情境運作 個人化需求全都達標 手機載具UI界面舒適 篩選與圖表功能流暢 05 05生活與學習 自由行協作記帳平台 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://sites.google.com/view/trip-count/%E5%87%BA%E5%9C%8B%E8%87%AA%E9%81%8A%E8%A1%8C%E5%8D%94%E4%BD%9C%E8%A8%98%E5%B8%B3%E7%B6%B2%E9%A0%81"
+    ]
+  },
+  "63": {
+    "slide": 63,
+    "text": "05 易經六十四卦自主學習平臺 如何加強64卦熟練度 能針對易錯的部份加強練習 專案發生需求情境 05生活與學習 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://sites.google.com/view/yichin20260310/64%E6%8E%9B%E8%87%AA%E5%AD%B8%E7%B6%B2?authuser=0"
+    ]
+  },
+  "64": {
+    "slide": 64,
+    "text": "易經六十四卦自主學習平臺 先確認基本功能 再一步步針對需求優化 分為基本進階功能 針對易錯的加強練習 可下載歷程記錄 提供卦辭回饋的複習功能 05 05生活與學習 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://sites.google.com/view/yichin20260310/64%E6%8E%9B%E8%87%AA%E5%AD%B8%E7%B6%B2?authuser=0"
+    ]
+  },
+  "65": {
+    "slide": 65,
+    "text": "05 轉型正義小測驗 純粹閒閒沒事 被社會議題燒到 玩的時候覺得算加法很煩 想幫他優化體驗 專案發生需求情境 05生活與學習 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://sites.google.com/view/transitional-justice-yoyo/%E8%87%BA%E7%81%A3%E8%BD%89%E5%9E%8B%E6%AD%A3%E7%BE%A9%E5%B0%8F%E6%B8%AC%E9%A9%97"
+    ]
+  },
+  "66": {
+    "slide": 66,
+    "text": "合格原因 和原出處作者請示過 設計為翻牌互動計分 結合 二月的記持 系列文章 作為轉型正義的公民補充教材 轉型正義小測驗 05 05生活與學習 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://www.facebook.com/hashtag/%E4%BA%8C%E6%9C%88%E7%9A%84%E8%A8%98%E6%8C%81?__cft__[0]=AZhI4JHkZRip5hzbBIoLyxRA5HFW37AepsnlSCTWdkANvPczP6yJViaduuSd6BQMdUCDebevXrnTun3l0o9Rxirjy989mVZYUeWxYJ9K-_VCzn7nnWL2fsawvaMV4qBoSoii1luM3Jz8b_XzzyuHlmY6Y67fdfbnR1togZQSjzWKrUEeSOgnfaB1B4x-p-bvbMxveff9nnwBmjU&__tn__=*NK-y-R",
+      "https://sites.google.com/view/transitional-justice-yoyo/%E8%87%BA%E7%81%A3%E8%BD%89%E5%9E%8B%E6%AD%A3%E7%BE%A9%E5%B0%8F%E6%B8%AC%E9%A9%97"
+    ]
+  },
+  "67": {
+    "slide": 67,
+    "text": "05 自由花蕊-島嶼迴聲實境解謎 被一場展覽深深打動決心要為它 製作一款零道具實境解謎 因為懶散本來想當沒這件事，但 為了115-1自我挑戰的宣靠，又 被迫逼著面對.... 這個展必須要有款實境遊戲啊~ 專案發生需求情境 05生活與學習 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://ziyou-huarui-demo.tschool-taip-6197.chatgpt.site"
+    ]
+  },
+  "68": {
+    "slide": 68,
+    "text": "05 自由花蕊-島嶼迴聲實境解謎 05生活與學習 20261124 - GPT X Tschoolchool 一開始直接讓CODEX讀資料夾 請它依規格書和每關的素材自行完成 結果非常可怕！.... 發現不能這樣一次餵一堆東西 只能先回GPT一關一關的生架構和關卡 大約到第一章OK再把CODE丟回去給CODEX 在這個架構下它就可以正常完成 然後需要一關一關的做和修 發現就算有AI很多事仍然快不起來",
+    "links": [
+      "https://docs.google.com/spreadsheets/d/1tDBWxZFrzeEbKllCir8JUL6GVM7id9ee/edit?gid=1265326958#gid=1265326958",
+      "https://ziyou-huarui-demo.tschool-taip-6197.chatgpt.site"
+    ]
+  },
+  "69": {
+    "slide": 69,
+    "text": "05 自由花蕊-島嶼迴聲實境解謎 05生活與學習 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://ziyou-huarui-demo.tschool-taip-6197.chatgpt.site"
+    ]
+  },
+  "70": {
+    "slide": 70,
+    "text": "自由花蕊-島嶼迴聲實境解謎 05 05生活與學習 合格原因 目前已完成5場次封測，8人次 搭配遊戲學習指引手冊 目前正在和中正紀念堂談授權 預定115-2辦理全國教師研習 並將教材發公文至全國各校 20261124 - GPT X Tschoolchool",
+    "links": [
+      "https://ziyou-huarui-demo.tschool-taip-6197.chatgpt.site"
+    ]
+  },
+  "71": {
+    "slide": 71,
+    "text": "還有N種想 法待開啟 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "72": {
+    "slide": 72,
+    "text": "1.跨域能力強 2.有美感有品味 3.記憶了很差 4.情緒化會鬧脾氣 5.容易自作主張 【GEMINI這朋友的畫像】 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "73": {
+    "slide": 73,
+    "text": "1.語言能力強 2.專項能力強 3.穩定而理性 4.資料蒐集高手 5.記憶力偏好 【GPT這朋友的畫像】 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "74": {
+    "slide": 74,
+    "text": "類別 代表工具 核心專長 最佳使用情境 文字生成 / 對話型 ChatGPT、Claude、Gemini 寫作、分析、規劃、程式、跨領域思考 教案、報告、專案設計、行政文件 搜尋研究型 Perplexity、Gemini Search 即時搜尋、來源整理、研究摘要 文獻查找、課前備課、趨勢研究 資料筆記型 （知識庫型） NotebookLM、ChatGPT Knowledge、Claude Projects 上傳資料後深度理解、跨文件分析、生成摘要與問答 教材整理、研究管理、會議統整、學習歷程分析 簡報與視覺文件 Gamma、Tome、Canva AI 自動生成簡報與視覺排版 教學簡報、提案、成果展示 圖片生成 DALL·E、Midjourney、Leonardo 插圖、風格設計、角色與場景生成 教材圖像、海報、品牌設計 影片生成 Runway、Pika、Sora、CapCut AI 文字轉影片、動畫生成、剪輯特效 宣傳影片、教學短片、活動紀錄 語音AI ElevenLabs、Whisper 語音生成、語音轉文字、多語翻譯 課程旁白、字幕、Podcast、會議紀錄 音樂生成 Suno、Udio AI作曲、背景音樂生成 教學影片配樂、活動音樂 程式開發 GitHub Copilot、Cursor、Codeium 程式生成、除錯、網站與工具開發 網站、APP、自動化工具 資料分析 ChatGPT Data、Excel AI、Power BI Copilot 數據整理、圖表、趨勢分析 問卷分析、學習成效、行政決策 自動化 / AI代理 Zapier、Make、AI Agents 任務自動執行、跨平台流程整合 行政自動化、批次處理、內容發布 3D建模生成 Tripo AI、Meshy、Luma AI、Spline AI 文字或圖片生成3D模型、快速建模、材質與動畫基礎處理 3D公仔、AR/VR素材、元宇宙場景、產品設計、遊戲素材 還有滿坑滿谷的AI團隊伙伴們 ※GPT匯整 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "75": {
+    "slide": 75,
+    "text": "【要與AI伙伴協作-多摸痛的領悟】 1. AI世代，怎麼做已經不是問題 「到底要做什麼」才是一直盤懸腦中 的核心問題 2. AI像體的團隊伙伴，各有專才專工。能夠交錯運用， 可以截長補短加速目標達成 3. AI又是數位工具又有自己個性 只能砸時間下去跟他相處， 摸透它的體質 4.保持對未知的警醒 不 要一次衝太快， 耐心迭代，緩慢封測修政 5.困境一定存在 在這個基礎上提升知能學習 是重要的事情 6. 承認自己現階段能力不足的 \"界限\" 適時要求助跟諮詢 7.AI不是過去數位工具的使用經驗 認知經驗的有限性 一口氣工作連緒性 8. 專案時推進自主學習 -認識什麼是APP SCRIPT -學習怎麼串API KEY/資料庫 9.卡關時該放手要放手 暫時達不成可轉個彎先用替代方案 專案能在時程內順利運作為最優先 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "76": {
+    "slide": 76,
+    "text": "跟AI工作的感受 我們更像一起 成長的伙伴 你教我 我也教你 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "77": {
+    "slide": 77,
+    "text": "製作本份簡報的時間... 第三天了... 為什麼還沒做完???? 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "78": {
+    "slide": 78,
+    "text": "當我們擁有了強大的AI團隊 AI讓產出變快，但快不起來的 是 「摔出來的歷程」 (我們的價值) 老師的...學生的... 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "79": {
+    "slide": 79,
+    "text": "深度思考 打磨拋光 真正花時間的不是生成，而是「統整歷程」 判斷萃取 這些事終究是快不起來.... 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "80": {
+    "slide": 80,
+    "text": "要做什麼 要怎麼修 Prompt不是重點，思考流程才是 要怎麼做 老師是...學生也是... 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "81": {
+    "slide": 81,
+    "text": "查證 修正 面對AI潛在風險下需具備及強化的能力 判斷 老師是...學生也是... 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "82": {
+    "slide": 82,
+    "text": "AI代工 深度學習 任務目標比工具使用更關鍵 整理型資料/簡報 心得報告（無限制條件） 開放式報告但缺乏個人情境 一次性交件型(字數導向) 解決複合問題(需決策判斷) 設計產出專案(需選擇執行) 真實情境應用(需個人經驗) 歷程反思記錄(需過程記錄) 老師是...學生更是... 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "83": {
+    "slide": 83,
+    "text": "AI專案的流程心法 表面上是.... 出一張嘴的公主病世代 當公舉的感覺真爽 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "84": {
+    "slide": 84,
+    "text": "你真的需要的是 怎樣當個清楚的 BUT AI專案的流程心法 甲方 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "85": {
+    "slide": 85,
+    "text": "AI專案的流程心法 你要有更專業背景 才能當一個稱職甲方 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "86": {
+    "slide": 86,
+    "text": "AI專案的流程心法 先求有 再求好 持續迭代 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "87": {
+    "slide": 87,
+    "text": "AI對於教育的意義 它它它....... 真的真的真的.... 可以客製化量身定製 個別需求深度學習 20261124 - GPT X Tschoolchool",
+    "links": []
+  },
+  "88": {
+    "slide": 88,
+    "text": "",
+    "links": []
+  },
+  "89": {
+    "slide": 89,
+    "text": "",
+    "links": []
+  },
+  "90": {
+    "slide": 90,
+    "text": "",
+    "links": []
+  },
+  "91": {
+    "slide": 91,
+    "text": "20260417 - GEMINI X Tschool 謝謝被社畜操到壞掉的 雞皮踢和雞摸耐好同事 謝謝被社畜操到壞掉的 雞皮踢和雞摸耐好同事 汪汪解謎黑洞清單 汪汪解謎黑洞清單 汪汪 謝謝被社畜操到壞掉的 雞皮踢和雞摸耐好同事 謝謝被社畜操到壞掉的 雞皮踢和雞摸耐好同事 汪汪解謎黑洞清單 汪汪解謎黑洞清單 汪汪",
+    "links": [
+      "https://www.facebook.com/profile.php?id=100000512468628",
+      "https://docs.google.com/spreadsheets/d/1o8b6GZ5cQDbrK3NzoNjdgnWWy9aZLlonI6wqp1V3KZY/edit?gid=0#gid=0"
+    ]
+  }
+}

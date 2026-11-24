@@ -2,7 +2,7 @@ const fs = require('fs');
 const docx = require('docx');
 const {
     Document, Packer, Paragraph, TextRun, HeadingLevel, Table, TableRow, TableCell,
-    WidthType, BorderStyle, AlignmentType, ShadingType, Header, Footer, PageNumber
+    WidthType, BorderStyle, AlignmentType, ShadingType, Header, Footer, PageNumber, ExternalHyperlink
 } = docx;
 
 // Color Palette
@@ -70,7 +70,7 @@ function createCell(text, isBold = false, bgColor = "FFFFFF", align = AlignmentT
     });
 }
 
-function createCallout(title, content, bgColor = BG_LIGHT_BLUE, borderColor = SECONDARY_COLOR) {
+function createCalloutWithLink(title, content, linkText = null, linkUrl = null, bgColor = BG_LIGHT_BLUE, borderColor = SECONDARY_COLOR) {
     const lines = content.split('\n');
     const paragraphs = [
         new Paragraph({
@@ -98,6 +98,36 @@ function createCallout(title, content, bgColor = BG_LIGHT_BLUE, borderColor = SE
         }))
     ];
 
+    if (linkText && linkUrl) {
+        paragraphs.push(
+            new Paragraph({
+                spacing: { before: 80, after: 40 },
+                children: [
+                    new TextRun({
+                        text: "🌐 線上實體系統展示：",
+                        bold: true,
+                        size: 20,
+                        font: "Microsoft JhengHei",
+                        color: SECONDARY_COLOR
+                    }),
+                    new ExternalHyperlink({
+                        children: [
+                            new TextRun({
+                                text: linkText + " (點擊開啟連結)",
+                                style: "Hyperlink",
+                                color: "0284C7",
+                                underline: {},
+                                size: 20,
+                                font: "Microsoft JhengHei"
+                            })
+                        ],
+                        link: linkUrl
+                    })
+                ]
+            })
+        );
+    }
+
     return new Table({
         width: { size: 100, type: WidthType.PERCENTAGE },
         rows: [
@@ -122,7 +152,7 @@ function createCallout(title, content, bgColor = BG_LIGHT_BLUE, borderColor = SE
 function p(text, options = {}) {
     const {
         bold = false,
-        size = 22, // 11pt
+        size = 22,
         color = DARK_TEXT,
         align = AlignmentType.LEFT,
         before = 80,
@@ -154,7 +184,7 @@ function h1(text) {
             new TextRun({
                 text,
                 bold: true,
-                size: 32, // 16pt
+                size: 32,
                 font: "Microsoft JhengHei",
                 color: PRIMARY_COLOR
             })
@@ -171,7 +201,7 @@ function h2(text) {
             new TextRun({
                 text,
                 bold: true,
-                size: 26, // 13pt
+                size: 26,
                 font: "Microsoft JhengHei",
                 color: SECONDARY_COLOR
             })
@@ -179,25 +209,8 @@ function h2(text) {
     });
 }
 
-function h3(text) {
-    return new Paragraph({
-        heading: HeadingLevel.HEADING_3,
-        alignment: AlignmentType.LEFT,
-        spacing: { before: 180, after: 80 },
-        children: [
-            new TextRun({
-                text,
-                bold: true,
-                size: 22, // 11pt
-                font: "Microsoft JhengHei",
-                color: ACCENT_COLOR
-            })
-        ]
-    });
-}
-
 async function buildHandbook() {
-    console.log("開始編譯高規格 Word 研習手冊...");
+    console.log("開始編譯高規格 Word 研習手冊（含 91 頁完整專案與超連結）...");
 
     const doc = new Document({
         styles: {
@@ -216,7 +229,7 @@ async function buildHandbook() {
                     }
                 },
                 children: [
-                    new Paragraph({ spacing: { before: 1200 } }),
+                    new Paragraph({ spacing: { before: 1000 } }),
                     new Paragraph({
                         alignment: AlignmentType.CENTER,
                         spacing: { before: 200, after: 100 },
@@ -224,7 +237,7 @@ async function buildHandbook() {
                             new TextRun({
                                 text: "AI 任務設計師",
                                 bold: true,
-                                size: 56, // 28pt
+                                size: 56,
                                 font: "Microsoft JhengHei",
                                 color: PRIMARY_COLOR
                             })
@@ -235,9 +248,9 @@ async function buildHandbook() {
                         spacing: { before: 80, after: 300 },
                         children: [
                             new TextRun({
-                                text: "GEMINI / GPT 畫布裡的自主學習與跨域專案實踐手冊",
+                                text: "讓 AI 成為工作好夥伴：自主學習與跨域專案全集",
                                 bold: true,
-                                size: 32, // 16pt
+                                size: 32,
                                 font: "Microsoft JhengHei",
                                 color: SECONDARY_COLOR
                             })
@@ -248,7 +261,7 @@ async function buildHandbook() {
                         spacing: { before: 100, after: 600 },
                         children: [
                             new TextRun({
-                                text: "從「工具使用者」轉變為「任務發想者」與「稱職的甲方」之專案實踐心法",
+                                text: "臺北市數位實驗高中（T-School）汪檍老師 91 頁研習講義與 20+ 個落地專案超連結實錄",
                                 size: 24,
                                 font: "Microsoft JhengHei",
                                 color: MUTED_TEXT,
@@ -257,14 +270,16 @@ async function buildHandbook() {
                         ]
                     }),
 
-                    createCallout(
+                    createCalloutWithLink(
                         "📌 核心教育哲學金句",
                         "「PROMPT 不是重點，思考流程才是：要做什麼 ➔ 怎麼做 ➔ 怎麼修。」\n「我們更像一起成長的夥伴：你教我，我也教你。」\n「你要有更專業的背景與清晰的需求，才能當一個稱職的甲方。」\n「先求有，再求好，持續迭代。」",
+                        null,
+                        null,
                         BG_WARM,
                         ACCENT_COLOR
                     ),
 
-                    new Paragraph({ spacing: { before: 1400 } }),
+                    new Paragraph({ spacing: { before: 1200 } }),
 
                     new Table({
                         width: { size: 100, type: WidthType.PERCENTAGE },
@@ -278,27 +293,25 @@ async function buildHandbook() {
                             new TableRow({
                                 children: [
                                     createCell("研習對象", true, BG_LIGHT_BLUE, AlignmentType.CENTER, 30),
-                                    createCell("南投國中全體教師、國中小數位學習與資訊應用推動教師", false, "FFFFFF", AlignmentType.LEFT, 70)
+                                    createCell("南投國中全體教師、國中小數位學習與資訊科技推動教師", false, "FFFFFF", AlignmentType.LEFT, 70)
                                 ]
                             }),
                             new TableRow({
                                 children: [
-                                    createCell("研習主題", true, BG_LIGHT_BLUE, AlignmentType.CENTER, 30),
-                                    createCell("AI 協作開發、Vibe Coding 理念、16 個落地教育專案、Prompt 任務工程", false, "FFFFFF", AlignmentType.LEFT, 70)
+                                    createCell("簡報版本收錄", true, BG_LIGHT_BLUE, AlignmentType.CENTER, 30),
+                                    createCell("雙版本整合：91 頁最新落地版 (20261124) + 73 頁精華版", false, "FFFFFF", AlignmentType.LEFT, 70)
                                 ]
                             }),
                             new TableRow({
                                 children: [
-                                    createCell("彙整產製日期", true, BG_LIGHT_BLUE, AlignmentType.CENTER, 30),
+                                    createCell("產製與備查日期", true, BG_LIGHT_BLUE, AlignmentType.CENTER, 30),
                                     createCell("中華民國 115 年 11 月 24 日（2026/11/24）", false, "FFFFFF", AlignmentType.LEFT, 70)
                                 ]
                             })
                         ]
                     }),
 
-                    new Paragraph({
-                        pageBreakBefore: true
-                    })
+                    new Paragraph({ pageBreakBefore: true })
                 ]
             },
 
@@ -316,7 +329,7 @@ async function buildHandbook() {
                                 alignment: AlignmentType.RIGHT,
                                 children: [
                                     new TextRun({
-                                        text: "AI 任務設計師：自主學習與跨域專案實踐手冊 | 汪檍老師",
+                                        text: "AI 任務設計師：讓AI成為工作好夥伴 | 汪檍老師",
                                         size: 18,
                                         color: MUTED_TEXT,
                                         font: "Microsoft JhengHei"
@@ -332,377 +345,345 @@ async function buildHandbook() {
                             new Paragraph({
                                 alignment: AlignmentType.CENTER,
                                 children: [
-                                    new TextRun({
-                                        text: "第 ",
-                                        size: 18,
-                                        font: "Microsoft JhengHei"
-                                    }),
-                                    new TextRun({
-                                        children: [PageNumber.CURRENT],
-                                        size: 18,
-                                        font: "Microsoft JhengHei"
-                                    }),
-                                    new TextRun({
-                                        text: " 頁，共 ",
-                                        size: 18,
-                                        font: "Microsoft JhengHei"
-                                    }),
-                                    new TextRun({
-                                        children: [PageNumber.TOTAL_PAGES],
-                                        size: 18,
-                                        font: "Microsoft JhengHei"
-                                    }),
-                                    new TextRun({
-                                        text: " 頁",
-                                        size: 18,
-                                        font: "Microsoft JhengHei"
-                                    })
+                                    new TextRun({ text: "第 ", size: 18, font: "Microsoft JhengHei" }),
+                                    new TextRun({ children: [PageNumber.CURRENT], size: 18, font: "Microsoft JhengHei" }),
+                                    new TextRun({ text: " 頁，共 ", size: 18, font: "Microsoft JhengHei" }),
+                                    new TextRun({ children: [PageNumber.TOTAL_PAGES], size: 18, font: "Microsoft JhengHei" }),
+                                    new TextRun({ text: " 頁", size: 18, font: "Microsoft JhengHei" })
                                 ]
                             })
                         ]
                     })
                 },
                 children: [
+                    h1("特別導言：Canva 簡報與專案線上系統總導覽"),
+                    p("本研習手冊完整複製並收錄汪檍老師在 2026/11/24 發表之最新簡報內容，包括所有實體線上運行之系統、專案網頁與評量工具連結："),
+
+                    new Table({
+                        width: { size: 100, type: WidthType.PERCENTAGE },
+                        rows: [
+                            new TableRow({
+                                children: [
+                                    createHeaderCell("資源項目", 25),
+                                    createHeaderCell("專案名稱與領域", 35),
+                                    createHeaderCell("線上連結網址（點擊開啟）", 40)
+                                ]
+                            }),
+                            new TableRow({
+                                children: [
+                                    createCell("最新 91 頁簡報", true, BG_LIGHT_BLUE),
+                                    createCell("AI任務設計師：讓AI成為工作好夥伴 (20261124 - GPT)"),
+                                    createCell("https://www.canva.com/design/DAHZ1N312-w/9RUqHr3ISjqY8geL9zzPCQ/view")
+                                ]
+                            }),
+                            new TableRow({
+                                children: [
+                                    createCell("精華 73 頁簡報", true, BG_LIGHT_BLUE),
+                                    createCell("AI任務設計師：GEMINI/GPT畫布裡的自主學習與跨域專案"),
+                                    createCell("https://www.canva.com/design/DAHA4t2-pWY/HtqtOGLrNZ3m4ILw3eNU2g/view")
+                                ]
+                            }),
+                            new TableRow({
+                                children: [
+                                    createCell("校園管理", true, BG_LIGHT_GRAY),
+                                    createCell("TSCHOOL 空間借用系統"),
+                                    createCell("https://sites.google.com/tschool.tp.edu.tw/0909/home?authuser=2")
+                                ]
+                            }),
+                            new TableRow({
+                                children: [
+                                    createCell("校園管理", true, BG_LIGHT_GRAY),
+                                    createCell("TSCHOOL 學習成果平台"),
+                                    createCell("https://sites.google.com/tschool.tp.edu.tw/tschool20250915/tschool")
+                                ]
+                            }),
+                            new TableRow({
+                                children: [
+                                    createCell("校園管理", true, BG_LIGHT_GRAY),
+                                    createCell("TSCHOOL 招生心理測驗"),
+                                    createCell("https://sites.google.com/tschool.tp.edu.tw/tschooltest?usp=sharing")
+                                ]
+                            }),
+                            new TableRow({
+                                children: [
+                                    createCell("校園管理", true, BG_LIGHT_GRAY),
+                                    createCell("TSCHOOL 數位校史平臺"),
+                                    createCell("https://sites.google.com/tschool.tp.edu.tw/tschool-historyt/t-school-history")
+                                ]
+                            }),
+                            new TableRow({
+                                children: [
+                                    createCell("自主學習", true, BG_LIGHT_GRAY),
+                                    createCell("字音字形自學互動網"),
+                                    createCell("https://sites.google.com/view/tschool100/00年字音字形競賽練習-互動學習系統")
+                                ]
+                            }),
+                            new TableRow({
+                                children: [
+                                    createCell("自主學習", true, BG_LIGHT_GRAY),
+                                    createCell("學習歷程指南互動自學平台"),
+                                    createCell("https://sites.google.com/view/tschoollearningportfolio/1031")
+                                ]
+                            }),
+                            new TableRow({
+                                children: [
+                                    createCell("自主學習", true, BG_LIGHT_GRAY),
+                                    createCell("AI 學習歷程密室 (GitHub Pages)"),
+                                    createCell("https://ivy7579-spec.github.io/ai-learning-portfolio-game/")
+                                ]
+                            }),
+                            new TableRow({
+                                children: [
+                                    createCell("自主學習", true, BG_LIGHT_GRAY),
+                                    createCell("傾城之戀閱讀解謎"),
+                                    createCell("https://sites.google.com/view/loveinfallencity2026/loveinfallencity")
+                                ]
+                            }),
+                            new TableRow({
+                                children: [
+                                    createCell("自主學習", true, BG_LIGHT_GRAY),
+                                    createCell("2025 臺灣科教展互動闖關"),
+                                    createCell("https://sites.google.com/view/tschooldigitalera/數位時代")
+                                ]
+                            }),
+                            new TableRow({
+                                children: [
+                                    createCell("自主學習", true, BG_LIGHT_GRAY),
+                                    createCell("2026 臺灣科教展互動闖關 (ChatGPT Site)"),
+                                    createCell("https://edtech-2026-explore.tschool-taip-6197.chatgpt.site")
+                                ]
+                            }),
+                            new TableRow({
+                                children: [
+                                    createCell("課程教學", true, BG_LIGHT_GRAY),
+                                    createCell("自我覺察工作坊報告書"),
+                                    createCell("https://sites.google.com/view/tschool-self-awareness/tschool-自我覺察")
+                                ]
+                            }),
+                            new TableRow({
+                                children: [
+                                    createCell("課程教學", true, BG_LIGHT_GRAY),
+                                    createCell("自我覺察 115 挑戰賽 (ChatGPT Site)"),
+                                    createCell("https://self-awareness-115-challenge.tschool-taip-6197.chatgpt.site")
+                                ]
+                            }),
+                            new TableRow({
+                                children: [
+                                    createCell("課程教學", true, BG_LIGHT_GRAY),
+                                    createCell("跨校交流學習遊戲 Demo"),
+                                    createCell("https://school-exchange-115-demo.tschool-taip-6197.chatgpt.site/game/")
+                                ]
+                            }),
+                            new TableRow({
+                                children: [
+                                    createCell("策展共創", true, BG_LIGHT_GRAY),
+                                    createCell("2026 數實祭總舖師上菜 (GitHub Pages)"),
+                                    createCell("https://ivy7579-spec.github.io/chef-serving-game/?v=f74554c")
+                                ]
+                            }),
+                            new TableRow({
+                                children: [
+                                    createCell("策展共創", true, BG_LIGHT_GRAY),
+                                    createCell("2026 數實祭官方活動網頁"),
+                                    createCell("https://sites.google.com/view/tschool2026/2026數實祭")
+                                ]
+                            }),
+                            new TableRow({
+                                children: [
+                                    createCell("生活跨域", true, BG_LIGHT_GRAY),
+                                    createCell("出國自由行協作記帳網頁"),
+                                    createCell("https://sites.google.com/view/trip-count/出國自由行協作記帳網頁")
+                                ]
+                            }),
+                            new TableRow({
+                                children: [
+                                    createCell("生活跨域", true, BG_LIGHT_GRAY),
+                                    createCell("臺灣轉型正義小測驗"),
+                                    createCell("https://sites.google.com/view/transitional-justice-yoyo/臺灣轉型正義小測驗")
+                                ]
+                            }),
+                            new TableRow({
+                                children: [
+                                    createCell("生活跨域", true, BG_LIGHT_GRAY),
+                                    createCell("易經六十四卦自學網"),
+                                    createCell("https://sites.google.com/view/yichin20260310/64掛自學網?authuser=0")
+                                ]
+                            }),
+                            new TableRow({
+                                children: [
+                                    createCell("回饋評量", true, BG_LIGHT_GRAY),
+                                    createCell("NPDL 前後測 Google 試算表"),
+                                    createCell("https://docs.google.com/spreadsheets/d/1tDBWxZFrzeEbKllCir8JUL6GVM7id9ee/")
+                                ]
+                            }),
+                            new TableRow({
+                                children: [
+                                    createCell("回饋評量", true, BG_LIGHT_GRAY),
+                                    createCell("研習回饋與反思 Google 試算表"),
+                                    createCell("https://docs.google.com/spreadsheets/d/1o8b6GZ5cQDbrK3NzoNjdgnWWy9aZLlonI6wqp1V3KZY/")
+                                ]
+                            })
+                        ]
+                    }),
+
                     h1("第一章：淺談與 AI 的工作心理歷程與認知轉變"),
-                    p("在生成式 AI 爆發的時代，許多教育工作者最初面對 AI 時往往經歷了「焦慮、抗拒、懷疑」的心態。然而，隨著技術演進，我們逐漸發現：AI 不再只是一個冰冷的自動化工具，而是一個能與我們對話、共同成長的「數位真人協作夥伴」"),
+                    p("在生成式 AI 爆發的時代，許多教育工作者最初面對 AI 時往往經歷了「焦慮、抗拒、懷疑」的心態。然而，汪檍老師指出：AI 已經成為行政、教學、生活與心情的重要夥伴，從官方邀請信、課程學習單、冰箱剩菜料理、策展主題發想，到冗長繁複的 N 種計畫報告，無所不包。"),
 
                     h2("1.1 態度與心態的三重轉變"),
-                    new Table({
-                        width: { size: 100, type: WidthType.PERCENTAGE },
-                        rows: [
-                            new TableRow({
-                                children: [
-                                    createHeaderCell("階段進程", 20),
-                                    createHeaderCell("過去的認知（傳統心態）", 40),
-                                    createHeaderCell("現在與未來的跨越（任務設計師心態）", 40)
-                                ]
-                            }),
-                            new TableRow({
-                                children: [
-                                    createCell("角色定位", true, BG_LIGHT_BLUE, AlignmentType.CENTER),
-                                    createCell("將 AI 視為執行單一指令的「工具」（Tool），單向索取標準答案。"),
-                                    createCell("將 AI 視為「協同創作者與真人夥伴」，雙向溝通、相互拋接思考。")
-                                ]
-                            }),
-                            new TableRow({
-                                children: [
-                                    createCell("心理狀態", true, BG_LIGHT_BLUE, AlignmentType.CENTER),
-                                    createCell("擔心被取代的「焦慮與抗拒」，執著於尋找無所不能的神奇 Prompt。"),
-                                    createCell("「包容與坦然」，接受 AI 會犯錯，並在除錯修正的過程中持續迭代。")
-                                ]
-                            }),
-                            new TableRow({
-                                children: [
-                                    createCell("工作模式", true, BG_LIGHT_BLUE, AlignmentType.CENTER),
-                                    createCell("尋找標準作業程序（SOP），期待照本宣科得到一致成果。"),
-                                    createCell("「放下 SOP，打開專案實驗思維」，在不確定性中探索未知與可能性。")
-                                ]
-                            })
-                        ]
-                    }),
+                    p("• 使用態度：過去將其視為單向索取答案的「工具」；現在將其視為雙向成長的「真人夥伴」。\n• 心態轉變：過去面對技術更迭感到「抗拒與焦慮」；現在建立客觀專業的「判斷與審核力」。\n• 深層感受：放掉 SOP，什麼面向都可以嘗試；AI 把屬於我的寶貴時間交還給我，堆疊出深厚的心理韌性。"),
 
-                    h2("1.2 評估啟動 AI 專案的三大情境指標"),
-                    p("汪檍老師在實踐中總結出，最適合邀請 AI 深度協作（甚至進入 Vibe Coding）的專案通常具備以下三個特質："),
-                    createCallout(
-                        "🔍 專案啟動檢核指標",
-                        "1. 高度客製化：現成軟體或 SaaS 平台無法滿足學校獨特的評量、班級活動或跨領域需求。\n2. 人手資源不足：沒有專屬工程團隊或充裕經費，由教師或學生自行單兵作戰。\n3. 需求規範清晰：雖然不會寫程式，但對於「想要什麼功能、給誰用、流程長怎樣」有極為明確的畫面。",
-                        BG_LIGHT_BLUE,
-                        SECONDARY_COLOR
-                    ),
+                    h2("1.2 評估啟動 AI 專案的好時機"),
+                    p("1. 高度客製化：現有工具無法滿足學校獨特的評量或跨域需求。\n2. 人手資源不足：時間、專業、經費匱乏，由單兵教師獨立作戰。\n3. 需求規範清晰：專案目標非常明確，清楚想要什麼成果畫面。"),
 
                     h1("第二章：Vibe Coding 理念與協作心法"),
-                    p("「Vibe Coding」是一種嶄新的軟體與專案協作模式：開發者不需深究底層語法細節，而是透過自然語言與 AI 共同營造專案的「氛圍與節奏」（Vibe），藉由快速提示、即時反饋、小步驗證來建構產品。"),
+                    p("「Vibe Coding」是以自然語言引導、快速原型驗證（MVP）的沉浸式協作模式。重點在於「探索可能性」而非長期維護，使用者往往就是開發者本人，試錯成本極低。"),
 
-                    h2("2.1 Vibe Coding 的核心原則"),
-                    p("👉 重點是「探索可能性」，而非打造百年維護的系統架構。\n👉 使用者往往等於開發者本人（或本校師生），試錯成本極低、容錯率高。\n👉 溝通流程：自然語言描繪情境 ➔ 生成原型 ➔ 點擊測試 ➔ 挑出痛點 ➔ 碎念式反饋 ➔ 即時修復。"),
+                    h2("2.1 與 AI 協作的碎念心理準備"),
+                    p("• 如同任何專案一樣，一定要預留工作時程，事情永遠不會像你想的那麼順。\n• AI 其實沒那麼聰明，給出越清楚的架構，專案推進越流暢。\n• 要有大顆的心臟，拼命砍掉重來是協作日常，適時學會「轉彎找替代方案」。"),
 
-                    h2("2.2 協作中的「多麼痛的領悟」與心理準備"),
-                    p("專案過程中一定會遭遇挫折與卡關，汪檍老師特別提醒三項關鍵心理素質："),
-                    createCallout(
-                        "💡 專案搏鬥心法",
-                        "• 怎麼做已經不是問題，『到底要做什麼』才是核心：AI 讓代工產出變快，但若目標模糊，產出的只是大量的數位垃圾。\n• 經費與技術有時是必要條件，適時學會「轉彎」：當某個 API 要收費或某個套件卡死時，不要死嗑，果斷尋找替代工具或簡化介面。\n• 保持好奇心與小步快跑：不要妄想一次建出完美龐然大物，先做出一個可點擊的小按鈕，再逐步增生功能。",
-                        BG_WARM,
-                        ACCENT_COLOR
-                    ),
+                    h1("第三章：和 GEMINI / GPT 搏鬥的 20+ 個真實落地專案庫實錄"),
+                    p("本章完整收錄 91 頁簡報中汪檍老師在一線實作的代表性專案，並附帶真實線上運行系統網址："),
 
-                    h1("第三章：GEMINI vs. GPT 畫布特質與 12 大 AI 工具光譜"),
-                    p("不同的生成式模型如同性格迥異的合作夥伴，了解它們各自的長處與盲點，才能人盡其才："),
-
-                    h2("3.1 兩大核心模型特質比對"),
-                    new Table({
-                        width: { size: 100, type: WidthType.PERCENTAGE },
-                        rows: [
-                            new TableRow({
-                                children: [
-                                    createHeaderCell("比較維度", 20),
-                                    createHeaderCell("GEMINI 的畫布特質", 40),
-                                    createHeaderCell("GPT 的畫布特質", 40)
-                                ]
-                            }),
-                            new TableRow({
-                                children: [
-                                    createCell("核心優勢", true, BG_LIGHT_BLUE, AlignmentType.CENTER),
-                                    createCell("1. 跨域聯想力極強\n2. 視覺美感與多模態敏銳\n3. 具備隨時隨地的發想彈性\n4. 與 Google 生態系（Sheet, Drive, Docs）無縫銜接"),
-                                    createCell("1. 語言修辭與邏輯架構極端嚴密\n2. 程式語法與除錯精準度高\n3. 系統穩定度與耐受性強\n4. 結構化資料抽取能力出色")
-                                ]
-                            }),
-                            new TableRow({
-                                children: [
-                                    createCell("限制與盲點", true, BG_LIGHT_BLUE, AlignmentType.CENTER),
-                                    createCell("記憶力較短暫，多輪深入程式碼修改時容易忘記前置約束；偶有隨興偏題情況。"),
-                                    createCell("版面視覺設計偏向保守標準化，需要更明確的美感指令引導。")
-                                ]
-                            }),
-                            new TableRow({
-                                children: [
-                                    createCell("最佳應用情境", true, BG_LIGHT_BLUE, AlignmentType.CENTER),
-                                    createCell("創意發想、跨領域教材整合、圖像美感引導、情境解謎、視覺策展。"),
-                                    createCell("程式架構規劃、資料庫語法設計、複雜評量量規制定、精確文本邏輯校驗。")
-                                ]
-                            })
-                        ]
-                    }),
-
-                    h2("3.2 現代教師必備的 12 大類別 AI 工具光譜全景圖"),
-                    new Table({
-                        width: { size: 100, type: WidthType.PERCENTAGE },
-                        rows: [
-                            new TableRow({
-                                children: [
-                                    createHeaderCell("類別", 15),
-                                    createHeaderCell("代表性工具", 25),
-                                    createHeaderCell("核心專長與教育應用情境", 60)
-                                ]
-                            }),
-                            new TableRow({
-                                children: [
-                                    createCell("文字生成", true, BG_LIGHT_GRAY),
-                                    createCell("ChatGPT, Claude, Gemini"),
-                                    createCell("教案撰寫、文章改寫、概念提問、情境對話角色扮演、評語生成。")
-                                ]
-                            }),
-                            new TableRow({
-                                children: [
-                                    createCell("即時搜尋", true, BG_LIGHT_GRAY),
-                                    createCell("Perplexity, Gemini Search"),
-                                    createCell("即時時事查證、學術文獻溯源、最新法規與教學資源精確彙整。")
-                                ]
-                            }),
-                            new TableRow({
-                                children: [
-                                    createCell("知識庫整理", true, BG_LIGHT_GRAY),
-                                    createCell("NotebookLM, Claude Projects"),
-                                    createCell("上傳校本教材、課綱文件、學生研究論文，進行閉環知識問答與播客生成。")
-                                ]
-                            }),
-                            new TableRow({
-                                children: [
-                                    createCell("簡報生成", true, BG_LIGHT_GRAY),
-                                    createCell("Gamma, Canva AI, Tome"),
-                                    createCell("輸入教案大綱快速產出高質感視覺簡報，節省 80% 排版時間。")
-                                ]
-                            }),
-                            new TableRow({
-                                children: [
-                                    createCell("圖像生成", true, BG_LIGHT_GRAY),
-                                    createCell("Midjourney, DALL-E 3, Leonardo"),
-                                    createCell("歷史情境重現、課文插圖設計、活動視覺主視覺、概念視覺化。")
-                                ]
-                            }),
-                            new TableRow({
-                                children: [
-                                    createCell("影音生成", true, BG_LIGHT_GRAY),
-                                    createCell("Runway, Sora, CapCut AI"),
-                                    createCell("文字轉生動短影片、校園宣導短片動態字幕與自動剪輯合成。")
-                                ]
-                            }),
-                            new TableRow({
-                                children: [
-                                    createCell("語音技術", true, BG_LIGHT_GRAY),
-                                    createCell("ElevenLabs, Whisper"),
-                                    createCell("多國語言逼真配音、課堂演講自動轉精確逐字稿、聽力測驗音檔生成。")
-                                ]
-                            }),
-                            new TableRow({
-                                children: [
-                                    createCell("音樂音效", true, BG_LIGHT_GRAY),
-                                    createCell("Suno, Udio"),
-                                    createCell("輸入學科口訣即時創作成流行歌曲、微電影配樂與廣播劇音效。")
-                                ]
-                            }),
-                            new TableRow({
-                                children: [
-                                    createCell("程式開發", true, BG_LIGHT_GRAY),
-                                    createCell("Cursor, Copilot, Antigravity"),
-                                    createCell("全自動生成教學網頁、課堂即時抽籤小工具、自動化試卷產製。")
-                                ]
-                            }),
-                            new TableRow({
-                                children: [
-                                    createCell("數據分析", true, BG_LIGHT_GRAY),
-                                    createCell("ChatGPT Data, Excel AI"),
-                                    createCell("學生學業成績趨勢分析、問卷交叉比對、自動繪製專業統計圖表。")
-                                ]
-                            }),
-                            new TableRow({
-                                children: [
-                                    createCell("流程自動化", true, BG_LIGHT_GRAY),
-                                    createCell("Make, Zapier, AI Agents"),
-                                    createCell("表單提交自動寄信通知、研習簽到自動同步名冊、日常行政排程。")
-                                ]
-                            }),
-                            new TableRow({
-                                children: [
-                                    createCell("3D 與空間", true, BG_LIGHT_GRAY),
-                                    createCell("Tripo AI, Luma, Spline"),
-                                    createCell("文字生成 3D 模型、虛擬校園導覽、AR/VR 沉浸式情境教材建構。")
-                                ]
-                            })
-                        ]
-                    }),
-
-                    h1("第四章：和 GEMINI / GPT 搏鬥的 16 個真實落地專案庫實錄"),
-                    p("本章完整收錄汪檍老師在教學與行政現場實際打造的 16 個落地專案，從專案痛點、AI 解決策略、踩坑挫折到最終合格成效，提供最鮮活的一線實戰經驗："),
-
-                    h2("【領域一：校園管理與行政專案】"),
-                    createCallout(
+                    createCalloutWithLink(
                         "專案 1：TSCHOOL 空間借用系統",
-                        "• 需求情境：新設學校空間資源彈性多變，傳統紙本或 Google 日曆容易撞期且無法設定審核規則。\n• 碰壁歷程：一開始想建置大型 SQL 資料庫，但技術過於複雜且介面超載；AI 寫了一堆無法落地的複雜後端架構。\n• 轉彎與解法：改用 Google Apps Script 串接 Google Sheet，搭配純 HTML/Tailwind 前端與 Google Sites 嵌入，零成本達成即時預約防呆。\n• 合格成效：全校師生可直接在單一網頁查看可用時段並一鍵送出登記，行政負擔下降 70%。",
+                        "• 需求情境：新設學校空間資源調度繁複，紙本與日曆極易撞期，無程式背景教師需自力建置。\n• 踩坑與解法：放棄大型關聯資料庫，以 Google Sheet + Apps Script 打造純前端預約防呆網頁，嵌入 Google Sites 零成本運作。\n• 合格成效：全校師生可即時查看空檔登記，行政調度負擔大減。",
+                        "開啟 TSCHOOL 空間借用系統",
+                        "https://sites.google.com/tschool.tp.edu.tw/0909/home?authuser=2",
                         BG_LIGHT_BLUE,
                         PRIMARY_COLOR
                     ),
 
-                    createCallout(
-                        "專案 2：TSCHOOL 學生自主學習歷程與成果展示平台",
-                        "• 需求情境：學生自主學習成果分散在各處，缺乏統一且能展現多元多媒體形式的數位畫布。\n• 碰壁歷程：初期要求 AI 生成複雜的社群互動與權限系統，導致網頁載入緩慢且維護困難。\n• 轉彎與解法：化繁為簡，以模組化卡片呈現學生作品（連結、PDF、影片、3D 模型），並支援標籤快速過濾。\n• 合格成效：成為高一新生至高三畢業生展示個人代表作的標準櫥窗，深獲家長與訪視委員好評。",
+                    createCalloutWithLink(
+                        "專案 2：TSCHOOL 學生自主學習歷程展示平台",
+                        "• 需求情境：學生多元成果（影片、PDF、3D 模型、連結）分散，缺乏具設計感的專屬櫥窗。\n• 踩坑與解法：模組化分類按鍵與卡片過濾器，結合 Google Drive 雲端連結，打造典雅展示牆。\n• 合格成效：成為全校學生代表作展示標準平台，獲得訪視委員高度評價。",
+                        "開啟 TSCHOOL 學習成果平台",
+                        "https://sites.google.com/tschool.tp.edu.tw/tschool20250915/tschool",
                         BG_LIGHT_GRAY,
                         SECONDARY_COLOR
                     ),
 
-                    createCallout(
+                    createCalloutWithLink(
                         "專案 3：TSCHOOL 招生宣傳互動心理測驗",
-                        "• 需求情境：招生博覽會上傳統紙本簡介吸引力不足，需要讓國中生在 2 分鐘內了解自己的學習特質與學校契合度。\n• 碰壁歷程：測驗計分邏輯反覆出現分支衝突，AI 產生的隨機題庫在行動端瀏覽器排版跑版。\n• 轉彎與解法：固定 6 道情境式是非/選擇題，設定清晰的計分維度，完成後自動生成具備設計感與分享圖的結果卡。\n• 合格成效：博覽會現場引發排隊體驗潮，單日觸及超過 1,200 名潛在學生與家長。",
+                        "• 需求情境：招生博覽會上紙本折頁乏人問津，需要在 2 分鐘內吸引國中畢業生與家長。\n• 踩坑與解法：以五大核心能力對應選項，設定加權分數演算法，自動產製設計感滿滿的個人化學習光譜卡。\n• 合格成效：現場大排長龍，單日吸引超過千人互動體驗。",
+                        "開啟 TSCHOOL 招生測驗",
+                        "https://sites.google.com/tschool.tp.edu.tw/tschooltest?usp=sharing",
                         BG_LIGHT_BLUE,
                         PRIMARY_COLOR
                     ),
 
-                    h2("【領域二：自主學習任務專案】"),
-                    createCallout(
-                        "專案 4：故宮文化實境解謎任務生成器",
-                        "• 需求情境：帶領學生參觀故宮，傳統學習單流於抄寫展品說明牌，需要結合情境解謎激發探究興趣。\n• 碰壁歷程：AI 憑空捏造展廳文物位置與歷史事實（模型幻覺嚴重），提示詞不夠具體導致謎題毫無難度。\n• 轉彎與解法：預先餵入故宮官方正確展品圖文清單，限定解謎題型為「細節觀察 + 歷史線索推理 + 密碼鎖驗證」。\n• 合格成效：學生拿著平板在展廳主動搜尋器物細節，自主學習投入度顯著提升。",
-                        BG_WARM,
-                        ACCENT_COLOR
-                    ),
-
-                    createCallout(
-                        "專案 5：2025 臺灣科教展現場互動闖關系統",
-                        "• 需求情境：時間極度緊迫！展覽當天需完成即時闖關互動網頁，當晚就要發布給全體參訪學生！\n• 碰壁歷程：時間壓力破表！跟 AI 溝通時 Prompt 太過冗長，產出的介面文字一直溢出螢幕框架，iOS 裝置一度無法滾動！\n• 轉彎與解法：果斷放棄複雜特效，要求 AI 採用最穩固的純 Flexbox 響應式架構，將長文拆成多步驟彈窗提示。\n• 合格成效：當晚如期上線封測，全展期數百名學生順利流暢完成闖關任務，化解開展危機！",
-                        BG_LIGHT_BLUE,
-                        PRIMARY_COLOR
-                    ),
-
-                    createCallout(
-                        "專案 6：學習歷程指南互動目錄與前導教材",
-                        "• 需求情境：官方發布的 PDF 學習歷程指南長達數十頁，學生普遍反映難以閱讀且缺乏章節跳轉索引。\n• 碰壁歷程：直接轉成網頁時排版凌亂，文字堆疊難以抓住重點。\n• 轉彎與解法：利用 AI 將指南重構為「互動式目錄地圖」，搭配「概念自我檢核清單」與關鍵字搜尋功能。\n• 合格成效：學生可在動態指引下一步步完成自主學習計畫撰寫，成為全校公認最好用的工具型教材。",
+                    createCalloutWithLink(
+                        "專案 4：TSCHOOL 數位校史平臺",
+                        "• 需求情境：創校邁向第五年，大量影音與文字活動紀錄分散，需要能每年持續更新並外掛於官網的平臺。\n• 踩坑與解法：運用分類鍵清楚分類，建置影音牆，以 Google Sheet 部屬達成前後台無縫同步。\n• 合格成效：每年影音資料即時匯入，省下重新委外建置官網的高額費用。",
+                        "開啟 TSCHOOL 校史平臺",
+                        "https://sites.google.com/tschool.tp.edu.tw/tschool-historyt/t-school-history",
                         BG_LIGHT_GRAY,
                         SECONDARY_COLOR
                     ),
 
-                    createCallout(
-                        "專案 7：字音字形自主練字與手寫辨識平台",
-                        "• 需求情境：語文競賽選手日常需要高強度自主練習字音字形，渴望有即時手寫反饋與錯題本。\n• 碰壁歷程：超級痛點！「逐次餵題庫，但吃了後面的丟了前面的！」專案間隔幾天 AI 就把之前的題庫洗掉；手寫畫筆在 iPad 上嚴重卡頓延遲！\n• 轉彎與解法：放棄單頁一次性塞入數千題庫，改為依單元拆解成輕量化分頁 JSON；手寫畫框放大為大尺寸 Canvas，支援指尖平滑繪製。\n• 合格成效：選手可離線自主練習，系統自動記錄常錯字音字形，備賽效率倍增！",
+                    createCalloutWithLink(
+                        "專案 5：字音字形自主練字與手寫辨識網",
+                        "• 需求情境：導生國文寫作別字率高，紙本練習追蹤困難，高度依賴平板，需要手寫與下載歷程記錄。\n• 踩坑與解法：逐次餵題庫導致「吃了後面丟了前面」；果斷拆解模組化分頁，加大畫布框支援手指流暢書寫。\n• 合格成效：選手可離線自主練習，系統精確記錄錯字，備賽效率倍增。",
+                        "開啟字音字形自學網",
+                        "https://sites.google.com/view/tschool100/00年字音字形競賽練習-互動學習系統",
                         BG_WARM,
                         ACCENT_COLOR
                     ),
 
-                    h2("【領域三：課程教學與評量專案】"),
-                    createCallout(
-                        "專案 8：課堂互評回饋抽籤與即時接力工具",
-                        "• 需求情境：公開觀課或專案發表時，需要全班多組同步互評抽籤，避免順序爭議與冷場。\n• 碰壁歷程：傳統工具缺乏防重複抽籤機制，多人同時點擊時後端資料庫頻繁死鎖。\n• 轉彎與解法：設計成純前端本機狀態儲存的輕量化轉盤抽籤，支援一鍵匯入分組名單與倒數計時器。\n• 合格成效：課堂節奏明快緊湊，學生全神貫注參與評量與同儕互饋。",
+                    createCalloutWithLink(
+                        "專案 6：學習歷程指南互動自學平台",
+                        "• 需求情境：突然受邀分享教育部發布的學習歷程指南，手冊厚重缺乏超連結與閱讀索引。\n• 踩坑與解法：將靜態長文重構為「四步驟互動目錄」，附帶檢核清單與常見誤區，大幅優化電子閱覽體驗。\n• 合格成效：成為學生撰寫學習歷程前不可或缺的前導自學教材。",
+                        "開啟學習歷程指南平台",
+                        "https://sites.google.com/view/tschoollearningportfolio/1031",
                         BG_LIGHT_BLUE,
                         PRIMARY_COLOR
                     ),
 
-                    createCallout(
-                        "專案 9：兩日實體工作坊復盤紀錄與 SEL 五項度自評系統",
-                        "• 需求情境：高強度跨域工作坊結束後，需結合實體作品照片進行反思復盤，並落實社會情緒學習（SEL）指標。\n• 碰壁歷程：學生只會寫「很好玩、收穫很多」等空泛心得，無法深入內省自我情緒與團隊合作歷程。\n• 轉彎與解法：建立 SEL 5 大維度（自我覺察、自我管理、社會覺察、人際技巧、負責任決定）引導題庫，搭配拍照上傳與雷達圖生成。\n• 合格成效：產出圖文並茂的深度反思紀錄，直接作為自主學習成果檔案存檔。",
+                    createCalloutWithLink(
+                        "專案 7：2025 與 2026 臺灣科教展互動闖關系統",
+                        "• 需求情境：高一校必修「數位時代」年度學習活動，開展當天半天內必須完工發布給全體學生。\n• 踩坑與解法：2025 年歷經文字超出框架、iOS 畫面回彈、PDF 匯出失敗等崩潰，放棄完美小步修復；2026 年進化導入 AI Agent，2 小時內即高效優化完成。\n• 合格成效：全展期數百名學生以手機流暢闖關完成學習單繳交。",
+                        "開啟 2026 科教展闖關系統 (ChatGPT Site)",
+                        "https://edtech-2026-explore.tschool-taip-6197.chatgpt.site",
                         BG_LIGHT_GRAY,
                         SECONDARY_COLOR
                     ),
 
-                    createCallout(
-                        "專案 10：NPDL 深度學習前後測檢核表系統",
-                        "• 需求情境：高一必修課每學期固定進行 NPDL 深度學習能力前後測，過去四年全用紙本自評，教師統計資料極度痛苦！\n• 碰壁歷程：曾嘗試用複雜大型問卷系統，但介面繁瑣導致學生填答意願低落且難以進行前後測個別對比。\n• 轉彎與解法：利用 AI 打造「UX 極致優化版表單」，背後僅需串接 Google Sheet，學生 3 分鐘內以滑桿完成 6 大全球素養自評。\n• 合格成效：前後測數據一秒匯出自動生成比較長條圖，教師免去輸入數百張紙本分數之苦！",
+                    createCalloutWithLink(
+                        "專案 8：AI 學習歷程密室逃脫遊戲",
+                        "• 需求情境：初次嘗試將生成式 AI 結合密室逃脫機制，以遊戲化方式帶領學生理解學習歷程的核心內涵。\n• 踩坑與解法：克服網頁狀態保存難題，將謎題線索與學習歷程檔案指標相互鑲嵌，支援即時驗證解鎖密碼。\n• 合格成效：引爆學生自發闖關熱潮，並開源部署於 GitHub Pages 供全台教師使用。",
+                        "開啟 AI 學習歷程密室 (GitHub Pages)",
+                        "https://ivy7579-spec.github.io/ai-learning-portfolio-game/",
                         BG_WARM,
                         ACCENT_COLOR
                     ),
 
-                    h2("【領域四：策展與展演專案】"),
-                    createCallout(
+                    createCalloutWithLink(
+                        "專案 9：傾城之戀閱讀解謎遊戲",
+                        "• 需求情境：國文文學經典張愛玲《傾城之戀》閱讀教學，擺脫單向講述，讓學生化身偵探深入文本意象。\n• 踩坑與解法：結合文本細節線索與情境謎題，引導學生在段落字裡行間尋找破案密碼。\n• 合格成效：學生對經典文本的重讀率與詮釋深度顯著提升。",
+                        "開啟傾城之戀解謎",
+                        "https://sites.google.com/view/loveinfallencity2026/loveinfallencity",
+                        BG_LIGHT_BLUE,
+                        PRIMARY_COLOR
+                    ),
+
+                    createCalloutWithLink(
+                        "專案 10：自我覺察工作坊報告書與挑戰賽",
+                        "• 需求情境：兩日跨域工作坊需結合學生實體作品照片進行反思復盤，落實社會情緒學習（SEL）指標。\n• 踩坑與解法：設計生活化引導問題與五項度雷達圖，打造結合 ChatGPT Site 的線上挑戰互動介面。\n• 合格成效：學生產出圖文並茂的深度反思報告，直接收錄於學習歷程檔案。",
+                        "開啟自我覺察 115 挑戰賽",
+                        "https://self-awareness-115-challenge.tschool-taip-6197.chatgpt.site",
+                        BG_LIGHT_GRAY,
+                        SECONDARY_COLOR
+                    ),
+
+                    createCalloutWithLink(
                         "專案 11：2026 數實祭總舖師上菜-數位辦桌趣",
-                        "• 需求情境：全校年度大型策展活動，希望以傳統「台灣辦桌」為意象，打造數位共創的互動展覽體驗。\n• 碰壁歷程：史詩級崩潰！「AI 手把手教我串接高級影像 API，好不容易調試成功，一測試才發現每點一次都要燒錢！」經費瞬間拉警報！\n• 轉彎與解法：體悟「經費有時是必要條件」，果斷轉彎！改用純前端預渲染素材庫與開源輕量化 Canvas 濾鏡，打造免 API 費用的互動辦桌拼盤。\n• 合格成效：展覽期間超過 2,000 人次參與共創數位菜餚，成為校園最吸睛的策展打卡亮點！",
-                        BG_LIGHT_BLUE,
-                        PRIMARY_COLOR
+                        "• 需求情境：全校大型策展需要將台灣「辦桌」意象轉化為師生共創的數位體驗。\n• 踩坑與解法：史詩級崩潰！「AI 手把手教串接 API，串好才發現每點一次都要燒錢！」果斷轉彎改用純前端 Canvas 拼貼。\n• 合格成效：全展期逾 2,000 人次參與共創數位佳餚，無伺服器與 API 負擔！",
+                        "開啟總舖師上菜共創遊戲 (GitHub Pages)",
+                        "https://ivy7579-spec.github.io/chef-serving-game/?v=f74554c",
+                        BG_WARM,
+                        ACCENT_COLOR
                     ),
 
-                    h2("【領域五：生活、學習與身心靈跨域專案】"),
-                    createCallout(
+                    createCalloutWithLink(
                         "專案 12：自由行協作即時記帳與分帳平台",
-                        "• 需求情境：師生海外研習或自由行時，多幣別計算與多人分帳極易混亂，市售 App 往往無法完全符合客製化需求。\n• 碰壁歷程：行動端離線狀態下資料同步衝突，介面按鍵在小螢幕手機上容易誤觸。\n• 轉彎與解法：先在 Google Sheet 建立完備計算公式，前端介面優化為大按鈕計算機風格，並支援匯率快照。\n• 合格成效：旅程中多人即時登錄花費，結算時一鍵產出誰該給誰多少錢的清晰清單，零爭議！",
-                        BG_LIGHT_GRAY,
-                        SECONDARY_COLOR
-                    ),
-
-                    createCallout(
-                        "專案 13：人類圖（Human Design）AI 深度解讀器",
-                        "• 需求情境：用於學生自我探索與師生對話，需要依據九大能量中心、內在權威與人生角色產出深度個人化分析報告。\n• 碰壁歷程：最初全靠手動一項項輸入繁複數據，耗時且容易漏填；AI 產生的報告書論述品質時高時低。\n• 轉彎與解法：迭代升級為「圖片辨識技術」，只需上傳人類圖截圖，AI 自動解析中心通道，並套用嚴格的結構化報告框架。\n• 合格成效：產出論述品質高度穩定且具備諮商同理心的長篇解讀報告，成為輔導對話的絕佳破冰媒介。",
-                        BG_WARM,
-                        ACCENT_COLOR
-                    ),
-
-                    createCallout(
-                        "專案 14：紫微斗數命盤深度解讀器",
-                        "• 需求情境：將傳統東方命理智慧轉化為個人性格優勢、潛在盲點與生涯規劃的探討工具。\n• 碰壁歷程：命盤十二宮位星曜眾多，AI 一開始常會張冠李戴，將主星吉凶完全解讀混亂。\n• 轉彎與解法：同樣導入命盤圖片光學辨識，並在 System Prompt 鎖定宮位對應關係與正向心理學引導原則。\n• 合格成效：報告書兼具傳統星曜深度與現代生涯探索啟發，成功破除迷信，轉化為自我賦能之教材。",
+                        "• 需求情境：師生海外參訪多幣別計算混亂，市售 App 無法精確符合分帳需求。\n• 踩坑與解法：在 Google Sheet 先建架構，前端做大按鍵優化，最小轉帳次數演算法精確算出一覽表。\n• 合格成效：旅程中多人即時登錄花費，結算時一鍵產出清單，零爭議！",
+                        "開啟自由行協作記帳",
+                        "https://sites.google.com/view/trip-count/出國自由行協作記帳網頁",
                         BG_LIGHT_BLUE,
                         PRIMARY_COLOR
                     ),
 
-                    createCallout(
-                        "專案 15：易經六十四卦自主學習與情境決策平臺",
-                        "• 需求情境：國文與哲學跨領域自主學習，希望學生藉由古老卦象智慧，反思當前學習瓶頸或專案抉擇。\n• 碰壁歷程：學生對文言文卦辭爻辭望而生畏，無法與真實生活產生連結。\n• 轉彎與解法：設計「先確認基本問題情境 ➔ 動態搖卦 ➔ 白話解讀 ➔ 專案策略引導」的四階流程。\n• 合格成效：成為學生自主學習過程中深思熟慮與復盤心態的特殊反思平台。",
+                    createCalloutWithLink(
+                        "專案 13：臺灣轉型正義小測驗",
+                        "• 需求情境：公民與歷史跨領域教學，將嚴肅歷史議題轉化為具備啟發性與同理心的情境問答。\n• 踩坑與解法：避免偏頗斷語，以史實情境做多角度思考提問，測驗後產出引導反思卡。\n• 合格成效：課堂討論熱烈，學生能站在歷史人物立場進行價值辨析。",
+                        "開啟臺灣轉型正義小測驗",
+                        "https://sites.google.com/view/transitional-justice-yoyo/臺灣轉型正義小測驗",
                         BG_LIGHT_GRAY,
                         SECONDARY_COLOR
                     ),
 
-                    createCallout(
-                        "專案 16：未來 N 種待開啟的 AI 專案探索庫",
-                        "• 核心意涵：從校園行政、課堂評量、展演互動到生活自我探索，AI 不是冷冰冰的代工機器，而是點燃無限創意的畫布。\n• 汪檍老師期許：每一位老師與學生只要擁有好奇心，隨時都能在自己的專業領域中開啟第 17、第 18 個全新專案！",
+                    createCalloutWithLink(
+                        "專案 14：易經六十四卦自學網",
+                        "• 需求情境：國文與哲學自主學習，讓學生藉由卦象智慧反思當前專案或生活面臨的抉擇瓶頸。\n• 踩坑與解法：打破文言玄奧，以「釐清困惑 ➔ 搖卦 ➔ 白話解讀 ➔ 行動反思」四步驟引導。\n• 合格成效：成為學生專案卡關時極佳的哲學思維復盤工具。",
+                        "開啟易經六十四卦自學網",
+                        "https://sites.google.com/view/yichin20260310/64掛自學網?authuser=0",
                         BG_WARM,
                         ACCENT_COLOR
                     ),
 
-                    h1("第五章：AI 專案流程心法與教育現場的深遠意義"),
-                    h2("5.1 表面上是下指令，背後是「當個稱職的甲方」"),
-                    p("許多人以為 AI 專案成功的關鍵是知道某個神秘的 Prompt 關鍵字，但汪檍老師一針見血地指出："),
-                    createCallout(
-                        "👑 稱職甲方的四項修煉",
-                        "1. 需求清晰明確：你必須比 AI 更清楚最終畫面長怎樣，不能只說「幫我做一個好用的系統」。\n2. 具備專業專業背景與鑑賞力：只有你擁有學科與教學專業，才能一眼看出 AI 寫的教案或程式是否及格。\n3. 提供充足的上下文（Context）：給予足夠的範例、限制條件與輸入格式，而不是讓 AI 瞎猜。\n4. 小步驗收與耐性調校：不奢求一次到位，採用「先求有 ➔ 再求好 ➔ 持續迭代」的策略。",
-                        BG_LIGHT_BLUE,
-                        PRIMARY_COLOR
-                    ),
+                    h1("第四章：AI 專案流程心法與教育現場的深遠意義"),
+                    h2("4.1 當個稱職的甲方"),
+                    p("許多人以為 AI 專案成功的關鍵是知道某個神秘的 Prompt，但汪檍老師強調：\n1. 需求明確清晰：你比 AI 更清楚最終畫面的呈現。\n2. 具備專業背景與鑑賞力：以自身專業一眼識破生成內容的破綻。\n3. 給予充足上下文：提供範例與邊界限制。\n4. 小步驗收與耐性調校：先求有，再求好，持續迭代。"),
 
-                    h2("5.2 思考流程：要做什麼 ➔ 怎麼做 ➔ 怎麼修"),
-                    p("Prompt 真的不是重點，思考流程才是靈魂所在："),
-                    p("• 【要做什麼】（What）：定義使用者、核心痛點、最小可行性產品（MVP）範圍。\n• 【怎麼做】（How）：選擇合適的 AI 夥伴（GEMINI 發想 / GPT 架構 / Cursor 開發），拆解功能步驟。\n• 【怎麼修】（Fix）：測試驗收、收集真實反饋、挑出錯誤、碎念式反饋並精準修復。"),
-
-                    h2("5.3 AI 代工 vs. 深度學習：教育的核心價值"),
-                    p("「AI 讓產出變快，但快不起來的是：『思考的過程』。」"),
-                    p("如果只是讓 AI 代工寫作業、做簡報，學生的思維能力只會退化；但如果將 AI 作為鏡子與鷹架，引導學生經歷「發想 ➔ 提示 ➔ 審核 ➔ 判斷 ➔ 修正」，這才是真正發生深刻學習的時刻。在未來，每個孩子都能在 AI 的賦能下，客製化自己的學習畫布，打破年級與學科的藩籬！"),
+                    h2("4.2 AI 代工 vs. 深度學習"),
+                    p("「AI 讓產出變快，但快不起來的是思考的過程。」"),
+                    p("如果只是讓 AI 代工寫作業、做簡報，學生的思維只會退化；但如果將 AI 作為鏡子與鷹架，引導學生經歷「發想 ➔ 提示 ➔ 審核 ➔ 判斷 ➔ 修正」，這才是真正發生深刻學習的時刻。在未來，每個孩子都能在 AI 的賦能下，客製化自己的學習畫布！"),
 
                     new Paragraph({ spacing: { before: 200 } }),
-                    createCallout(
-                        "🌟 結語：準備好開始實驗了嗎？",
-                        "「我們更像一起成長的夥伴，你教我，我也教你。」\n教育不是注滿一桶水，而是點燃一把火。願每位教育工作者都能勇敢拿起 AI 畫筆，成為自主學習與教育創新的卓越任務設計師！",
+                    createCalloutWithLink(
+                        "🌟 研習總結心得",
+                        "「我們更像一起成長的夥伴，你教我，我也教你。」\n感謝汪檍老師傾囊相授 91 頁真實跌撞與豐碩成果，願每位老師都能勇敢拿起 AI 畫筆，成為自主學習與教育創新的卓越任務設計師！",
+                        "汪檍老師 Facebook 專案紀錄交流",
+                        "https://www.facebook.com/profile.php?id=100000512468628",
                         BG_WARM,
                         ACCENT_COLOR
                     )
@@ -714,9 +695,7 @@ async function buildHandbook() {
     const buffer = await Packer.toBuffer(doc);
     fs.writeFileSync("1151124汪憶-AI設計者_完整研習手冊.docx", buffer);
     fs.writeFileSync("AI任務設計師_實務架構手冊_汪檍.docx", buffer);
-    console.log("✅ Word 研習手冊產製完成：");
-    console.log("   - 1151124汪憶-AI設計者_完整研習手冊.docx");
-    console.log("   - AI任務設計師_實務架構手冊_汪檍.docx");
+    console.log("✅ Word 研習手冊已重新編譯完成（含完整 91 頁專案與超連結）！");
 }
 
 buildHandbook().catch(console.error);
