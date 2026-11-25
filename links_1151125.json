@@ -1,0 +1,73 @@
+{
+  "title": "1151125_(講師版)製作教學使用多模態APP",
+  "theme": "AI賦能: 製作動態視覺化ＡＰＰ",
+  "source": "臺師大教創中心陳佩英教授 與 優履團隊",
+  "lecturer": "主講值日生：王琴雲",
+  "collaborators": ["江英瑞", "李佳穎", "陳惠珍", "黎懿瑩"],
+  "date": "2026-11-25",
+  "canvaUrl": "https://www.canva.com/design/DAHbnyxup84/s2BC-LG2KcVs-DDovzk3KQ/view?utm_content=DAHbnyxup84&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7d23558db4",
+  "shortUrl": "https://canva.link/ssgcc8l72qtigkt",
+  "totalSlides": 53,
+  "groups": [
+    {"group": "G1", "lead": "惠珍", "members": ["塗瑀真(國)", "李欣霈(國)", "蔡艷卿(國)"]},
+    {"group": "G2", "lead": "英瑞", "members": ["高若喬(自)", "葉敏(自)", "詹智傑(自)"]},
+    {"group": "G3", "lead": "懿瑩", "members": ["林福泉(資)", "姚述勤(資)", "張雅文(數)", "鄭鳳惠(數)", "嚴高一(數)"]},
+    {"group": "G4", "lead": "佳穎", "members": ["吳芃軒(健)", "鄭燕琪(綜)", "曾麗娜(英)"]}
+  ],
+  "links": [
+    {
+      "slide": 12,
+      "title": "1.1 App體驗-SEL：正念 / 安頓",
+      "url": "https://share.gemini.google/PTjqlSLxMszJ",
+      "type": "Gemini Canvas App"
+    },
+    {
+      "slide": 13,
+      "title": "1.2 App體驗-班經：任務分配轉盤",
+      "url": "https://share.gemini.google/QU4OpI6Js5eh",
+      "type": "Gemini Canvas App"
+    },
+    {
+      "slide": 19,
+      "title": "【SEL & 班經指令卡】資源網",
+      "url": "https://sel-class-van.netlify.app",
+      "type": "Netlify Web App 指令卡"
+    },
+    {
+      "slide": 21,
+      "title": "Notebook 製作互動式教學 APP 流程指南",
+      "url": "https://notebook.google.com",
+      "type": "Google NotebookLM"
+    },
+    {
+      "slide": 30,
+      "title": "2.6 & 3.6 研習成果繳交與共創回饋板",
+      "url": "https://padlet.com/vanessa5881/115-11-25-app-s025qbrpwmopvznipg3q",
+      "type": "Padlet 成果牆"
+    },
+    {
+      "slide": 37,
+      "title": "3.2 學科領域＆虛擬教具體驗：水的三態偵探",
+      "url": "https://share.gemini.google/fk2JefsNaEq8",
+      "type": "Gemini Canvas App"
+    },
+    {
+      "slide": 37,
+      "title": "3.2 學科領域＆虛擬教具體驗：面積剪剪貼貼",
+      "url": "https://share.gemini.google/qT051JVIH3vO",
+      "type": "Gemini Canvas App"
+    },
+    {
+      "slide": 39,
+      "title": "【闖關活動與虛擬教具指令卡】資源網",
+      "url": "https://subjects-van.netlify.app",
+      "type": "Netlify Web App 指令卡"
+    },
+    {
+      "slide": 40,
+      "title": "【學習目標與題庫卡片 / 題庫產生指令】底家",
+      "url": "https://subjects-aids-van.netlify.app",
+      "type": "Netlify Web App 指令卡"
+    }
+  ]
+}

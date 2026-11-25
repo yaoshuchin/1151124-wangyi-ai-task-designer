@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-TW" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI任務設計師：讓AI成為工作好夥伴 | 汪檍老師自主學習與跨域專案全集</title>
+    <title>AI賦能教學創新雙核心平台 | 製作動態視覺化APP × AI任務設計師</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons CDN -->
-    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -15,38 +13,23 @@
                 extend: {
                     colors: {
                         brand: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0284c7',
-                            600: '#0369a1',
-                            700: '#075985',
-                            800: '#0c4a6e',
-                            900: '#082f49',
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
                         }
                     }
                 }
             }
         }
     </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
-        body {
-            font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-        code, pre {
-            font-family: 'JetBrains Mono', monospace;
-        }
-        .glass {
-            background: rgba(255, 255, 255, 0.88);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-        }
-        .dark .glass {
-            background: rgba(15, 23, 42, 0.88);
-        }
-        .shake {
-            animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
-        }
+        .shake-animation { animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both; }
         @keyframes shake {
             10%, 90% { transform: translate3d(-1px, 0, 0); }
             20%, 80% { transform: translate3d(2px, 0, 0); }
@@ -76,7 +59,7 @@
 
             <h2 class="text-2xl font-bold tracking-tight mb-2 text-slate-900 dark:text-white">研習學員專屬驗證門禁</h2>
             <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">
-                汪檍老師：AI任務設計師研習成果系統<br>
+                AI賦能動態視覺化APP × AI任務設計師 · 雙核心研習系統<br>
                 <span class="text-xs text-slate-400 dark:text-slate-500">請輸入授權通行碼以解鎖完整專案庫與實務手冊</span>
             </p>
 
@@ -93,1045 +76,835 @@
                     <span>驗證通行並進入系統</span>
                 </button>
             </form>
-            <div class="mt-6 text-xs text-slate-400">研習日期：115 年 11 月 24 日 | 臺北市數位實驗高中 × 南投國中</div>
+            <div class="mt-6 text-xs text-slate-400">研習日期：115 年 11 月 24 - 25 日 | 臺師大教創中心 × 優履團隊 × T-School × 南投國中</div>
         </div>
     </div>
 
     <!-- ==================== 頂部導航列 ==================== -->
-    <header class="sticky top-0 z-40 border-b border-slate-200/80 dark:border-slate-800 glass no-print">
+    <header class="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 no-print">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-sky-600/20">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-sky-500/20">
                     <i data-lucide="sparkles" class="w-5 h-5"></i>
                 </div>
                 <div>
-                    <span class="font-bold text-lg text-slate-900 dark:text-white tracking-tight flex items-center gap-2">
-                        AI 任務設計師
-                        <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800">91頁最新完整版</span>
-                    </span>
-                    <span class="hidden sm:inline-block text-xs text-slate-500 dark:text-slate-400">讓 AI 成為工作好夥伴・自主學習與跨域專案</span>
+                    <h1 class="font-bold text-base sm:text-lg leading-tight text-slate-900 dark:text-white flex items-center gap-2">
+                        <span>AI賦能教學創新雙核心平台</span>
+                        <span class="text-xs font-normal px-2 py-0.5 rounded-full bg-sky-100 text-sky-800 dark:bg-sky-900/60 dark:text-sky-300">1151125 & 1151124</span>
+                    </h1>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">臺師大教創中心 × 優履團隊 × T-School × 南投國中</p>
                 </div>
             </div>
 
-            <!-- 導航連結 -->
-            <nav class="hidden md:flex items-center gap-1 text-sm font-medium">
-                <a href="#overview" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition">總覽理念</a>
-                <a href="#live-sites" class="px-3 py-2 rounded-lg text-sky-600 dark:text-sky-400 font-semibold hover:bg-sky-50 dark:hover:bg-sky-950/50 transition">🌐 線上專案一覽</a>
-                <a href="#mindset" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition">心法與流程</a>
-                <a href="#tools" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition">工具光譜</a>
-                <a href="#projects" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition">專案實錄庫</a>
-                <a href="#generator" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition">任務Prompt生成器</a>
-                <a href="#handbook" class="px-3 py-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition">手冊下載</a>
-            </nav>
+            <!-- 導航切換按鈕 -->
+            <div class="flex items-center gap-2 sm:gap-3">
+                <nav class="hidden md:flex items-center gap-1 bg-slate-100 dark:bg-slate-800 p-1 rounded-xl text-xs font-medium">
+                    <button onclick="switchMainTab('tab-1151125')" id="nav-btn-1151125" class="nav-tab-btn px-3 py-1.5 rounded-lg transition bg-white dark:bg-slate-700 shadow-sm text-sky-600 dark:text-sky-400 font-semibold flex items-center gap-1.5">
+                        <i data-lucide="layout-grid" class="w-3.5 h-3.5"></i>
+                        <span>1151125 動態視覺化APP</span>
+                    </button>
+                    <button onclick="switchMainTab('tab-1151124')" id="nav-btn-1151124" class="nav-tab-btn px-3 py-1.5 rounded-lg transition text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5">
+                        <i data-lucide="compass" class="w-3.5 h-3.5"></i>
+                        <span>1151124 AI任務設計師</span>
+                    </button>
+                    <button onclick="switchMainTab('tab-prompts')" id="nav-btn-prompts" class="nav-tab-btn px-3 py-1.5 rounded-lg transition text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5">
+                        <i data-lucide="terminal" class="w-3.5 h-3.5"></i>
+                        <span>實務指令庫 & 產生器</span>
+                    </button>
+                    <button onclick="switchMainTab('tab-downloads')" id="nav-btn-downloads" class="nav-tab-btn px-3 py-1.5 rounded-lg transition text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5">
+                        <i data-lucide="file-down" class="w-3.5 h-3.5"></i>
+                        <span>手冊下載</span>
+                    </button>
+                </nav>
 
-            <!-- 右側功能按鈕 -->
-            <div class="flex items-center gap-2">
-                <button onclick="toggleDarkMode()" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition" title="切換深淺色模式">
-                    <i id="theme-icon" data-lucide="moon" class="w-5 h-5"></i>
+                <!-- 深淺模式切換 -->
+                <button onclick="toggleDarkMode()" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" title="切換深淺色模式">
+                    <i data-lucide="moon" class="w-4 h-4 hidden dark:block"></i>
+                    <i data-lucide="sun" class="w-4 h-4 block dark:hidden"></i>
                 </button>
-                <button onclick="window.print()" class="hidden sm:flex items-center gap-1.5 px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-700 text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
-                    <i data-lucide="printer" class="w-4 h-4"></i>
-                    <span>列印手冊</span>
+
+                <button onclick="window.print()" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 text-xs font-medium transition" title="列印或另存 PDF">
+                    <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+                    <span>列印</span>
                 </button>
-                <a href="1151124汪憶-AI設計者_完整研習手冊.docx" download class="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold shadow-md shadow-sky-600/30 transition">
-                    <i data-lucide="file-down" class="w-4 h-4"></i>
-                    <span class="hidden sm:inline">下載 Word</span> 手冊
-                </a>
             </div>
+        </div>
+
+        <!-- 行動版子導航 -->
+        <div class="md:hidden flex overflow-x-auto no-scrollbar px-4 py-2 gap-2 bg-slate-100/70 dark:bg-slate-800/70 border-t border-slate-200/50 dark:border-slate-800 text-xs">
+            <button onclick="switchMainTab('tab-1151125')" class="mobile-tab-btn px-3 py-1 rounded-lg bg-white dark:bg-slate-700 text-sky-600 dark:text-sky-400 font-semibold shadow-sm whitespace-nowrap">1151125 動態APP</button>
+            <button onclick="switchMainTab('tab-1151124')" class="mobile-tab-btn px-3 py-1 rounded-lg text-slate-600 dark:text-slate-300 whitespace-nowrap">1151124 任務設計師</button>
+            <button onclick="switchMainTab('tab-prompts')" class="mobile-tab-btn px-3 py-1 rounded-lg text-slate-600 dark:text-slate-300 whitespace-nowrap">指令庫 & 產生器</button>
+            <button onclick="switchMainTab('tab-downloads')" class="mobile-tab-btn px-3 py-1 rounded-lg text-slate-600 dark:text-slate-300 whitespace-nowrap">手冊下載</button>
         </div>
     </header>
 
-    <!-- ==================== 主要內容區 ==================== -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
 
-        <!-- ==================== HERO 區域 ==================== -->
-        <section id="overview" class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-indigo-900 via-sky-900 to-slate-900 text-white p-8 sm:p-12 shadow-2xl border border-sky-800/40">
-            <div class="absolute -top-32 -right-32 w-96 h-96 bg-sky-500/20 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <!-- ==================== TAB 1: 1151125 最新研習焦點 ==================== -->
+        <div id="tab-1151125" class="main-tab-content space-y-12">
+            <!-- Hero Section -->
+            <section class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-900 via-sky-900 to-slate-900 text-white p-8 sm:p-12 shadow-xl border border-sky-800/40">
+                <div class="absolute -top-32 -right-32 w-80 h-80 bg-sky-500/20 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -bottom-32 -left-32 w-80 h-80 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
-            <div class="relative z-10 max-w-4xl space-y-6">
-                <div class="flex flex-wrap items-center gap-2">
-                    <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-400/30">#臺北市數位實驗高中 T-School</span>
-                    <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-400/30">#汪檍（汪汪）老師</span>
-                    <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">#20261124 最新發表</span>
-                    <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-400/30">#20+ 個線上實體專案</span>
-                </div>
-
-                <h1 class="text-3xl sm:text-5xl font-black tracking-tight leading-tight text-white">
-                    AI 任務設計師：<br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-teal-300 to-amber-300">讓 AI 成為工作好夥伴・自主學習與跨域專案全集</span>
-                </h1>
-
-                <p class="text-lg text-slate-300 font-normal leading-relaxed">
-                    完整收錄汪檍老師在 2026/11/24 最新發表之 91 頁完整簡報與 73 頁精華版。從日常行政、自主學習、閱讀解謎、數位策展到生活跨域，完整公開 20+ 個真實上線系統連結、AI 協作策略與崩潰踩坑經驗談。
-                </p>
-
-                <!-- 雙份原始 Canva 簡報按鈕 -->
-                <div class="flex flex-wrap gap-3 pt-2">
-                    <a href="https://www.canva.com/design/DAHZ1N312-w/9RUqHr3ISjqY8geL9zzPCQ/view" target="_blank" rel="noopener noreferrer"
-                       class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs sm:text-sm shadow-lg shadow-amber-500/20 transition">
-                        <i data-lucide="external-link" class="w-4 h-4"></i>
-                        <span>開啟最新 91 頁 Canva 簡報 (20261124)</span>
-                    </a>
-                    <a href="https://www.canva.com/design/DAHA4t2-pWY/HtqtOGLrNZ3m4ILw3eNU2g/view" target="_blank" rel="noopener noreferrer"
-                       class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/15 hover:bg-white/25 text-white font-semibold text-xs sm:text-sm border border-white/20 transition">
-                        <i data-lucide="external-link" class="w-4 h-4"></i>
-                        <span>開啟 73 頁精華版 Canva 簡報</span>
-                    </a>
-                </div>
-
-                <!-- 金句跑馬燈 / 標籤輪播卡 -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
-                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/10 flex flex-col justify-between">
-                        <div class="flex items-center gap-2 text-sky-300 text-xs font-bold uppercase tracking-wider mb-2">
-                            <i data-lucide="refresh-cw" class="w-4 h-4"></i> 角色跨越
-                        </div>
-                        <div class="text-sm font-semibold text-white">從「工具使用者」到「稱職的任務甲方」</div>
-                    </div>
-                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/10 flex flex-col justify-between">
-                        <div class="flex items-center gap-2 text-amber-300 text-xs font-bold uppercase tracking-wider mb-2">
-                            <i data-lucide="compass" class="w-4 h-4"></i> 思考流程
-                        </div>
-                        <div class="text-sm font-semibold text-white">Prompt 不是重點，思考流程才是靈魂</div>
-                    </div>
-                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/10 flex flex-col justify-between">
-                        <div class="flex items-center gap-2 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-2">
-                            <i data-lucide="zap" class="w-4 h-4"></i> Vibe Coding
-                        </div>
-                        <div class="text-sm font-semibold text-white">先求有，再求好，持續碎念式迭代</div>
-                    </div>
-                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/10 flex flex-col justify-between">
-                        <div class="flex items-center gap-2 text-purple-300 text-xs font-bold uppercase tracking-wider mb-2">
-                            <i data-lucide="heart-handshake" class="w-4 h-4"></i> 教育核心
-                        </div>
-                        <div class="text-sm font-semibold text-white">AI讓產出變快，但快不起來的是思考過程</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==================== 線上實作專案與展廳一覽 (LIVE SITES) ==================== -->
-        <section id="live-sites" class="space-y-6">
-            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400">Live Demonstrations</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
-                        <span>🌐 汪檍老師實作專案與線上展廳一覽</span>
-                        <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">全部點擊可直接開啟</span>
-                    </h2>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">簡報第 13 頁起公開之所有真實線上運作專案、GitHub 遊戲、Google Sites 平台與試算表</p>
-                </div>
-            </div>
-
-            <!-- 實時專案超連結卡片網格 -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" id="live-links-grid">
-                <!-- 動態注入真實連結卡片 -->
-            </div>
-        </section>
-
-        <!-- ==================== 心法與思維流程 (MINDSET & WORKFLOW) ==================== -->
-        <section id="mindset" class="space-y-8">
-            <div class="text-center max-w-3xl mx-auto space-y-2">
-                <span class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400">Cognitive Upgrade</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">與 AI 協作的認知升級與思考流程</h2>
-                <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">放下工具學習的 SOP，打開心態的專案實驗思維</p>
-            </div>
-
-            <!-- 三大心態轉換對比卡 -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- 卡片 1 -->
-                <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 shadow-sm hover:shadow-md transition border border-slate-200/80 dark:border-slate-700/80 space-y-4">
-                    <div class="w-12 h-12 rounded-2xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 flex items-center justify-center font-bold">
-                        <i data-lucide="user-check" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">1. 使用態度：工具 ➔ 協作夥伴</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                        過去我們把 AI 當做自動販賣機，期待投下神奇指令就能吐出完美結果；現在我們將 AI 視為擁有專長的同事，需要隨時對話、校準上下文與相互啟發。
-                    </p>
-                    <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-900 text-xs font-mono text-slate-500">
-                        「不是在用工具，是在跟人協作。」
-                    </div>
-                </div>
-
-                <!-- 卡片 2 -->
-                <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 shadow-sm hover:shadow-md transition border border-slate-200/80 dark:border-slate-700/80 space-y-4">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold">
-                        <i data-lucide="shuffle" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">2. 工作心態：死守 SOP ➔ 專案實驗</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                        教學與行政沒有標準 SOP 能應付所有變局。面對未知專案，允許自己犯錯、允許 AI 抽風，在不完美的原型中進行「小步快跑與即時封測」。
-                    </p>
-                    <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-900 text-xs font-mono text-slate-500">
-                        「放掉SOP，什麼面向我都可以試試。」
-                    </div>
-                </div>
-
-                <!-- 卡片 3 -->
-                <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 shadow-sm hover:shadow-md transition border border-slate-200/80 dark:border-slate-700/80 space-y-4">
-                    <div class="w-12 h-12 rounded-2xl bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold">
-                        <i data-lucide="crown" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">3. 核心修煉：當個「稱職的甲方」</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                        下指令表面上是 Prompt，背後是你的教學素養。你必須擁有更專業的學科背景與需求鑑賞力，才能在五花八門的生成結果中做出精準審核。
-                    </p>
-                    <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-900 text-xs font-mono text-slate-500">
-                        「你要有更專業背景，才能當個稱職的甲方。」
-                    </div>
-                </div>
-            </div>
-
-            <!-- 思考流程圖：要做什麼 -> 怎麼做 -> 怎麼修 -->
-            <div class="bg-gradient-to-r from-sky-50 via-indigo-50 to-amber-50 dark:from-slate-800/80 dark:via-slate-800 dark:to-slate-800/80 rounded-3xl p-6 sm:p-8 border border-sky-100 dark:border-slate-700">
-                <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
-                    <i data-lucide="git-branch" class="w-5 h-5 text-sky-600"></i>
-                    汪檍老師實證：AI 任務設計師的三階思考流程
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
-                    <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 space-y-2">
-                        <div class="flex items-center justify-between">
-                            <span class="w-7 h-7 rounded-full bg-sky-600 text-white font-bold text-xs flex items-center justify-center">1</span>
-                            <span class="text-xs font-semibold text-sky-600 dark:text-sky-400">WHAT</span>
-                        </div>
-                        <h4 class="font-bold text-slate-900 dark:text-white">要做什麼？（清晰需求）</h4>
-                        <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                            鎖定真實痛點、使用者畫像與最精簡核心功能（MVP）。不貪多、不求一蹴可幾，先用文字畫出最終使用畫面。
-                        </p>
-                    </div>
-
-                    <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 space-y-2">
-                        <div class="flex items-center justify-between">
-                            <span class="w-7 h-7 rounded-full bg-indigo-600 text-white font-bold text-xs flex items-center justify-center">2</span>
-                            <span class="text-xs font-semibold text-indigo-600 dark:text-indigo-400">HOW</span>
-                        </div>
-                        <h4 class="font-bold text-slate-900 dark:text-white">要怎麼做？（夥伴選型）</h4>
-                        <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                            發想與美感交給 GEMINI；嚴謹邏輯與程式架構交給 GPT；將大目標拆分成小步驟，讓 AI 逐步落實原型。
-                        </p>
-                    </div>
-
-                    <div class="bg-white dark:bg-slate-900 p-5 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 space-y-2">
-                        <div class="flex items-center justify-between">
-                            <span class="w-7 h-7 rounded-full bg-amber-600 text-white font-bold text-xs flex items-center justify-center">3</span>
-                            <span class="text-xs font-semibold text-amber-600 dark:text-amber-400">FIX</span>
-                        </div>
-                        <h4 class="font-bold text-slate-900 dark:text-white">要怎麼修？（碎念迭代）</h4>
-                        <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                            上線測試、抓出卡頓跑版、像跟同事碎念一樣具體指出問題；若遇收費 API 或技術瓶頸，靈活「轉彎找替代方案」。
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==================== GEMINI VS GPT & AI 工具光譜 (TOOLS) ==================== -->
-        <section id="tools" class="space-y-8">
-            <div class="text-center max-w-3xl mx-auto space-y-2">
-                <span class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400">Tool Ecosystem</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">GEMINI vs GPT 畫布對照與 12 大工具光譜</h2>
-                <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">依據簡報實戰歸納，找對工具事半功倍</p>
-            </div>
-
-            <!-- GEMINI vs GPT 雙柱對照卡 -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- GEMINI 畫布 -->
-                <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 shadow-sm border-2 border-sky-400/40 relative overflow-hidden space-y-4">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-sky-500/10 rounded-full blur-2xl pointer-events-none"></div>
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-xl bg-sky-500 text-white flex items-center justify-center font-bold">G</div>
-                            <div>
-                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">和 GEMINI 一起畫的畫布</h3>
-                                <span class="text-xs text-sky-600 dark:text-sky-400 font-medium">靈活隨性・美感創意・跨域多模態</span>
-                            </div>
-                        </div>
-                        <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300">感性創作者</span>
-                    </div>
-
-                    <ul class="space-y-2.5 text-sm text-slate-600 dark:text-slate-300">
-                        <li class="flex items-start gap-2">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-500 mt-0.5 shrink-0"></i>
-                            <span><strong>跨領域能力超強</strong>：能將藝術、文學、科學與遊戲元素無縫串聯。</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-500 mt-0.5 shrink-0"></i>
-                            <span><strong>有美感有品味</strong>：對視覺排版、色彩搭配與多模態圖片理解極為敏銳。</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-500 mt-0.5 shrink-0"></i>
-                            <span><strong>隨時隨地能發想</strong>：能適應多變指令，探索專案無限可能性。</span>
-                        </li>
-                        <li class="flex items-start gap-2 text-amber-600 dark:text-amber-400">
-                            <i data-lucide="alert-circle" class="w-4 h-4 mt-0.5 shrink-0"></i>
-                            <span><strong>使用注意事項</strong>：記憶長度稍短，深入修改程式時需重複提醒約束限制。</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- GPT 畫布 -->
-                <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 shadow-sm border-2 border-indigo-400/40 relative overflow-hidden space-y-4">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-full blur-2xl pointer-events-none"></div>
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold">O</div>
-                            <div>
-                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">和 GPT 一起畫的畫布</h3>
-                                <span class="text-xs text-indigo-600 dark:text-indigo-400 font-medium">嚴謹架構・邏輯清晰・穩定交付</span>
-                            </div>
-                        </div>
-                        <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300">理性架構師</span>
-                    </div>
-
-                    <ul class="space-y-2.5 text-sm text-slate-600 dark:text-slate-300">
-                        <li class="flex items-start gap-2">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500 mt-0.5 shrink-0"></i>
-                            <span><strong>語言與邏輯能力強</strong>：結構分明、語法精準，適合條列嚴密規章與表單。</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500 mt-0.5 shrink-0"></i>
-                            <span><strong>專案穩定度高</strong>：程式碼邏輯除錯能力強，能處理複雜資料結構與正規表達式。</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-500 mt-0.5 shrink-0"></i>
-                            <span><strong>記憶耐受力佳</strong>：在多輪對話中仍能精確恪守前後文脈絡。</span>
-                        </li>
-                        <li class="flex items-start gap-2 text-amber-600 dark:text-amber-400">
-                            <i data-lucide="alert-circle" class="w-4 h-4 mt-0.5 shrink-0"></i>
-                            <span><strong>使用注意事項</strong>：視覺美感預設偏保守標準化，需額外給予設計風格指引。</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 12 大類別 AI 工具速查矩陣 -->
-            <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200/80 dark:border-slate-700 space-y-6">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                    <div>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">汪檍老師實用 AI 工具全景矩陣</h3>
-                        <p class="text-xs text-slate-500 dark:text-slate-400">涵蓋 12 大工作流領域，點擊標籤或輸入關鍵字即時篩選</p>
-                    </div>
-                    <!-- 搜尋框 -->
-                    <div class="relative w-full sm:w-64">
-                        <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-3"></i>
-                        <input type="text" id="tool-search" oninput="filterTools()" placeholder="搜尋工具名稱或功能..."
-                               class="w-full text-xs pl-9 pr-4 py-2.5 bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500">
-                    </div>
-                </div>
-
-                <!-- 分類過濾按鈕 -->
-                <div class="flex flex-wrap gap-2 text-xs font-medium">
-                    <button onclick="setToolCategory('all')" class="tool-cat-btn px-3 py-1.5 rounded-xl bg-sky-600 text-white font-semibold transition" data-cat="all">全部 (12)</button>
-                    <button onclick="setToolCategory('content')" class="tool-cat-btn px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition" data-cat="content">文本與研究</button>
-                    <button onclick="setToolCategory('media')" class="tool-cat-btn px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition" data-cat="media">影音與圖像</button>
-                    <button onclick="setToolCategory('code')" class="tool-cat-btn px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition" data-cat="code">程式與數據</button>
-                    <button onclick="setToolCategory('agent')" class="tool-cat-btn px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition" data-cat="agent">自動化與 3D</button>
-                </div>
-
-                <!-- 工具卡片網格 -->
-                <div id="tools-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <!-- 動態渲染工具卡片 -->
-                </div>
-            </div>
-        </section>
-
-        <!-- ==================== 專案實錄庫 (PROJECTS) ==================== -->
-        <section id="projects" class="space-y-8">
-            <div class="text-center max-w-3xl mx-auto space-y-2">
-                <span class="text-xs font-bold uppercase tracking-widest text-sky-600 dark:text-sky-400">Battle-Tested Projects</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">和 GEMINI / GPT 搏鬥的落地專案全集</h2>
-                <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
-                    完整涵蓋【校園管理】、【自主學習】、【課程教學】、【策展展演】與【身心生活】等 16 個代表作
-                </p>
-            </div>
-
-            <!-- 專案分類過濾按鈕列 -->
-            <div class="flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm font-medium">
-                <button onclick="setProjectCategory('all')" class="proj-cat-btn px-4 py-2 rounded-2xl bg-sky-600 text-white font-semibold shadow-sm transition" data-pcat="all">全部專案 (16)</button>
-                <button onclick="setProjectCategory('admin')" class="proj-cat-btn px-4 py-2 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" data-pcat="admin">🏫 校園管理 (4)</button>
-                <button onclick="setProjectCategory('self-learn')" class="proj-cat-btn px-4 py-2 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" data-pcat="self-learn">🎯 自主學習 (5)</button>
-                <button onclick="setProjectCategory('curriculum')" class="proj-cat-btn px-4 py-2 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" data-pcat="curriculum">📚 課程教學 (3)</button>
-                <button onclick="setProjectCategory('exhibition')" class="proj-cat-btn px-4 py-2 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" data-pcat="exhibition">🎨 策展展演 (1)</button>
-                <button onclick="setProjectCategory('lifestyle')" class="proj-cat-btn px-4 py-2 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" data-pcat="lifestyle">🔮 生活與跨域 (3)</button>
-            </div>
-
-            <!-- 專案卡片網格 -->
-            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- 動態注入專案 -->
-            </div>
-        </section>
-
-        <!-- ==================== 互動式「AI 任務設計師」PROMPT 產生器 ==================== -->
-        <section id="generator" class="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 rounded-3xl p-8 sm:p-12 text-white shadow-2xl border border-sky-800/50 space-y-8 relative overflow-hidden">
-            <div class="absolute -top-32 -left-32 w-80 h-80 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
-            <div class="max-w-3xl space-y-3">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-400/30">
-                    <i data-lucide="wand-2" class="w-4 h-4"></i>
-                    <span>Interactive Prompt Architecture</span>
-                </div>
-                <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight">AI 任務設計師・結構化提示詞產生器</h2>
-                <p class="text-slate-300 text-sm sm:text-base">
-                    依照汪檍老師「稱職甲方」四要素與思考流程，輸入您的教學或行政痛點，一鍵產出具備角色、痛點約束、架構步驟與驗收標準的專案級 Prompt！
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                <!-- 左側輸入表單 -->
-                <div class="lg:col-span-5 bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/10 space-y-4">
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-sky-300 mb-1">1. 學科／行政領域</label>
-                        <input type="text" id="gen-domain" value="國中八年級 國文科 / 閱讀寫作" class="w-full text-sm px-3.5 py-2.5 rounded-xl bg-slate-900/80 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-sky-500">
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-sky-300 mb-1">2. 核心痛點與專案需求</label>
-                        <textarea id="gen-pain" rows="3" class="w-full text-sm px-3.5 py-2.5 rounded-xl bg-slate-900/80 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-sky-500" placeholder="例如：學生練習字音字形容易無聊，想要一個互動式線上自主闖關網頁，能計分並記錄常錯字...">學生寫自主學習計畫常言之無物，需要一個引導式提問問卷網頁，能依據學生的興趣逐步生成學習計畫草案並一鍵匯出 Word。</textarea>
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-3">
-                        <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-sky-300 mb-1">3. 協作模型夥伴</label>
-                            <select id="gen-model" class="w-full text-sm px-3 py-2.5 rounded-xl bg-slate-900/80 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-sky-500">
-                                <option value="GEMINI">GEMINI（重創意發想與視覺美感）</option>
-                                <option value="GPT">GPT（重邏輯架構與程式穩定）</option>
-                                <option value="HYBRID" selected>雙模協作（GEMINI發想 + GPT架構）</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-sky-300 mb-1">4. 交付產品形態</label>
-                            <select id="gen-deliverable" class="w-full text-sm px-3 py-2.5 rounded-xl bg-slate-900/80 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-sky-500">
-                                <option value="單頁純前端互動網頁 (HTML/Tailwind)" selected>單頁純前端互動網頁 (HTML/Tailwind)</option>
-                                <option value="Google Sheet + Apps Script 系統">Google Sheet + Apps Script 系統</option>
-                                <option value="結構化評量量規與教學手冊">結構化評量量規與教學手冊</option>
-                                <option value="情境角色扮演對話 RPG 腳本">情境角色扮演對話 RPG 腳本</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <button onclick="generateStructuredPrompt()" class="w-full py-3 px-4 bg-gradient-to-r from-sky-500 to-indigo-500 hover:from-sky-600 hover:to-indigo-600 text-white font-bold rounded-xl shadow-lg shadow-sky-500/25 transition flex items-center justify-center gap-2">
-                        <i data-lucide="sparkles" class="w-4 h-4"></i>
-                        <span>一鍵生成專案 Prompt</span>
-                    </button>
-                </div>
-
-                <!-- 右側輸出展示區 -->
-                <div class="lg:col-span-7 bg-slate-950/90 rounded-2xl p-6 border border-slate-800 space-y-4">
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs font-mono text-slate-400 flex items-center gap-1.5">
-                            <i data-lucide="terminal" class="w-4 h-4 text-emerald-400"></i>
-                            生成之結構化 Prompt 預覽
+                <div class="relative z-10 space-y-6">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                            1151125 最新講師版課程
                         </span>
-                        <button onclick="copyGeneratedPrompt()" class="text-xs px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-sky-400 flex items-center gap-1 transition">
+                        <span class="px-3 py-1 rounded-full text-xs font-medium bg-sky-500/20 text-sky-200 border border-sky-500/30">臺師大教創中心 × 優履團隊</span>
+                        <span class="px-3 py-1 rounded-full text-xs font-medium bg-indigo-500/20 text-indigo-200 border border-indigo-500/30">共 53 頁完整講綱</span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+                            AI 賦能：製作動態視覺化ＡＰＰ
+                        </h2>
+                        <p class="text-slate-300 text-base sm:text-lg max-w-3xl leading-relaxed">
+                            從「紙本學習單痛點」轉化為「互動動態 APP」！掌握好指令三大面向（角色與背景、互動邏輯、防呆機制）與「三個面向＋一條輸送帶」架構，以自然語言敏捷迭代專屬教學教具。
+                        </p>
+                    </div>
+
+                    <!-- 講師與協作陣容 -->
+                    <div class="p-4 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 flex flex-wrap items-center justify-between gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-sky-400/20 text-sky-300 flex items-center justify-center font-bold">
+                                師
+                            </div>
+                            <div>
+                                <div class="text-sm font-semibold">指導來源：臺師大教創中心 陳佩英教授 與 優履團隊</div>
+                                <div class="text-xs text-slate-300">主講值日生：王琴雲 老師 | 協作：江英瑞、李佳穎、陳惠珍、黎懿瑩 老師</div>
+                            </div>
+                        </div>
+
+                        <!-- Canva 官方簡報按鈕 -->
+                        <div class="flex flex-wrap items-center gap-3">
+                            <a href="https://canva.link/ssgcc8l72qtigkt" target="_blank"
+                               class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-white font-semibold text-sm shadow-lg shadow-sky-500/30 hover:scale-[1.02] transition">
+                                <i data-lucide="presentation" class="w-4 h-4"></i>
+                                <span>開啟 Canva 53 頁官方簡報</span>
+                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                            </a>
+                            <a href="#section-1151125-links"
+                               class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-medium text-sm border border-white/20 transition">
+                                <i data-lucide="layers" class="w-4 h-4"></i>
+                                <span>瀏覽 9 大線上系統</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 四大目標與分組名單 -->
+            <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- 四大目標 -->
+                <div class="lg:col-span-2 bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-sm space-y-4">
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                        <i data-lucide="target" class="w-5 h-5 text-sky-600 dark:text-sky-400"></i>
+                        <span>工作坊四大核心目標</span>
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-4 rounded-2xl bg-sky-50 dark:bg-sky-950/40 border border-sky-100 dark:border-sky-800/40 space-y-1">
+                            <div class="text-xs font-semibold text-sky-700 dark:text-sky-300">目標 1</div>
+                            <div class="font-bold text-slate-900 dark:text-white text-sm">熟悉 Canvas 環境與操作模式</div>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">掌握程式碼預覽、自然語言微調與截圖優化操作。</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-100 dark:border-indigo-800/40 space-y-1">
+                            <div class="text-xs font-semibold text-indigo-700 dark:text-indigo-300">目標 2</div>
+                            <div class="font-bold text-slate-900 dark:text-white text-sm">教學需求轉化為 AI 工具</div>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">寫指令就是做教學設計，梳理使用者、流程與邊界。</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-100 dark:border-emerald-800/40 space-y-1">
+                            <div class="text-xs font-semibold text-emerald-700 dark:text-emerald-300">目標 3</div>
+                            <div class="font-bold text-slate-900 dark:text-white text-sm">開發學科專屬動態教學 APP</div>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">涵蓋正念安頓、任務抽籤、水的三態、幾何面積教具。</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-100 dark:border-amber-800/40 space-y-1">
+                            <div class="text-xs font-semibold text-amber-700 dark:text-amber-300">目標 4</div>
+                            <div class="font-bold text-slate-900 dark:text-white text-sm">建立跨域共創與專業回饋</div>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">以「我喜歡/我希望/如果可以」三面向建立正向同儕生態。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 分組名冊卡 -->
+                <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-sm space-y-4">
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white flex items-center justify-between">
+                        <span class="flex items-center gap-2">
+                            <i data-lucide="users" class="w-5 h-5 text-indigo-600 dark:text-indigo-400"></i>
+                            <span>工作坊分組協作名冊</span>
+                        </span>
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-300">共 4 組</span>
+                    </h3>
+                    <div class="space-y-2.5 text-xs">
+                        <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-750 border border-slate-200/80 dark:border-slate-700">
+                            <div class="font-bold text-slate-900 dark:text-white mb-0.5">G1 桌長：陳惠珍 老師</div>
+                            <div class="text-slate-600 dark:text-slate-300">塗瑀真(國)、李欣霈(國)、蔡艷卿(國)</div>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-750 border border-slate-200/80 dark:border-slate-700">
+                            <div class="font-bold text-slate-900 dark:text-white mb-0.5">G2 桌長：江英瑞 老師</div>
+                            <div class="text-slate-600 dark:text-slate-300">高若喬(自)、葉 敏(自)、詹智傑(自)</div>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-sky-50 dark:bg-sky-950/50 border border-sky-300 dark:border-sky-800">
+                            <div class="font-bold text-sky-800 dark:text-sky-300 mb-0.5 flex items-center gap-1">
+                                <span>G3 桌長：黎懿瑩 老師</span>
+                                <span class="text-[10px] px-1.5 py-0.2 rounded bg-sky-200 dark:bg-sky-800 text-sky-900 dark:text-sky-200 font-normal">資科與數理</span>
+                            </div>
+                            <div class="text-sky-950 dark:text-sky-200 font-medium">林福泉(資)、姚述勤(資)、張雅文(數)、鄭鳳惠(數)、嚴高一(數)</div>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-750 border border-slate-200/80 dark:border-slate-700">
+                            <div class="font-bold text-slate-900 dark:text-white mb-0.5">G4 桌長：李佳穎 老師</div>
+                            <div class="text-slate-600 dark:text-slate-300">吳芃軒(健)、鄭燕琪(綜)、曾麗娜(英)</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9 大實體線上系統展廳 -->
+            <section id="section-1151125-links" class="space-y-6">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                            <i data-lucide="globe" class="w-6 h-6 text-sky-600 dark:text-sky-400"></i>
+                            <span>1151125 研習 9 大實體線上系統與實作卡一覽</span>
+                        </h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">從 Canva 簡報逐頁提取並解密之真實上線 Gemini Canvas APP、Netlify 指令卡與 Padlet 看板</p>
+                    </div>
+                    <span class="text-xs px-3 py-1 rounded-full bg-sky-100 dark:bg-sky-900 text-sky-800 dark:text-sky-200 self-start sm:self-auto font-medium">
+                        9 處真實線上站點
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- Link 1 -->
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-semibold px-2 py-0.5 rounded bg-purple-100 dark:bg-purple-900/60 text-purple-700 dark:text-purple-300">SEL 體驗 · Slide 12</span>
+                                <i data-lucide="heart" class="w-4 h-4 text-purple-500"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">1.1 SEL：正念 / 安頓 APP</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">透過溫暖動態引導學生深呼吸、覺察當下情緒與平靜專注，在上課前迅速收心。</p>
+                        </div>
+                        <a href="https://share.gemini.google/PTjqlSLxMszJ" target="_blank"
+                           class="mt-4 w-full py-2 px-3 rounded-xl bg-purple-50 hover:bg-purple-100 dark:bg-purple-950/50 dark:hover:bg-purple-900/50 text-purple-700 dark:text-purple-300 text-xs font-semibold flex items-center justify-center gap-1.5 transition">
+                            <span>開啟 Gemini Canvas APP</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+
+                    <!-- Link 2 -->
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-semibold px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300">班經體驗 · Slide 13</span>
+                                <i data-lucide="compass" class="w-4 h-4 text-blue-500"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">1.2 班經：任務分配轉盤 APP</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">大螢幕動態指針轉盤，隨機公平分配課堂職務、值日生與小組上台發表順序。</p>
+                        </div>
+                        <a href="https://share.gemini.google/QU4OpI6Js5eh" target="_blank"
+                           class="mt-4 w-full py-2 px-3 rounded-xl bg-blue-50 hover:bg-blue-100 dark:bg-blue-950/50 dark:hover:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-xs font-semibold flex items-center justify-center gap-1.5 transition">
+                            <span>開啟 Gemini Canvas APP</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+
+                    <!-- Link 3 -->
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-semibold px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-900/60 text-indigo-700 dark:text-indigo-300">實作資源 · Slide 19-20</span>
+                                <i data-lucide="library" class="w-4 h-4 text-indigo-500"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">【SEL & 班經指令卡】資源網</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">專屬指令卡底家！內建情緒卡、轉盤卡、計時器等多樣化角色背景與邏輯模組。</p>
+                        </div>
+                        <a href="https://sel-class-van.netlify.app" target="_blank"
+                           class="mt-4 w-full py-2 px-3 rounded-xl bg-indigo-50 hover:bg-indigo-100 dark:bg-indigo-950/50 dark:hover:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 text-xs font-semibold flex items-center justify-center gap-1.5 transition">
+                            <span>開啟指令卡資源庫</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+
+                    <!-- Link 4 -->
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-semibold px-2 py-0.5 rounded bg-sky-100 dark:bg-sky-900/60 text-sky-700 dark:text-sky-300">生成工具 · Slide 21</span>
+                                <i data-lucide="cpu" class="w-4 h-4 text-sky-500"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">Google NotebookLM 工作室</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">在來源貼上指令，對話輸入提示語，於右側工作室一鍵產出互動網頁 HTML 檔。</p>
+                        </div>
+                        <a href="https://notebook.google.com" target="_blank"
+                           class="mt-4 w-full py-2 px-3 rounded-xl bg-sky-50 hover:bg-sky-100 dark:bg-sky-950/50 dark:hover:bg-sky-900/50 text-sky-700 dark:text-sky-300 text-xs font-semibold flex items-center justify-center gap-1.5 transition">
+                            <span>開啟 NotebookLM</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+
+                    <!-- Link 5 -->
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-semibold px-2 py-0.5 rounded bg-teal-100 dark:bg-teal-900/60 text-teal-700 dark:text-teal-300">自然領域 · Slide 37</span>
+                                <i data-lucide="droplet" class="w-4 h-4 text-teal-500"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">3.2 水的三態偵探 APP</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">固態、液態、氣態分子熱運動互動模擬，讓抽象物理化學狀態看得見、摸得到！</p>
+                        </div>
+                        <a href="https://share.gemini.google/fk2JefsNaEq8" target="_blank"
+                           class="mt-4 w-full py-2 px-3 rounded-xl bg-teal-50 hover:bg-teal-100 dark:bg-teal-950/50 dark:hover:bg-teal-900/50 text-teal-700 dark:text-teal-300 text-xs font-semibold flex items-center justify-center gap-1.5 transition">
+                            <span>開啟 Gemini Canvas APP</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+
+                    <!-- Link 6 -->
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300">數學領域 · Slide 37</span>
+                                <i data-lucide="shapes" class="w-4 h-4 text-emerald-500"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">3.2 面積剪剪貼貼 APP</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">幾何圖形割補、拼接與面積推導虛擬教具，動態操作化繁為簡，克服空間抽象盲區。</p>
+                        </div>
+                        <a href="https://share.gemini.google/qT051JVIH3vO" target="_blank"
+                           class="mt-4 w-full py-2 px-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 dark:bg-emerald-950/50 dark:hover:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 text-xs font-semibold flex items-center justify-center gap-1.5 transition">
+                            <span>開啟 Gemini Canvas APP</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+
+                    <!-- Link 7 -->
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-semibold px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-900/60 text-amber-700 dark:text-amber-300">學科實作 · Slide 39-40</span>
+                                <i data-lucide="scroll" class="w-4 h-4 text-amber-500"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">【闖關活動與虛擬教具指令卡】</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">專為各學科打造的互動闖關與教具架構指令庫，支援三工作站與輸送帶規範。</p>
+                        </div>
+                        <a href="https://subjects-van.netlify.app" target="_blank"
+                           class="mt-4 w-full py-2 px-3 rounded-xl bg-amber-50 hover:bg-amber-100 dark:bg-amber-950/50 dark:hover:bg-amber-900/50 text-amber-700 dark:text-amber-300 text-xs font-semibold flex items-center justify-center gap-1.5 transition">
+                            <span>開啟學科指令卡庫</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+
+                    <!-- Link 8 -->
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-semibold px-2 py-0.5 rounded bg-rose-100 dark:bg-rose-900/60 text-rose-700 dark:text-rose-300">題庫指令 · Slide 40</span>
+                                <i data-lucide="sparkles" class="w-4 h-4 text-rose-500"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">【學習目標與題庫卡片 / 題庫指令】</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">「修感靈感」題庫產生指令！協助教師將課綱學習目標轉化為結構化 JSON 測驗題庫。</p>
+                        </div>
+                        <a href="https://subjects-aids-van.netlify.app" target="_blank"
+                           class="mt-4 w-full py-2 px-3 rounded-xl bg-rose-50 hover:bg-rose-100 dark:bg-rose-950/50 dark:hover:bg-rose-900/50 text-rose-700 dark:text-rose-300 text-xs font-semibold flex items-center justify-center gap-1.5 transition">
+                            <span>開啟題庫指令卡庫</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+
+                    <!-- Link 9 -->
+                    <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-semibold px-2 py-0.5 rounded bg-violet-100 dark:bg-violet-900/60 text-violet-700 dark:text-violet-300">成果看板 · Slide 30, 43</span>
+                                <i data-lucide="share-2" class="w-4 h-4 text-violet-500"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">2.6 & 3.6 研習成果共創看板 (Padlet)</h4>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">全體教師作品集散地！繳交 APP 連結與 HTML，進行「我喜歡/我希望/如果可以」同儕回饋。</p>
+                        </div>
+                        <a href="https://padlet.com/vanessa5881/115-11-25-app-s025qbrpwmopvznipg3q" target="_blank"
+                           class="mt-4 w-full py-2 px-3 rounded-xl bg-violet-50 hover:bg-violet-100 dark:bg-violet-950/50 dark:hover:bg-violet-900/50 text-violet-700 dark:text-violet-300 text-xs font-semibold flex items-center justify-center gap-1.5 transition">
+                            <span>開啟 Padlet 成果牆</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 核心設計心法與架構 -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- 好指令三大思考面向 -->
+                <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-sm space-y-4">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                        <i data-lucide="lightbulb" class="w-6 h-6 text-amber-500"></i>
+                        <span>好指令的三大思考面向（寫指令就是做教學設計）</span>
+                    </h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">將教學需求轉化為 AI 工具的黃金思維支柱：</p>
+                    <div class="space-y-3">
+                        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-750 border-l-4 border-sky-500 space-y-1">
+                            <div class="font-bold text-sm text-slate-900 dark:text-white">【角色與背景】：誰在用？</div>
+                            <p class="text-xs text-slate-600 dark:text-slate-300">
+                                教師投影帶全班（大螢幕大按鈕）？學生自用平板（自主節奏）？分組共用一台？還是回家練習？明確先備知識與裝置邊界。
+                            </p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-750 border-l-4 border-indigo-500 space-y-1">
+                            <div class="font-bold text-sm text-slate-900 dark:text-white">【互動邏輯】：怎麼用？</div>
+                            <p class="text-xs text-slate-600 dark:text-slate-300">
+                                操作步驟是甚麼？答對給予音效與動畫、答錯給予提示卡；抽籤是否防重複；倒數計時與過關判定條件。
+                            </p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-750 border-l-4 border-rose-500 space-y-1">
+                            <div class="font-bold text-sm text-slate-900 dark:text-white">【防呆機制】：出錯怎麼辦？</div>
+                            <p class="text-xs text-slate-600 dark:text-slate-300">
+                                不可違反的教學規則！人數錯誤、欄位空白、手殘連按防護、學生重整重來都不會崩潰。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 三個面向＋一條輸送帶 -->
+                <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-sm space-y-4">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                        <i data-lucide="git-merge" class="w-6 h-6 text-emerald-500"></i>
+                        <span>學科 APP「三個面向 ＋ 一條輸送帶」架構</span>
+                    </h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">模組化組裝複雜教學教具的系統工程：</p>
+                    <div class="space-y-3">
+                        <div class="grid grid-cols-3 gap-2">
+                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-750 border border-slate-200 dark:border-slate-700 text-center">
+                                <div class="text-[10px] text-sky-600 dark:text-sky-400 font-bold">工作站 1</div>
+                                <div class="font-bold text-xs text-slate-900 dark:text-white mt-0.5">[ 核心 ]</div>
+                                <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-1">結構與邏輯定調</div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-750 border border-slate-200 dark:border-slate-700 text-center">
+                                <div class="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold">工作站 2</div>
+                                <div class="font-bold text-xs text-slate-900 dark:text-white mt-0.5">[ 外觀 ]</div>
+                                <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-1">視覺與風格套用</div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-750 border border-slate-200 dark:border-slate-700 text-center">
+                                <div class="text-[10px] text-rose-600 dark:text-rose-400 font-bold">工作站 3</div>
+                                <div class="font-bold text-xs text-slate-900 dark:text-white mt-0.5">[ 例外防呆 ]</div>
+                                <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-1">加入防呆與進階</div>
+                            </div>
+                        </div>
+
+                        <!-- 輸送帶 -->
+                        <div class="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/50 space-y-1">
+                            <div class="flex items-center justify-between text-xs font-bold text-amber-800 dark:text-amber-300">
+                                <span>═ 輸送帶：全程適用 ═</span>
+                                <span>格式與製作要求</span>
+                            </div>
+                            <p class="text-xs text-amber-950 dark:text-amber-200/90 leading-relaxed">
+                                「以單一純 HTML/CSS/JS 交付，響應式手機平版完全相容，美觀現代卡片風格，禁止外部付費 API。」確保全流程標準化輸出！
+                            </p>
+                        </div>
+
+                        <!-- 敏捷四步法 -->
+                        <div class="p-3.5 rounded-2xl bg-slate-100 dark:bg-slate-750 text-xs text-slate-600 dark:text-slate-300 flex items-center justify-between">
+                            <span class="font-bold text-slate-800 dark:text-slate-200">敏捷四步：</span>
+                            <span>Step 1 生成</span> ➔ <span>Step 2 試用</span> ➔ <span>Step 3 說出問題</span> ➔ <span>Step 4 修改指令</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 零伺服器維護發布工作流 (NotebookLM -> Canvas -> Google Sites) -->
+            <section class="bg-gradient-to-r from-sky-500/10 via-indigo-500/10 to-purple-500/10 rounded-3xl p-6 sm:p-8 border border-sky-200/60 dark:border-sky-800/40 space-y-6">
+                <div class="max-w-2xl">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                        <i data-lucide="workflow" class="w-6 h-6 text-sky-600 dark:text-sky-400"></i>
+                        <span>極致無痛：NotebookLM ➔ Canvas ➔ Google Sites 三階發布工作流</span>
+                    </h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">告別複雜伺服器維運！日後修改 APP 只要更換協作平台程式碼，學生的專屬連結與 QR Code 永不失效！</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm space-y-2">
+                        <div class="w-8 h-8 rounded-lg bg-sky-100 dark:bg-sky-900/60 text-sky-700 dark:text-sky-300 font-bold flex items-center justify-center text-sm">1</div>
+                        <h4 class="font-bold text-sm text-slate-900 dark:text-white">NotebookLM 原型生成</h4>
+                        <p class="text-xs text-slate-600 dark:text-slate-400">
+                            左側新增來源貼上指令，中間輸入「請在右邊工作室提供可預覽的互動式教學網頁」，右側工作室點開烤肉串選單下載 HTML 檔。
+                        </p>
+                    </div>
+
+                    <div class="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm space-y-2">
+                        <div class="w-8 h-8 rounded-lg bg-indigo-100 dark:bg-indigo-900/60 text-indigo-700 dark:text-indigo-300 font-bold flex items-center justify-center text-sm">2</div>
+                        <h4 class="font-bold text-sm text-slate-900 dark:text-white">Gemini Canvas 截圖精修</h4>
+                        <p class="text-xs text-slate-600 dark:text-slate-400">
+                            開啟 Canvas 上傳 HTML 檔，透過自然語言與視覺截圖（直接指出哪裡改進），遵循「一次只改一件事」原則迭代優化。
+                        </p>
+                    </div>
+
+                    <div class="bg-white dark:bg-slate-800 p-5 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm space-y-2">
+                        <div class="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 font-bold flex items-center justify-center text-sm">3</div>
+                        <h4 class="font-bold text-sm text-slate-900 dark:text-white">Google Sites 協作平台連動</h4>
+                        <p class="text-xs text-slate-600 dark:text-slate-400">
+                            教育帳號點擊「匯出」連動協作平台發布。若日後需要改動 APP，直接換置協作平台後台程式碼，無須頻繁更新學生連結！
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==================== TAB 2: 1151124 旗艦專案 (汪檍老師) ==================== -->
+        <div id="tab-1151124" class="main-tab-content hidden space-y-12">
+            <!-- 1151124 Hero -->
+            <section class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-indigo-950 to-sky-950 text-white p-8 sm:p-12 shadow-xl border border-indigo-800/40">
+                <div class="relative z-10 space-y-6">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-500/40">1151124 研習核心講綱</span>
+                        <span class="px-3 py-1 rounded-full text-xs font-medium bg-indigo-500/20 text-indigo-200 border border-indigo-500/30">臺北市數位實驗高中 (T-School)</span>
+                        <span class="px-3 py-1 rounded-full text-xs font-medium bg-amber-500/20 text-amber-200 border border-amber-500/30">91 頁完整實務</span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+                            AI 任務設計師：自主學習與跨域專案
+                        </h2>
+                        <p class="text-slate-300 text-base sm:text-lg max-w-3xl leading-relaxed">
+                            主講：汪檍（汪汪）老師。從「工具使用者」轉變成「任務發想者與稱職的甲方」；收錄 26 處真實落地專案展廳與 16 大深度專案痛點剖析。
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <a href="https://www.canva.com/design/DAHZ1N312-w/9RUqHr3ISjqY8geL9zzPCQ/view?utm_content=DAHZ1N312-w&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1eeaa63079" target="_blank"
+                           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-white font-semibold text-sm shadow-lg shadow-sky-500/30 hover:scale-[1.02] transition">
+                            <i data-lucide="presentation" class="w-4 h-4"></i>
+                            <span>Canva 91 頁完整精進版</span>
+                            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </a>
+                        <a href="https://www.canva.com/design/DAHA4t2-pWY/HtqtOGLrNZ3m4ILw3eNU2g/view?utm_content=DAHA4t2-pWY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h72f792ca85#1" target="_blank"
+                           class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-medium text-sm border border-white/20 transition">
+                            <i data-lucide="layout" class="w-4 h-4"></i>
+                            <span>Canva 73 頁核心實務版</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 26 處真實專案快速檢索看板 -->
+            <section class="space-y-6">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-4">
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                            <i data-lucide="layout-grid" class="w-6 h-6 text-sky-600 dark:text-sky-400"></i>
+                            <span>汪檍老師 26 處真實落地專案與線上展廳一覽</span>
+                        </h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400">所有專案均為真實上線平台（Google Sites、GitHub Pages、ChatGPT Web App 等）</p>
+                    </div>
+                    <div class="relative w-full sm:w-72">
+                        <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                        <input type="text" id="project-filter-input" onkeyup="filterProjectCards()" placeholder="搜尋專案名稱或技術關鍵字..."
+                               class="w-full pl-9 pr-4 py-2 text-xs rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 outline-none focus:ring-2 focus:ring-sky-500">
+                    </div>
+                </div>
+
+                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Cards populated by JS -->
+                </div>
+            </section>
+        </div>
+
+        <!-- ==================== TAB 3: 實務指令庫 & 互動產生器 ==================== -->
+        <div id="tab-prompts" class="main-tab-content hidden space-y-10">
+            <section class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-slate-700 shadow-sm space-y-6">
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                        <i data-lucide="terminal" class="w-6 h-6 text-indigo-600 dark:text-indigo-400"></i>
+                        <span>互動式教學 APP 指令產生器（依據 1151125 & 1151124 雙模型）</span>
+                    </h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+                        依據「好指令三大面向」與「三個面向＋一條輸送帶」架構，自訂你的教學需求並一鍵產生完整 Prompt！
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">1. 課堂使用場景 (角色與背景)</label>
+                        <select id="gen-scene" class="w-full p-2.5 rounded-xl text-xs bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 outline-none">
+                            <option value="老師投影，帶全班一起用 (大螢幕、大字體、大按鈕、即時倒數與慶祝動畫)">老師投影帶全班 (大按鈕、大螢幕)</option>
+                            <option value="學生各自使用平板電腦操作 (個人配速、即時對錯回饋、關卡成就解鎖)">學生各自用平板 (每人獨立操作)</option>
+                            <option value="學生分組共用一台平板 (組員輪流輸入、角色防呆機制、組內共識決策)">學生分組共用 (輪流操作、合作討論)</option>
+                            <option value="學生回家自己自主練習 (防呆提示卡、語音發音朗讀、自主檢核清單)">回家自己練習 (無教師在場)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">2. 欲解決之學習卡關痛點</label>
+                        <select id="gen-pain" class="w-full p-2.5 rounded-xl text-xs bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 outline-none">
+                            <option value="學生寫完不知道對錯，需要等老師批改或隔天才能得知反饋">寫完不知道對錯 (反饋延遲)</option>
+                            <option value="學生答錯就放棄、卡住不知下一步該如何思考">答錯就放棄 (缺乏及時鷹架)</option>
+                            <option value="練習時間與次數都不夠，紙本學習單寫一次就結束無重複性">練習次數不夠 (無法重複精熟)</option>
+                            <option value="抽象概念太抽象，只能憑空想像看不到也摸不到">概念太抽象 (缺乏視覺與動態操作)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">3. 預期達成之關鍵教學成效</label>
+                        <select id="gen-outcome" class="w-full p-2.5 rounded-xl text-xs bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 outline-none">
+                            <option value="獲得提示卡與階梯式即時回饋，願意主動嘗試繼續往下破關挑戰">獲得提示卡即時回饋，持續闖關</option>
+                            <option value="透過動態拖曳割補或分子熱運動模擬，直觀理解深層原理">透過動態操作直觀理解核心原理</option>
+                            <option value="完成測驗後自動產製專屬個人化能力雷達圖與學習證書">自動生成能力雷達圖與榮譽證書</option>
+                            <option value="在課前 3 分鐘平靜呼吸與覺察心情，專注投入課堂">課前平靜呼吸收心，提升專注力</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300">產出之完整 Prompt 指令（可直接貼入 NotebookLM 或 Canvas）：</label>
+                    <div class="relative">
+                        <textarea id="generated-prompt" rows="8" readonly
+                                  class="w-full p-4 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-xs font-mono text-slate-800 dark:text-slate-200 outline-none"></textarea>
+                        <button onclick="copyGeneratedPrompt()"
+                                class="absolute right-3 top-3 px-3 py-1.5 rounded-lg bg-sky-600 hover:bg-sky-700 text-white text-xs font-medium flex items-center gap-1 shadow">
                             <i data-lucide="copy" class="w-3.5 h-3.5"></i>
-                            <span id="copy-btn-text">複製提示詞</span>
+                            <span id="copy-btn-text">一鍵複製</span>
                         </button>
                     </div>
-
-                    <pre id="prompt-output" class="text-xs text-slate-300 leading-relaxed overflow-x-auto p-4 rounded-xl bg-slate-900 border border-slate-800/80 max-h-[380px] overflow-y-auto whitespace-pre-wrap font-mono"></pre>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
-        <!-- ==================== 手冊下載與研習資源區 (HANDBOOK) ==================== -->
-        <section id="handbook" class="bg-white dark:bg-slate-800 rounded-3xl p-8 sm:p-10 shadow-sm border border-slate-200/80 dark:border-slate-700 space-y-6">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <!-- ==================== TAB 4: 手冊下載 ==================== -->
+        <div id="tab-downloads" class="main-tab-content hidden space-y-8">
+            <section class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-slate-700 shadow-sm space-y-6">
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white">研習完整實務手冊與文件下載</h2>
-                    <p class="text-sm text-slate-500 dark:text-slate-400">已自動排版轉譯成標準行政研習講義（Microsoft Word 格式，內嵌所有可點擊超連結）</p>
-                </div>
-                <div class="flex flex-wrap gap-3">
-                    <a href="1151124汪憶-AI設計者_完整研習手冊.docx" download class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white text-sm font-bold shadow-md shadow-sky-600/30 transition">
-                        <i data-lucide="download" class="w-4 h-4"></i>
-                        <span>下載完整 Word 手冊 (.docx)</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- 文件規格卡片列表 -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-                <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-700/60 flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0">
-                        <i data-lucide="file-text" class="w-6 h-6"></i>
-                    </div>
-                    <div class="space-y-1">
-                        <h4 class="font-bold text-slate-900 dark:text-white text-sm">1151124汪憶-AI設計者_完整研習手冊.docx</h4>
-                        <p class="text-xs text-slate-500 dark:text-slate-400">包含完整章節、91 頁簡報精華、20+ 實體專案痛點/架構/踩坑分析、AI 工具光譜表與超連結總覽。</p>
-                        <div class="text-xs text-sky-600 dark:text-sky-400 font-mono pt-1">標楷體 / 微軟正黑體排版・南投國中研習標準備查格式</div>
-                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                        <i data-lucide="download" class="w-6 h-6 text-sky-600 dark:text-sky-400"></i>
+                        <span>雙核心研習行政與實務手冊下載中心 (.docx)</span>
+                    </h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+                        基於 Node.js docx 套件自動化編譯，完整排版微軟正黑體、涵蓋所有超連結、分組名單與實務踩坑剖析。
+                    </p>
                 </div>
 
-                <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-700/60 flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0">
-                        <i data-lucide="code-2" class="w-6 h-6"></i>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- 1151125 Docx Card -->
+                    <div class="p-6 rounded-2xl bg-gradient-to-br from-sky-50 to-indigo-50 dark:from-slate-750 dark:to-slate-800 border border-sky-200 dark:border-sky-800/60 flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold px-2 py-0.5 rounded bg-sky-200 dark:bg-sky-900 text-sky-800 dark:text-sky-300">1151125 講師版手冊</span>
+                                <i data-lucide="file-text" class="w-5 h-5 text-sky-600"></i>
+                            </div>
+                            <h4 class="font-bold text-base text-slate-900 dark:text-white">AI賦能：製作教學使用動態視覺化多模態 APP</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">
+                                臺師大教創中心陳佩英教授團隊 × 優履團隊 · 53 頁完整講綱、4 組名單、9 大線上連結、NotebookLM+Canvas+Google Sites 發布工作流。
+                            </p>
+                        </div>
+                        <a href="1151125_AI賦能_製作教學使用多模態APP_研習手冊.docx" download
+                           class="w-full py-2.5 px-4 rounded-xl bg-sky-600 hover:bg-sky-700 text-white text-xs font-semibold flex items-center justify-center gap-2 shadow transition">
+                            <i data-lucide="download" class="w-4 h-4"></i>
+                            <span>下載 1151125 完整研習手冊 (.docx)</span>
+                        </a>
                     </div>
-                    <div class="space-y-1">
-                        <h4 class="font-bold text-slate-900 dark:text-white text-sm">generate_docx.js 自動化產製腳本</h4>
-                        <p class="text-xs text-slate-500 dark:text-slate-400">基於 Node.js docx 套件之腳本，可隨時根據最新教學案例或教師反饋一鍵重新生成更新手冊。</p>
-                        <div class="text-xs text-indigo-600 dark:text-indigo-400 font-mono pt-1">相容 Office 365, Word 2016+, Google Docs</div>
+
+                    <!-- 1151124 Docx Card -->
+                    <div class="p-6 rounded-2xl bg-gradient-to-br from-slate-50 to-indigo-50 dark:from-slate-750 dark:to-slate-800 border border-slate-200 dark:border-slate-700 flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold px-2 py-0.5 rounded bg-indigo-200 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-300">1151124 旗艦手冊</span>
+                                <i data-lucide="file-text" class="w-5 h-5 text-indigo-600"></i>
+                            </div>
+                            <h4 class="font-bold text-base text-slate-900 dark:text-white">AI 任務設計師：自主學習與跨域專案 (汪檍老師)</h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400">
+                                臺北市數位實驗高中汪檍老師 · 91 頁完整專案精華、26 個真實站點超連結表、16 個深度專案痛點剖析。
+                            </p>
+                        </div>
+                        <a href="1151124汪憶-AI設計者_完整研習手冊.docx" download
+                           class="w-full py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold flex items-center justify-center gap-2 shadow transition">
+                            <i data-lucide="download" class="w-4 h-4"></i>
+                            <span>下載 1151124 完整研習手冊 (.docx)</span>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
     </main>
 
-    <!-- ==================== 頁尾 ==================== -->
-    <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 py-8 text-center text-xs text-slate-500 dark:text-slate-400 no-print">
-        <div class="max-w-7xl mx-auto px-4 space-y-2">
-            <p class="font-medium text-slate-700 dark:text-slate-300">南投市立南投國民中學 教師專業學習社群 × 臺北市數位實驗高中（T-School）</p>
-            <p>主講：汪檍（汪汪）老師 | 成果建置：Antigravity AI 任務工程系統 | 日期：115 年 11 月 24 日</p>
-        </div>
+    <!-- 頁尾 -->
+    <footer class="border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-400 no-print">
+        <p>國立臺灣師範大學 教育創新與評鑑研究中心 × 優履團隊 × 臺北市數位實驗高中 × 南投國中</p>
+        <p class="mt-1">研習成果整合發布系統 · 支援自然語言引導與自主學習教具設計</p>
     </footer>
 
-    <!-- ==================== 浮動 Toast 提示 ==================== -->
-    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 flex items-center gap-2 px-4 py-3 rounded-2xl bg-slate-900 text-white shadow-xl text-sm border border-slate-700 pointer-events-none">
-        <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
-        <span id="toast-msg">已成功複製提示詞！</span>
-    </div>
-
-    <!-- ==================== 資料與互動邏輯 SCRIPT ==================== -->
+    <!-- ==================== 前端邏輯 (含 SHA-256 門禁保護) ==================== -->
     <script>
-        // ==================== 門禁防護 (SHA-256 雜湊驗證，不公開明文密碼) ====================
-        const AUTH_SESSION_KEY = "wang_yi_auth_session";
-        // SHA-256 雜湊值（對應使用者指定之通行碼）
-        const TARGET_HASH = "5cae49b1fea5b5b969cdc931b8338968940c92309aa2339360cdd5c77be4a4ff";
+        // SHA-256 雜湊驗證常數 (不儲存任何明文密碼)
+        const TARGET_HASH = '5cae49b1fea5b5b969cdc931b8338968940c92309aa2339360cdd5c77be4a4ff';
 
-        function checkAuth() {
-            if (sessionStorage.getItem(AUTH_SESSION_KEY) === "authenticated") {
-                const gate = document.getElementById('auth-gate');
-                if (gate) gate.classList.add('hidden');
-            }
-        }
-
-        async function computeSHA256(text) {
-            const msgBuffer = new TextEncoder().encode(text);
-            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+        async function computeSHA256(str) {
+            const buffer = new TextEncoder().encode(str);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', buffer);
             const hashArray = Array.from(new Uint8Array(hashBuffer));
             return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
         }
 
         async function handleAuth(e) {
             e.preventDefault();
-            const input = document.getElementById('access-code');
-            const err = document.getElementById('auth-error');
-            const userCode = input.value.trim().toLowerCase();
+            const inputVal = document.getElementById('access-code').value.trim().toLowerCase();
+            const inputHash = await computeSHA256(inputVal);
 
-            const userHash = await computeSHA256(userCode);
-
-            if (userHash === TARGET_HASH) {
-                sessionStorage.setItem(AUTH_SESSION_KEY, "authenticated");
-                document.getElementById('auth-gate').classList.add('opacity-0');
+            if (inputHash === TARGET_HASH) {
+                sessionStorage.setItem('auth_verified', 'true');
+                document.getElementById('auth-gate').classList.add('opacity-0', 'pointer-events-none');
                 setTimeout(() => {
-                    document.getElementById('auth-gate').classList.add('hidden');
+                    document.getElementById('auth-gate').style.display = 'none';
                 }, 300);
             } else {
+                const err = document.getElementById('auth-error');
                 err.classList.remove('hidden');
-                input.classList.add('shake', 'border-rose-500');
-                setTimeout(() => {
-                    input.classList.remove('shake');
-                }, 500);
+                const formBox = document.querySelector('#auth-gate > div');
+                formBox.classList.add('shake-animation');
+                setTimeout(() => formBox.classList.remove('shake-animation'), 500);
             }
         }
 
-        // ==================== 深淺色切換 ====================
+        // 檢查登入狀態
+        if (sessionStorage.getItem('auth_verified') === 'true') {
+            document.getElementById('auth-gate').style.display = 'none';
+        }
+
+        // 深色模式切換
         function toggleDarkMode() {
-            const isDark = document.documentElement.classList.toggle('dark');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            updateThemeIcon();
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
         }
-        function updateThemeIcon() {
-            const isDark = document.documentElement.classList.contains('dark');
-            const icon = document.getElementById('theme-icon');
-            if (icon) {
-                icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
-                lucide.createIcons();
-            }
-        }
-        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
         }
 
-        // ==================== 26 個真實線上專案超連結資料 ====================
-        const liveLinks = [
-            { title: "TSCHOOL 空間借用系統", cat: "校園管理", url: "https://sites.google.com/tschool.tp.edu.tw/0909/home?authuser=2", icon: "calendar-check", desc: "Google Sheet + Apps Script 零成本空間借用防呆系統" },
-            { title: "TSCHOOL 學生學習成果平臺", cat: "校園管理", url: "https://sites.google.com/tschool.tp.edu.tw/tschool20250915/tschool", icon: "folder-kanban", desc: "全校學生代表作、影片與 3D 模型多元成果櫥窗" },
-            { title: "TSCHOOL 數位校史平臺", cat: "校園管理", url: "https://sites.google.com/tschool.tp.edu.tw/tschool-historyt/t-school-history", icon: "history", desc: "創校五週年影音牆與文字記錄同步平臺" },
-            { title: "TSCHOOL 招生宣傳心理測驗", cat: "校園管理", url: "https://sites.google.com/tschool.tp.edu.tw/tschooltest?usp=sharing", icon: "clipboard-list", desc: "五大核心能力光譜落點與情境圖片測驗" },
-            { title: "2026 科教展互動闖關 (ChatGPT Site)", cat: "自主學習", url: "https://edtech-2026-explore.tschool-taip-6197.chatgpt.site", icon: "gamepad-2", desc: "AI Agent 2小時極速優化之科教展即時闖關網頁" },
-            { title: "2025 科教展互動闖關 (Google Sites)", cat: "自主學習", url: "https://sites.google.com/view/tschooldigitalera/數位時代", icon: "sparkles", desc: "高一必修「數位時代」年度學習活動互動成果單" },
-            { title: "AI 學習歷程密室 (GitHub Pages)", cat: "自主學習", url: "https://ivy7579-spec.github.io/ai-learning-portfolio-game/", icon: "unlock", desc: "汪檍老師開源之線上密室逃脫學習歷程遊戲" },
-            { title: "AI 學習歷程密室 (Google Sites)", cat: "自主學習", url: "https://sites.google.com/view/learning-portfoliotschool2026/ai學習歷程密室", icon: "file-code", desc: "學習歷程密室互動指引與教材資源頁" },
-            { title: "教育部學習歷程指南自學平台", cat: "自主學習", url: "https://sites.google.com/view/tschoollearningportfolio/1031", icon: "book-open", desc: "教育部學習歷程檔案指引互動式四步曲自學教材" },
-            { title: "字音字形自主練字互動網", cat: "自主學習", url: "https://sites.google.com/view/tschool100/00年字音字形競賽練習-互動學習系統", icon: "pen-tool", desc: "大畫布手指流暢書寫、題庫隨機抽取與錯題紀錄" },
-            { title: "傾城之戀文學閱讀解謎", cat: "自主學習", url: "https://sites.google.com/view/loveinfallencity2026/loveinfallencity", icon: "feather", desc: "張愛玲經典小說之情境偵探推理閱讀解謎網頁" },
-            { title: "自我覺察 115 挑戰賽 (ChatGPT Site)", cat: "課程教學", url: "https://self-awareness-115-challenge.tschool-taip-6197.chatgpt.site", icon: "trophy", desc: "結合 ChatGPT Site 打造之線上自我覺察互動挑戰" },
-            { title: "自我覺察工作坊復盤報告書", cat: "課程教學", url: "https://sites.google.com/view/tschool-self-awareness/tschool-自我覺察", icon: "heart-handshake", desc: "兩日跨域工作坊復盤記錄與 SEL 五維度自我評核" },
-            { title: "跨校交流學習遊戲 Demo", cat: "課程教學", url: "https://school-exchange-115-demo.tschool-taip-6197.chatgpt.site/game/", icon: "network", desc: "中學生跨校學習交流與互動任務生成展示" },
-            { title: "2026 數實祭總舖師上菜 (GitHub Pages)", cat: "策展展演", url: "https://ivy7579-spec.github.io/chef-serving-game/?v=f74554c", icon: "utensils", desc: "免收費 API！純前端 Canvas 台灣傳統辦桌共創拼盤遊戲" },
-            { title: "2026 數實祭官方展覽首頁", cat: "策展展演", url: "https://sites.google.com/view/tschool2026/2026數實祭", icon: "palette", desc: "臺北市數位實驗高中 2026 年度大型數位策展專頁" },
-            { title: "自由行協作記帳與智慧分帳", cat: "生活跨域", url: "https://sites.google.com/view/trip-count/出國自由行協作記帳網頁", icon: "coins", desc: "多人海外旅行多幣別記帳與最小轉帳次數演算法" },
-            { title: "臺灣轉型正義情境小測驗", cat: "生活跨域", url: "https://sites.google.com/view/transitional-justice-yoyo/臺灣轉型正義小測驗", icon: "scale", desc: "公民歷史情境式同理心反思與價值辨析小測驗" },
-            { title: "易經六十四卦自主學習網", cat: "生活跨域", url: "https://sites.google.com/view/yichin20260310/64掛自學網?authuser=0", icon: "compass", desc: "結合現代專案管理與傳統卦象之決策反思工具" },
-            { title: "自由花蕊 Demo (ChatGPT Site)", cat: "生活跨域", url: "https://ziyou-huarui-demo.tschool-taip-6197.chatgpt.site", icon: "flower-2", desc: "跨領域創新概念驗證原型展示站" },
-            { title: "NPDL 前後測 Google 試算表", cat: "評量資料", url: "https://docs.google.com/spreadsheets/d/1tDBWxZFrzeEbKllCir8JUL6GVM7id9ee/", icon: "file-spreadsheet", desc: "6C 全球素養前後測自評資料庫與圖表範本" },
-            { title: "研習回饋與反思 Google 試算表", cat: "評量資料", url: "https://docs.google.com/spreadsheets/d/1o8b6GZ5cQDbrK3NzoNjdgnWWy9aZLlonI6wqp1V3KZY/", icon: "message-circle", desc: "汪檍老師實體研習即時互動回饋表單資料庫" },
-            { title: "汪檍老師 Facebook 專案誌", cat: "交流社群", url: "https://www.facebook.com/profile.php?id=100000512468628", icon: "share-2", desc: "汪檍（汪汪）老師日常專案開發與教學實務紀錄" },
-            { title: "最新 91 頁 Canva 簡報 (20261124)", cat: "簡報原檔", url: "https://www.canva.com/design/DAHZ1N312-w/9RUqHr3ISjqY8geL9zzPCQ/view", icon: "presentation", desc: "最新完整版：讓 AI 成為工作好夥伴 (20261124 - GPT)" },
-            { title: "73 頁精華版 Canva 簡報", cat: "簡報原檔", url: "https://www.canva.com/design/DAHA4t2-pWY/HtqtOGLrNZ3m4ILw3eNU2g/view", icon: "presentation", desc: "GEMINI 畫布裡的自主學習與跨域專案精華版" }
-        ];
+        // Tab 切換邏輯
+        function switchMainTab(tabId) {
+            document.querySelectorAll('.main-tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById(tabId).classList.remove('hidden');
 
-        function renderLiveLinks() {
-            const grid = document.getElementById('live-links-grid');
-            grid.innerHTML = liveLinks.map(item => `
-                <a href="${item.url}" target="_blank" rel="noopener noreferrer"
-                   class="group p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 hover:border-sky-500 dark:hover:border-sky-400 hover:shadow-md transition flex flex-col justify-between space-y-3">
-                    <div class="space-y-1.5">
-                        <div class="flex items-center justify-between">
-                            <span class="text-[11px] font-bold px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">
-                                ${item.cat}
-                            </span>
-                            <i data-lucide="external-link" class="w-3.5 h-3.5 text-slate-400 group-hover:text-sky-500 transition"></i>
-                        </div>
-                        <h4 class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition leading-snug">
-                            ${item.title}
-                        </h4>
-                        <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-                            ${item.desc}
-                        </p>
-                    </div>
-                    <div class="pt-2 border-t border-slate-100 dark:border-slate-700/60 flex items-center gap-1.5 text-xs font-semibold text-sky-600 dark:text-sky-400">
-                        <i data-lucide="${item.icon}" class="w-3.5 h-3.5"></i>
-                        <span>立即造訪線上網站</span>
-                    </div>
-                </a>
-            `).join('');
-            lucide.createIcons();
-        }
-
-        // ==================== 12 大工具資料庫 ====================
-        const toolsData = [
-            { id: 1, cat: 'content', name: '文字生成 / 協作對話', tools: 'ChatGPT, Claude, Gemini', desc: '教案撰寫、概念引導、文章精簡擴寫、跨語言改寫、角色扮演情境教學。', icon: 'message-square' },
-            { id: 2, cat: 'content', name: '即時搜尋與時事查證', tools: 'Perplexity, Gemini Search', desc: '文獻溯源、教育時事查證、最新課綱法令精確條列與帶出處回答。', icon: 'search' },
-            { id: 3, cat: 'content', name: '校本知識庫整理', tools: 'NotebookLM, Claude Projects', desc: '上傳校本課程 PDF、學生論文，在封閉安全知識庫中自動產製 Podcast 語音與問答。', icon: 'book-open' },
-            { id: 4, cat: 'media', name: '簡報生成與視覺化', tools: 'Gamma, Canva AI, Tome', desc: '輸入教案大綱快速產出高質感視覺簡報，節省 80% 簡報排版時間。', icon: 'presentation' },
-            { id: 5, cat: 'media', name: '高畫質圖像生成', tools: 'Midjourney, DALL-E 3, Leonardo', desc: '歷史情境重現、課文插圖設計、活動視覺主視覺、概念視覺化。', icon: 'image' },
-            { id: 6, cat: 'media', name: '影音動態生成', tools: 'Runway, Sora, CapCut AI', desc: '文字生成短影片、校園宣導短片自動剪輯字幕與動畫合成。', icon: 'video' },
-            { id: 7, cat: 'media', name: '真實語音生成與轉錄', tools: 'ElevenLabs, Whisper', desc: '多國語言逼真配音、課堂演講自動轉精確逐字稿、聽力測驗音檔產製。', icon: 'mic' },
-            { id: 8, cat: 'media', name: '音樂音效創作', tools: 'Suno, Udio', desc: '輸入學科口訣即時創作成流行歌曲、微電影配樂與廣播劇音效。', icon: 'music' },
-            { id: 9, cat: 'code', name: '程式開發與 Vibe Coding', tools: 'Cursor, Copilot, Antigravity', desc: '全自動生成教學網頁、課堂即時抽籤小工具、自動化試卷產製。', icon: 'code-2' },
-            { id: 10, cat: 'code', name: '數據分析與視覺化', tools: 'ChatGPT Data, Excel AI', desc: '學生學業成績趨勢分析、問卷交叉比對、自動繪製專業統計圖表。', icon: 'bar-chart-3' },
-            { id: 11, cat: 'agent', name: '流程自動化與 Agent', tools: 'Make, Zapier, AI Agents', desc: '表單提交自動寄信通知、研習簽到自動同步名冊、日常行政排程。', icon: 'cpu' },
-            { id: 12, cat: 'agent', name: '3D 建模與沉浸空間', tools: 'Tripo AI, Luma, Spline', desc: '文字生成 3D 模型、虛擬校園導覽、AR/VR 沉浸式情境教材建構。', icon: 'box' }
-        ];
-
-        function renderTools(list) {
-            const grid = document.getElementById('tools-grid');
-            grid.innerHTML = list.map(item => `
-                <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-700/80 hover:border-sky-400 dark:hover:border-sky-500 transition space-y-2">
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs font-bold text-sky-600 dark:text-sky-400">${item.name}</span>
-                        <div class="w-8 h-8 rounded-lg bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 flex items-center justify-center">
-                            <i data-lucide="${item.icon}" class="w-4 h-4"></i>
-                        </div>
-                    </div>
-                    <div class="text-xs font-semibold text-slate-800 dark:text-slate-200">${item.tools}</div>
-                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">${item.desc}</p>
-                </div>
-            `).join('');
-            lucide.createIcons();
-        }
-
-        let currentToolCat = 'all';
-        function setToolCategory(cat) {
-            currentToolCat = cat;
-            document.querySelectorAll('.tool-cat-btn').forEach(btn => {
-                if (btn.dataset.cat === cat) {
-                    btn.className = "tool-cat-btn px-3 py-1.5 rounded-xl bg-sky-600 text-white font-semibold transition";
-                } else {
-                    btn.className = "tool-cat-btn px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition";
-                }
+            document.querySelectorAll('.nav-tab-btn').forEach(btn => {
+                btn.className = 'nav-tab-btn px-3 py-1.5 rounded-lg transition text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5';
             });
-            filterTools();
+
+            const activeMap = {
+                'tab-1151125': 'nav-btn-1151125',
+                'tab-1151124': 'nav-btn-1151124',
+                'tab-prompts': 'nav-btn-prompts',
+                'tab-downloads': 'nav-btn-downloads'
+            };
+
+            const activeBtn = document.getElementById(activeMap[tabId]);
+            if (activeBtn) {
+                activeBtn.className = 'nav-tab-btn px-3 py-1.5 rounded-lg transition bg-white dark:bg-slate-700 shadow-sm text-sky-600 dark:text-sky-400 font-semibold flex items-center gap-1.5';
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        function filterTools() {
-            const query = document.getElementById('tool-search').value.toLowerCase();
-            let filtered = toolsData;
-            if (currentToolCat !== 'all') {
-                filtered = filtered.filter(t => t.cat === currentToolCat);
-            }
-            if (query) {
-                filtered = filtered.filter(t => t.name.toLowerCase().includes(query) || t.tools.toLowerCase().includes(query) || t.desc.toLowerCase().includes(query));
-            }
-            renderTools(filtered);
-        }
-
-        // ==================== 16 個真實落地專案庫資料 (含直達連結) ====================
-        const projectsData = [
-            {
-                id: 1,
-                cat: 'admin',
-                badge: '校園管理',
-                badgeColor: 'bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300',
-                title: '01. TSCHOOL 空間借用系統',
-                link: 'https://sites.google.com/tschool.tp.edu.tw/0909/home?authuser=2',
-                pain: '新設實驗高中空間調度頻繁，現成軟體費用昂貴且無法客製審核規則，紙本或日曆登記極易撞期。',
-                strategy: '以純前端 HTML + Tailwind 刻畫清爽介面，後端透過 Google Apps Script 免費串接 Google Sheet 試算表。',
-                collapse: '初期想建置大型關聯式資料庫，AI 寫了一堆無法部署的複雜後端，網頁一度卡頓崩潰。',
-                solution: '轉彎改用最精簡的 Sheet API，嵌入在學校 Google Sites 內部網站，零伺服器成本達成防呆預約。',
-                prompt: `你是一位資深全端工程師。請為中學校園設計一個「多功能空間借用系統」單頁網頁：\n1. 需求：師生可選擇借用教室、日期、時段（第1~8節），並填寫借用人與用途。\n2. 防呆：已借出時段以灰色標示並禁用；送出前必須勾選空間使用公約。\n3. 技術限制：純前端 HTML + Tailwind CSS，表單送出請以 fetch POST 傳送 JSON 至指定的 Google Apps Script Web App URL。`
-            },
-            {
-                id: 2,
-                cat: 'admin',
-                badge: '校園管理',
-                badgeColor: 'bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300',
-                title: '02. TSCHOOL 學生自主學習歷程展示平台',
-                link: 'https://sites.google.com/tschool.tp.edu.tw/tschool20250915/tschool',
-                pain: '學生的多元自主學習成果（影片、PDF、3D 模型、外部連結）分散四處，缺乏統一且具備視覺質感的成果櫥窗。',
-                strategy: '設計模組化卡片過濾器，支援以年級、學科領域與媒介標籤快速篩選學生作品。',
-                collapse: '一開始要求 AI 設計會員帳號與即時點讚互動系統，結果系統維護成本過高。',
-                solution: '回歸核心價值：只做作品靜態展示與標籤檢索，利用 Google Drive 連結整合各類型檔案，簡單優雅。',
-                prompt: `請設計一個「國高中學生自主學習成果展示平台」前端頁面：\n1. 版面：現代簡約卡片網格（Card Grid），每張卡片包含作品封面、標題、學生姓名、領域標籤、簡介與外部檢視按鈕。\n2. 互動：頂部具備分類標籤（自然科學、社會人文、資訊科技、藝術設計）與即時搜尋框。\n3. 採用純 HTML、Tailwind CSS 與 Lucide Icons，具備響應式設計相容手機與平板。`
-            },
-            {
-                id: 3,
-                cat: 'admin',
-                badge: '校園管理',
-                badgeColor: 'bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300',
-                title: '03. TSCHOOL 招生宣傳互動心理測驗',
-                link: 'https://sites.google.com/tschool.tp.edu.tw/tschooltest?usp=sharing',
-                pain: '招生博覽會上傳統折頁宣傳單乏人問津，需要在 2 分鐘內抓住國中畢業生與家長注意力。',
-                strategy: '設計 6 題情境式心理測驗，根據回答計算「自主探索力、跨域創新力、團隊協作力」三大指數。',
-                collapse: '計分邏輯反覆出現加總異常，AI 一開始生成的行動端網頁在手機瀏覽器左右溢出。',
-                solution: '鎖定單題逐步推進（Stepper）動畫，測驗完成後自動生成視覺吸睛的個人化特質海報。',
-                prompt: `請撰寫一個「探索你的學習超能力」中學生招生互動心理測驗網頁：\n1. 共有 6 題單選題，每次只顯示一題，選完自動平滑滑動至下一題。\n2. 計算三項維度分數：自主探索度、科技適應力、跨域思考力。\n3. 測驗結束後生成一張專屬「學習角色結果卡」（如：數位遊俠、概念架構師、實作狂想家），並有重新測驗按鈕。`
-            },
-            {
-                id: 4,
-                cat: 'admin',
-                badge: '校園管理',
-                badgeColor: 'bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300',
-                title: '04. TSCHOOL 數位校史平臺',
-                link: 'https://sites.google.com/tschool.tp.edu.tw/tschool-historyt/t-school-history',
-                pain: '創校邁入第五年，大量珍貴文字影音分散各處，需要一個可持續每年擴充更新的線上展演專區。',
-                strategy: '建置影音牆與年度分類標籤，後端使用 Google Sheet 佈署，達成資料一鍵同步。',
-                collapse: '傳統委外建置維護費龐大，內容格式各異容易破圖跑版。',
-                solution: 'AI 輔助打造自適應 Google Sites 外掛頁面，省下數十萬預算。',
-                prompt: `請為學校設計一個「數位校史與重大活動影音紀錄」前端牆：\n1. 頂部提供民國 111~115 年（2022~2026）年度篩選標籤。\n2. 支援 YouTube 影音嵌入與活動圖文報導卡片展示。\n3. 具備輕量化外部 JSON 或 Sheet API 介面串接能力。`
-            },
-            {
-                id: 5,
-                cat: 'self-learn',
-                badge: '自主學習',
-                badgeColor: 'bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300',
-                title: '05. 2026 臺灣科教展互動闖關 (ChatGPT Site)',
-                link: 'https://edtech-2026-explore.tschool-taip-6197.chatgpt.site',
-                pain: '高一校必修「數位時代」大型展覽任務，需在開展當天提供數百名學生手機闖關繳交作業。',
-                strategy: '進化採用 AI Agent 2 小時完成高質量開發，優化展場地圖、PDF 報告書產出與遊戲化關卡。',
-                collapse: '2025 年舊版曾歷經字體溢出、iOS 滾動回彈與 PDF 失敗等慘痛崩潰。',
-                solution: '繼承舊版骨架、小步驗收，完美打造現代化闖關體驗。',
-                prompt: `緊急任務！請用極簡、絕對相容手機的純 HTML/CSS/JS 打造一個「科學教育展互動闖關」頁面：\n1. 包含 5 個關卡卡片，點擊進入輸入該展位通關密碼。\n2. 頂部有百分比進度條（Progress Bar）。\n3. 全部通關後跳出全螢幕慶祝動畫（Confetti）並顯示「特展小小科學家」數位榮譽徽章。`
-            },
-            {
-                id: 6,
-                cat: 'self-learn',
-                badge: '自主學習',
-                badgeColor: 'bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300',
-                title: '06. AI 學習歷程密室逃脫遊戲',
-                link: 'https://ivy7579-spec.github.io/ai-learning-portfolio-game/',
-                pain: '學習歷程檔案指標繁瑣枯燥，學生理解門檻高，缺乏主動探索與釐清概念之動力。',
-                strategy: '結合密室逃脫解謎機制，將檔案格式、反思原則設計成一道道關卡鎖碼。',
-                collapse: '初期關卡邏輯過於嚴苛，學生卡在第一關造成大批放棄。',
-                solution: '設計「AI 隨身智囊提示鈕」，給予漸進式提示，並在 GitHub Pages 開源部署。',
-                prompt: `請設計一個以「學習歷程檔案解密」為主題的 Web 密室逃脫遊戲：\n1. 設計 4 道關卡：【動機之門】、【歷程之鑰】、【成果之鏡】、【反思之巔】。\n2. 學生必須根據題意線索輸入正確文字或數字密碼進入下一關。\n3. 提供密碼錯誤提示與計時闖關挑戰機制。`
-            },
-            {
-                id: 7,
-                cat: 'self-learn',
-                badge: '自主學習',
-                badgeColor: 'bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300',
-                title: '07. 學習歷程指南互動自學平台',
-                link: 'https://sites.google.com/view/tschoollearningportfolio/1031',
-                pain: '官方 PDF 指南厚達數十頁，學生普遍反饋找不到章節、缺乏自我檢核與閱讀動機。',
-                strategy: '將靜態長文件轉化為具備章節超連結、折疊式常見 Q&A 與概念檢核清單的互動式前導網頁。',
-                collapse: '直接將 PDF 全文貼給 AI 時，排版破碎且重點失焦。',
-                solution: '拆解為「寫作四部曲：動機 ➔ 過程 ➔ 成果 ➔ 反思」，每一階段附上具體範例與避坑指南。',
-                prompt: `請將中學生「自主學習歷程撰寫指引」整理成一個互動式數位導讀網頁：\n1. 區分為四大步驟：主題發想、計畫擬定、執行紀錄、總結反思。\n2. 每個步驟包含：檢核清單（Checkbox 可勾選存於 LocalStorage）、常見誤區對比、優秀範例摘錄。\n3. 支援一鍵展開/折疊與關鍵字快速搜尋功能。`
-            },
-            {
-                id: 8,
-                cat: 'self-learn',
-                badge: '自主學習',
-                badgeColor: 'bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300',
-                title: '08. 字音字形自主練字與手寫辨識平台',
-                link: 'https://sites.google.com/view/tschool100/00年字音字形競賽練習-互動學習系統',
-                pain: '字音字形競賽選手需要每天高強度刷題，但傳統紙本題庫難以重複書寫與自動統計錯題。',
-                strategy: '設計 Canvas 手寫板，搭配單元抽題系統與即時標準正解對照。',
-                collapse: '超級痛點！「逐次餵題庫，但吃了後面的丟了前面的！」專案間隔幾天 AI 就忘光題庫；iPad 上手寫卡頓延遲！',
-                solution: '放棄單頁一次塞入數千題，改為模組化外部 JSON 題庫；放大 Canvas 尺寸支援手指流暢書寫。',
-                prompt: `請設計一個「字音字形自主練字評量」前端工具：\n1. 畫面中央為題目（如：提出「齏粉」之「齏」的注音或字形）。\n2. 下方具備一個平滑流暢的 Canvas 手寫區域，支援清除、筆刷粗細切換。\n3. 點擊「查看正解」後顯示標準教育部國語辭典字音字形解析，並提供「加入常錯筆記本」按鈕。`
-            },
-            {
-                id: 9,
-                cat: 'self-learn',
-                badge: '自主學習',
-                badgeColor: 'bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300',
-                title: '09. 傾城之戀文學閱讀解謎',
-                link: 'https://sites.google.com/view/loveinfallencity2026/loveinfallencity',
-                pain: '國文經典張愛玲小說字句深奧，單向講授難以激發學生細讀文本意象與線索的熱情。',
-                strategy: '將小說段落重構成解謎文本，學生化身白流蘇與范柳原時代的觀察者尋找情感線索。',
-                collapse: 'AI 產生的謎題曾一度過於跳躍，脫離課本教材重點。',
-                solution: '限制提問範圍在教育部推薦選文段落，結合字詞象徵完成通關。',
-                prompt: `請依據張愛玲小說《傾城之戀》文本，設計一組適合中學國文深究的「線上閱讀偵探解謎關卡」：\n1. 挑選 3 個關鍵場景（淺水灣飯店對話、斷垣殘壁、重逢決定）。\n2. 每個場景設計一個依據字句隱喻（如白鴿、月亮、野火）推導出的通關密碼。\n3. 提供「閱讀偵探線索手冊」提示欄。`
-            },
-            {
-                id: 10,
-                cat: 'curriculum',
-                badge: '課程教學',
-                badgeColor: 'bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300',
-                title: '10. 自我覺察工作坊復盤與 115 挑戰賽',
-                link: 'https://self-awareness-115-challenge.tschool-taip-6197.chatgpt.site',
-                pain: '跨域實體工作坊結束後，學生心得常千篇一律寫「很好玩」，缺乏對個人情緒與團隊協作的深度覺察。',
-                strategy: '融入社會情緒學習（SEL）5 大核心維度，以結構化引導問題帶領學生梳理兩日歷程。',
-                collapse: '問題太過學術抽象，學生填寫意願低落。',
-                solution: '改用情境式生活化提問，支援手機拍照上傳實體作品，一鍵生成漂亮的個人化復盤圖文卡。',
-                prompt: `請設計一個「工作坊個人復盤與 SEL 學習自我評核」網頁：\n1. 依據 SEL 五大向度（自我覺察、自我管理、社會覺察、人際互動、負責任決定）設計 5 個生活化反思滑桿。\n2. 具備心得輸入框與照片上傳預覽區（支援相機拍照）。\n3. 送出後自動在畫面上繪製出個人 SEL 成長五角雷達圖，並提供匯出圖檔（PNG）功能。`
-            },
-            {
-                id: 11,
-                cat: 'curriculum',
-                badge: '課程教學',
-                badgeColor: 'bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300',
-                title: '11. NPDL 深度學習前後測檢核表系統',
-                link: 'https://docs.google.com/spreadsheets/d/1tDBWxZFrzeEbKllCir8JUL6GVM7id9ee/',
-                pain: '高一必修課每學期固定需進行 NPDL 前後測評量，過去四年全用紙本自評，教師人工輸入資料極其痛苦！',
-                strategy: '打造「UX 極致優化版表單」，背後僅需串接 Google Sheet，學生 3 分鐘即可透過滑桿完成自評。',
-                collapse: '大型問卷平台介面過於繁瑣，且無法即時呈現前後測雷達圖對比。',
-                solution: '透過純前端網頁直接呈現 6C 全球素養前後測對比曲線，資料一秒同步至試算表。',
-                prompt: `請為中學 NPDL（深度學習新夥伴關係）課程製作一個「6C 全球素養前後測自我評核系統」：\n1. 包含 6 大指標：品格（Character）、公民（Citizenship）、協作（Collaboration）、溝通（Communication）、創意（Creativity）、批判思考（Critical Thinking）。\n2. 每項指標以 1~5 分滑桿評分，並提供前測與後測對比切換模式。\n3. 填寫完畢後自動以 Chart.js 繪製前後測雷達圖對比，並可一鍵複製彙整資料。`
-            },
-            {
-                id: 12,
-                cat: 'curriculum',
-                badge: '課程教學',
-                badgeColor: 'bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300',
-                title: '12. 跨校交流學習任務遊戲 Demo',
-                link: 'https://school-exchange-115-demo.tschool-taip-6197.chatgpt.site/game/',
-                pain: '與友校進行實體或線上交流時，傳統破冰遊戲缺乏教育意涵與共同協作點。',
-                strategy: '設計分組挑戰任務卡，透過自然語言提示生成兩校特色比對與尋寶關卡。',
-                collapse: '兩校網路環境與載具不一，複雜即時通訊頻繁斷線。',
-                solution: '改用無狀態輕量化任務代碼，各組獨立闖關後在大螢幕同步總進度。',
-                prompt: `請設計一個「跨校學習交流破冰尋寶遊戲」前端原型：\n1. 支援輸入兩所學校名稱與各自校園特色景點。\n2. 動態生成 3 道需要兩校學生共同討論才能解開的跨校知識謎題。\n3. 通關後生成象徵兩校友誼的數位合作證書。`
-            },
-            {
-                id: 13,
-                cat: 'exhibition',
-                badge: '策展展演',
-                badgeColor: 'bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300',
-                title: '13. 2026 數實祭總舖師上菜-數位辦桌趣',
-                link: 'https://ivy7579-spec.github.io/chef-serving-game/?v=f74554c',
-                pain: '全校年度策展需要將台灣傳統「辦桌」文化轉化為全校師生可共同參與的數位互動裝置。',
-                strategy: '設計「數位菜餚共創器」，讓參觀者在平板上選擇食材與文化典故，擺盤出專屬佳餚。',
-                collapse: '史詩級崩潰！「AI 手把手教我串接高級影像 API，好不容易調試成功，一測試才發現每點一次都要收費燒大錢！」經費瞬間拉警報！',
-                solution: '體悟「經費有時是必要條件，果斷轉彎！」改用純前端預繪製素材庫與 Canvas 拼貼，免 API 費用達成零延遲共創！',
-                prompt: `請以純 HTML5 Canvas + Tailwind CSS 打造一個「數位辦桌菜餚拼盤設計器」：\n1. 畫面中央為圓形傳統辦桌大紅盤。\n2. 左側有各類食材與裝飾物件（烏魚子、紅蟳米糕、櫻花蝦、香菜、雕花蔬果）可點擊拖曳至盤中。\n3. 支援旋轉、放大縮小、清除。\n4. 點擊「總舖師上菜」後在盤邊生成書法風格菜名標籤與寓意祝福語，並可下載合成照片。無須任何後端 API。`
-            },
-            {
-                id: 14,
-                cat: 'lifestyle',
-                badge: '生活跨域',
-                badgeColor: 'bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-300',
-                title: '14. 自由行協作即時記帳與智慧分帳',
-                link: 'https://sites.google.com/view/trip-count/出國自由行協作記帳網頁',
-                pain: '師生海外研習或自由行時，多幣別計算與多人分帳極易混亂，市售 App 往往無法完全符合客製化需求。',
-                strategy: '行動端計算機風格介面，支援離線記錄、即時匯率換算與自動最小還款路徑演算。',
-                collapse: '離線時資料同步混亂，多人在小螢幕手機上容易按錯金額。',
-                solution: '在 Google Sheet 先行校驗分帳公式，前端做大按鈕優化，一鍵算出誰該匯給誰多少錢。',
-                prompt: `請為多人海外自由行製作一個「即時協作記帳與智慧分帳」前端網頁：\n1. 支援輸入多位成員姓名。\n2. 記帳欄位：付款人、金額、幣別（TWD/JPY/USD）、消費項目、參與平分人員勾選。\n3. 智慧分帳演算法：一鍵計算所有成員的淨餘額，並產出「最少轉帳次數之還款清單」（例如：A 應轉給 B 520 元）。\n4. 具備 LocalStorage 本地保存與資料匯出功能。`
-            },
-            {
-                id: 15,
-                cat: 'lifestyle',
-                badge: '生活跨域',
-                badgeColor: 'bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-300',
-                title: '15. 臺灣轉型正義情境小測驗',
-                link: 'https://sites.google.com/view/transitional-justice-yoyo/臺灣轉型正義小測驗',
-                pain: '公民與歷史跨領域教學中，嚴肅議題容易流於背誦或立場對立，需要能引起同理反思的對話工具。',
-                strategy: '以情境式歷史案例作為出題背景，引導學生思考不同抉擇背後的代價與正義價值。',
-                collapse: '文案若語氣稍有偏差容易引起爭端。',
-                solution: '反覆透過 GPT 進行多視角中立校驗，注重多元觀點並列與自我省思。',
-                prompt: `請設計一個中學人權與歷史跨領域「轉型正義情境思考問卷網頁」：\n1. 呈現 4 個真實歷史情境分支題。\n2. 每個選項不以對錯定論，而是呈現該選擇在法律、道德、人道上的不同考量。\n3. 測驗結束後產出專屬「公民思辨風格雷達圖」與反思問題手冊。`
-            },
-            {
-                id: 16,
-                cat: 'lifestyle',
-                badge: '生活跨域',
-                badgeColor: 'bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-300',
-                title: '16. 易經六十四卦自主學習決策平臺',
-                link: 'https://sites.google.com/view/yichin20260310/64掛自學網?authuser=0',
-                pain: '國文與哲學自主學習中，學生對文言文卦辭爻辭感到晦澀難懂，無法應用於現實生活抉擇。',
-                strategy: '設計動態模擬銅錢搖卦動畫，將六十四卦智慧轉譯為「專案面臨卡關時的哲學思維啟發」。',
-                collapse: '直接解釋卦辭過於玄奧，學生無法連結當前問題。',
-                solution: '設計「先釐清心中困惑情境 ➔ 動態搖卦 ➔ 白話處世智慧 ➔ 專案迭代行動清單」四步驟。',
-                prompt: `請設計一個「易經六十四卦與自主學習反思」互動頁面：\n1. 學生先輸入當前自主學習專案遇到的具體困惑（如：進度落後不知道該不該換題目）。\n2. 提供「點擊搖卦」互動動畫，隨機生成一卦（附卦名、卦象符號）。\n3. 由 AI 以「現代專案管理與心理學思維」白話解讀此卦象給予的啟發，並條列三項具體下一步行動。`
-            }
+        // 汪檍老師 26 處專案資料
+        const projects26 = [
+            { id: 1, title: "TSCHOOL 空間借用系統", type: "Google Sites / Apps Script", url: "https://sites.google.com/tschool.tp.edu.tw/0909/home?authuser=2", desc: "創校初期借用撞期痛點，Google Sites + Sheets + Apps Script 零成本架構。" },
+            { id: 2, title: "TSCHOOL 學生自主學習成果平台", type: "Google Sites 展廳", url: "https://sites.google.com/tschool.tp.edu.tw/tschool20250915/tschool", desc: "模組化展示櫥窗，支援影片、PDF、3D 模型與成果檢索。" },
+            { id: 3, title: "TSCHOOL 數位校史平臺", type: "Google Sites 校園專案", url: "https://sites.google.com/tschool.tp.edu.tw/tschool-historyt/t-school-history", desc: "數位實驗高中創校歷程、大事記與重要發展脈絡數位化典藏。" },
+            { id: 4, title: "TSCHOOL 招生宣傳互動心理測驗", type: "Google Sites 測驗系統", url: "https://sites.google.com/tschool.tp.edu.tw/tschooltest?usp=sharing", desc: "2 分鐘情境測驗，自動產製個人化學習特質雷達圖與卡片。" },
+            { id: 5, title: "2026 科教展互動闖關系統", type: "ChatGPT Web App", url: "https://edtech-2026-explore.tschool-taip-6197.chatgpt.site", desc: "開展當天即時完成的極限 Vibe Coding，順暢抗住數百人現場手機闖關。" },
+            { id: 6, title: "AI 學習歷程密室逃脫遊戲", type: "GitHub Pages", url: "https://ivy7579-spec.github.io/ai-learning-portfolio-game/", desc: "結合生成式 AI 與密室逃脫機制，以遊戲化方式帶領學生理解學習歷程內涵。" },
+            { id: 7, title: "學習歷程指南自學平台", type: "Google Sites 自學導引", url: "https://sites.google.com/view/tschoollearningportfolio/1031", desc: "將厚重 PDF 轉化為四步曲互動地圖與 Checkbox 檢核清單。" },
+            { id: 8, title: "AI 學習歷程密室 (專題展廳)", type: "Google Sites 專題展廳", url: "https://sites.google.com/view/learning-portfoliotschool2026/ai%E5%AD%B8%E7%BF%92%E6%AD%B7%E7%A8%8B%E5%AF%86%E5%AE%A4", desc: "線上解謎概念設計展廳與教師實務備課指引。" },
+            { id: 9, title: "字音字形自學互動網", type: "Google Sites / Canvas", url: "https://sites.google.com/view/tschool100/00%E5%B9%B4%E5%AD%97%E9%9F%B3%E5%AD%97%E5%BD%A2%E7%AB%B6%E8%B3%BD%E7%B7%B4%E7%BF%92-%E4%BA%92%E5%8B%95%E5%AD%B8%E7%BF%92%E7%B3%BB%E7%B5%B1", desc: "大尺寸平滑手寫練字 Canvas，拆解模組化 JSON 題庫告別遺忘痛點。" },
+            { id: 10, title: "自我覺察自學導引平臺", type: "Google Sites", url: "https://sites.google.com/view/tschool-self-awareness/tschool-%E8%87%AA%E6%88%91%E8%A6%BA%E5%AF%9F", desc: "引導中學生進行心理情緒與學習習慣覺察的跨領域教材。" },
+            { id: 11, title: "115 自我覺察挑戰關卡", type: "ChatGPT Web App", url: "https://self-awareness-115-challenge.tschool-taip-6197.chatgpt.site", desc: "互動式情緒與專案瓶頸闖關關卡，生成個人覺察反思卡。" },
+            { id: 12, title: "自我覺察情境任務體驗", type: "ChatGPT Web App", url: "https://self-awareness-115-challenge.tschool-taip-6197.chatgpt.site/#s-hodvvxl0", desc: "深度情境引導任務，專屬錨點情境體驗。" },
+            { id: 13, title: "數位時代教學專題平臺", type: "Google Sites", url: "https://sites.google.com/view/tschooldigitalera/%E6%95%B8%E4%BD%8D%E6%99%82%E4%BB%A3", desc: "整合生成式 AI 工具與自主學習指引之專題教學站。" },
+            { id: 14, title: "2026 數實祭策展官方平臺", type: "Google Sites 策展專案", url: "https://sites.google.com/view/tschool2026/2026%E6%95%B8%E5%AF%A6%E7%A5%AD", desc: "學校年度專案成果大展官方宣傳與導覽站點。" },
+            { id: 15, title: "2026 數實祭：總舖師上菜遊戲", type: "GitHub Pages", url: "https://ivy7579-spec.github.io/chef-serving-game/?v=f74554c", desc: "純前端 Canvas 拼貼辦桌共創，逾 2,000 人次參與無伺服器負擔。" },
+            { id: 16, title: "自由花蕊自主學習展示網站", type: "ChatGPT Web App", url: "https://ziyou-huarui-demo.tschool-taip-6197.chatgpt.site", desc: "學生自主學習成果微型 Web 展示系統。" },
+            { id: 17, title: "傾城之戀文學閱讀解謎闖關", type: "Google Sites 國文專案", url: "https://sites.google.com/view/loveinfallencity2026/loveinfallencity", desc: "張愛玲小說文本意象偵探解謎，讓學生化身偵探尋找通關密碼。" },
+            { id: 18, title: "學校交流闖關互動模擬系統", type: "ChatGPT Web App", url: "https://school-exchange-115-demo.tschool-taip-6197.chatgpt.site/game/", desc: "校際交流互動模擬與破冰遊戲平台。" },
+            { id: 19, title: "出國自由行協作記帳平台", type: "Google Sites 工具網頁", url: "https://sites.google.com/view/trip-count/%E5%87%BA%E5%9C%8B%E8%87%AA%E9%81%8A%E8%A1%8C%E5%8D%94%E4%BD%9C%E8%A8%98%E5%B8%B3%E7%B6%B2%E9%A0%81", desc: "多幣別即時換算與最少轉帳次數演算法，海外師生協作記帳。" },
+            { id: 20, title: "臺灣轉型正義小測驗", type: "Google Sites 社會領域", url: "https://sites.google.com/view/transitional-justice-yoyo/%E8%87%BA%E7%81%A3%E8%BD%89%E5%9E%8B%E6%AD%A3%E7%BE%A9%E5%B0%8F%E6%B8%AC%E9%A9%97", desc: "史實情境問答與引導反思卡，公民與歷史跨領域教學。" },
+            { id: 21, title: "易經六十四卦自學網", type: "Google Sites 自學決策", url: "https://sites.google.com/view/yichin20260310/64%E6%8E%9B%E8%87%AA%E5%AD%B8%E7%B6%B2?authuser=0", desc: "結合傳統哲學與現代專案管理，在面臨學習瓶頸時提供行動反思。" },
+            { id: 22, title: "校園互動測驗與評量測試站", type: "Google Sites", url: "https://sites.google.com/view/tteesstt2026/test-1", desc: "教學評量遊戲化與即時測驗原型的實驗測試場域。" },
+            { id: 23, title: "二月的記持社群策展實務", type: "Facebook 專案紀錄", url: "https://www.facebook.com/hashtag/%E4%BA%8C%E6%9C%88%E7%9A%84%E8%A8%98%E6%8C%81", desc: "社群策展共創與教學實務反思歷程。" },
+            { id: 24, title: "共筆共創回饋協作試算表", type: "Google Sheets", url: "https://docs.google.com/spreadsheets/d/1tDBWxZFrzeEbKllCir8JUL6GVM7id9ee/edit?gid=1265326958#gid=1265326958", desc: "研習現場學員即時共筆、提問與共創回饋清單。" },
+            { id: 25, title: "汪檍老師個人專業交流專頁", type: "Facebook 教師交流", url: "https://www.facebook.com/profile.php?id=100000512468628", desc: "臺北市數位實驗高中汪檍老師日常教學研究與 AI 專案分享。" },
+            { id: 26, title: "南投國中研習線上共筆簽到表", type: "Google Sheets", url: "https://docs.google.com/spreadsheets/d/1o8b6GZ5cQDbrK3NzoNjdgnWWy9aZLlonI6wqp1V3KZY/edit?gid=0#gid=0", desc: "南投國中研習學員線上簽到與專案備查紀錄。" }
         ];
 
-        function renderProjects(list) {
-            const grid = document.getElementById('projects-grid');
-            grid.innerHTML = list.map(item => `
-                <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-7 shadow-sm hover:shadow-md transition border border-slate-200/80 dark:border-slate-700 flex flex-col justify-between space-y-5">
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="text-xs font-bold px-3 py-1 rounded-full ${item.badgeColor}">
-                                ${item.badge}
-                            </span>
-                            <span class="text-xs text-slate-400 font-mono">Case #${item.id}</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-snug">${item.title}</h3>
-                        
-                        <div class="space-y-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 pt-1">
-                            <div class="flex items-start gap-2">
-                                <span class="font-bold text-sky-600 dark:text-sky-400 shrink-0">🎯 需求痛點：</span>
-                                <span>${item.pain}</span>
-                            </div>
-                            <div class="flex items-start gap-2">
-                                <span class="font-bold text-indigo-600 dark:text-indigo-400 shrink-0">🤖 協作解法：</span>
-                                <span>${item.strategy}</span>
-                            </div>
-                            <div class="flex items-start gap-2 p-2.5 rounded-xl bg-rose-50 dark:bg-rose-950/40 text-rose-700 dark:text-rose-300 border border-rose-100 dark:border-rose-900/40">
-                                <span class="font-bold shrink-0">💥 崩潰踩坑：</span>
-                                <span>${item.collapse}</span>
-                            </div>
-                            <div class="flex items-start gap-2 p-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-100 dark:border-emerald-900/40">
-                                <span class="font-bold shrink-0">✅ 轉彎成效：</span>
-                                <span>${item.solution}</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pt-3 border-t border-slate-100 dark:border-slate-700/80 flex flex-wrap items-center justify-between gap-2">
-                        <div class="flex items-center gap-2">
-                            ${item.link ? `
-                            <a href="${item.link}" target="_blank" rel="noopener noreferrer"
-                               class="text-xs px-3.5 py-2 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-semibold transition flex items-center gap-1.5 shadow-sm">
-                                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                                <span>開啟實體系統</span>
-                            </a>` : ''}
-                            <button onclick="copyProjectPrompt(${item.id})" class="text-xs px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-600 transition flex items-center gap-1.5 font-semibold">
-                                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
-                                <span>複製 Prompt</span>
-                            </button>
-                        </div>
-                        <span class="text-xs text-slate-400 font-mono">T-School 實錄</span>
-                    </div>
-                </div>
-            `).join('');
+        function renderProjects(items) {
+            const container = document.getElementById('projects-grid');
+            if (!container) return;
+            container.innerHTML = items.map(function(p) {
+                return '<div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition flex flex-col justify-between">' +
+                    '<div class="space-y-2">' +
+                        '<div class="flex items-center justify-between">' +
+                            '<span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-sky-100 dark:bg-sky-900/60 text-sky-700 dark:text-sky-300">專案 ' + p.id + ' · ' + p.type + '</span>' +
+                            '<i data-lucide="external-link" class="w-3.5 h-3.5 text-slate-400"></i>' +
+                        '</div>' +
+                        '<h4 class="font-bold text-slate-900 dark:text-white text-sm">' + p.title + '</h4>' +
+                        '<p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">' + p.desc + '</p>' +
+                    '</div>' +
+                    '<a href="' + p.url + '" target="_blank" class="mt-4 w-full py-2 px-3 rounded-xl bg-slate-50 hover:bg-sky-50 dark:bg-slate-750 dark:hover:bg-slate-700 text-sky-600 dark:text-sky-400 text-xs font-semibold flex items-center justify-center gap-1.5 transition">' +
+                        '<span>開啟線上專案</span>' +
+                        '<i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>' +
+                    '</a>' +
+                '</div>';
+            }).join('');
             lucide.createIcons();
         }
 
-        let currentProjCat = 'all';
-        function setProjectCategory(cat) {
-            currentProjCat = cat;
-            document.querySelectorAll('.proj-cat-btn').forEach(btn => {
-                if (btn.dataset.pcat === cat) {
-                    btn.className = "proj-cat-btn px-4 py-2 rounded-2xl bg-sky-600 text-white font-semibold shadow-sm transition";
-                } else {
-                    btn.className = "proj-cat-btn px-4 py-2 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition";
-                }
+        function filterProjectCards() {
+            const q = document.getElementById('project-filter-input').value.toLowerCase();
+            const filtered = projects26.filter(function(p) {
+                return p.title.toLowerCase().indexOf(q) !== -1 || p.type.toLowerCase().indexOf(q) !== -1 || p.desc.toLowerCase().indexOf(q) !== -1;
             });
-            if (cat === 'all') {
-                renderProjects(projectsData);
-            } else {
-                renderProjects(projectsData.filter(p => p.cat === cat));
-            }
+            renderProjects(filtered);
         }
 
-        function copyProjectPrompt(id) {
-            const p = projectsData.find(item => item.id === id);
-            if (p) {
-                navigator.clipboard.writeText(p.prompt).then(() => {
-                    showToast(`已複製【${p.title}】實戰 Prompt！`);
-                });
-            }
-        }
+        // Prompt 產生器更新邏輯
+        function updateGeneratedPrompt() {
+            const scene = document.getElementById('gen-scene').value;
+            const pain = document.getElementById('gen-pain').value;
+            const outcome = document.getElementById('gen-outcome').value;
 
-        // ==================== 任務 PROMPT 產生器 ====================
-        function generateStructuredPrompt() {
-            const domain = document.getElementById('gen-domain').value.trim() || '國中跨領域教學';
-            const pain = document.getElementById('gen-pain').value.trim() || '缺乏即時互動反饋工具';
-            const model = document.getElementById('gen-model').value;
-            const deliverable = document.getElementById('gen-deliverable').value;
+            const text = '請為我設計一個單一純 HTML/CSS/JS 的「動態教學互動 APP」，遵循「好指令的三大面向」與「三個面向＋一條輸送帶」規範：\n\n' +
+                '【1. 角色與背景 (誰在用？)】\n' +
+                '- 課堂使用情境：' + scene + '\n' +
+                '- 介面受眾：中學生與學科授課教師，字體大小適中，版面具備良好視覺階層與卡片式現代美感。\n\n' +
+                '【2. 核心教學痛點與預期成效】\n' +
+                '- 針對痛點：' + pain + '\n' +
+                '- 預期成效：讓學生' + outcome + '\n\n' +
+                '【3. 互動邏輯 (怎麼用？)】\n' +
+                '- 設計清晰的闖關/操作步驟（如：開始挑戰 ➔ 操作互動/答題 ➔ 即時動態反饋 ➔ 結算成就）。\n' +
+                '- 具備即時提示卡（鷹架機制），答錯時不直接給答案，而是引導思考下一步。\n\n' +
+                '【4. 防呆機制 (出錯怎麼辦？)】\n' +
+                '- 欄位未填或未選擇時停用提交按鈕。\n' +
+                '- 限制連續快速點擊（防重複提交與動畫卡死）。\n' +
+                '- 重置時支援安全確認，所有狀態存於記憶體，重新開始不會崩潰。\n\n' +
+                '【5. 輸送帶全域格式規範】\n' +
+                '- 請以單一純 HTML 交付（內嵌 CSS 與 JS，可引入 Tailwind CSS 與 Lucide 圖標）。\n' +
+                '- 嚴格保護隱私：僅使用座號或代號，不收集真實個資，無外部付費 API 依賴。\n' +
+                '- 程式碼乾淨、註解詳實，以便在 Google Sites 協作平台以嵌入元件方式直接發布。';
 
-            let modelGuidance = '';
-            if (model === 'GEMINI') {
-                modelGuidance = '請發揮 GEMINI 強大的跨領域創意聯想與視覺審美，注重介面美感、視覺層次與啟發性文案。';
-            } else if (model === 'GPT') {
-                modelGuidance = '請發揮 GPT 嚴謹的邏輯結構與程式健壯性，注重完整防呆、正規表達式與資料架構清晰。';
-            } else {
-                modelGuidance = '請採雙模思維：先以 GEMINI 視角勾勒充滿美感與溫度的使用者體驗，再以 GPT 視角給出嚴密的程式與驗收步驟。';
-            }
-
-            const prompt = `【專案任務設計師指令】
-你是一位專門協助中學教師進行數位教學創新的「資深 AI 專案工程師與教學設計顧問」。
-
-【專案基本背景】
-- 教學／行政領域：${domain}
-- 使用者核心痛點：${pain}
-- 預期交付產品形態：${deliverable}
-- 合作模式要求：${modelGuidance}
-
-【專案執行與思考流程】
-請依照汪檍老師「要做什麼 ➔ 怎麼做 ➔ 怎麼修」的框架，為我完成以下四大階段：
-
-1. 【要做什麼？(MVP 最小可行性產品定義)】
-   - 請用三句話定義本專案要解決的核心問題。
-   - 列出本系統必須具備的 3 項不可或缺之核心功能（不貪多、重實效）。
-
-2. 【要怎麼做？(架構規劃與核心程式碼)】
-   - 提供直接可運行的完整程式碼（若為網頁，請使用純 HTML5 + Tailwind CSS CDN + 原生 JS，確保無需 npm build 即可雙擊開啟）。
-   - 介面需兼顧手機與電腦螢幕的自適應佈局（Responsive Design）。
-
-3. 【可能遇到的崩潰踩坑點與轉彎策略】
-   - 列出 2 個可能遇到的技術瓶頸（如：API 費用超標、記憶體流失、載具跑版）。
-   - 給予免成本、可快速替代的「轉彎」解法。
-
-4. 【身為稱職甲方的測試驗收清單】
-   - 提供 4 項具體的驗收測試標準，讓教師在測試時能一眼看出成效是否及格。`;
-
-            document.getElementById('prompt-output').textContent = prompt;
+            document.getElementById('generated-prompt').value = text;
         }
 
         function copyGeneratedPrompt() {
-            const text = document.getElementById('prompt-output').textContent;
-            if (!text) return;
-            navigator.clipboard.writeText(text).then(() => {
-                showToast("已成功複製生成的結構化 Prompt！");
+            const val = document.getElementById('generated-prompt').value;
+            navigator.clipboard.writeText(val).then(function() {
                 const btn = document.getElementById('copy-btn-text');
-                btn.textContent = "已複製！";
-                setTimeout(() => { btn.textContent = "複製提示詞"; }, 2000);
+                btn.textContent = '已複製成功！';
+                setTimeout(function() { btn.textContent = '一鍵複製'; }, 2000);
             });
         }
 
-        function showToast(msg) {
-            const toast = document.getElementById('toast');
-            document.getElementById('toast-msg').textContent = msg;
-            toast.classList.remove('translate-y-24', 'opacity-0');
-            setTimeout(() => {
-                toast.classList.add('translate-y-24', 'opacity-0');
-            }, 2500);
-        }
+        document.getElementById('gen-scene').addEventListener('change', updateGeneratedPrompt);
+        document.getElementById('gen-pain').addEventListener('change', updateGeneratedPrompt);
+        document.getElementById('gen-outcome').addEventListener('change', updateGeneratedPrompt);
 
         // 初始化
-        window.addEventListener('DOMContentLoaded', () => {
-            checkAuth();
-            renderLiveLinks();
-            renderTools(toolsData);
-            renderProjects(projectsData);
-            generateStructuredPrompt();
-            updateThemeIcon();
+        window.addEventListener('DOMContentLoaded', function() {
+            renderProjects(projects26);
+            updateGeneratedPrompt();
             lucide.createIcons();
         });
     </script>
